@@ -2,32 +2,16 @@ const Parser = require('./Parser')
 const AlphaNumericClassifier = require('../classifier/AlphaNumericClassifier')
 const TokenPositionClassifier = require('../classifier/TokenPositionClassifier')
 const HouseNumberClassifier = require('../classifier/HouseNumberClassifier')
-const UnitClassifier = require('../classifier/UnitClassifier')
-const UnitTypeClassifier = require('../classifier/UnitTypeClassifier')
-const UnitTypeUnitClassifier = require('../classifier/UnitTypeUnitClassifier')
 const PostcodeClassifier = require('../classifier/PostcodeClassifier')
 const StreetPrefixClassifier = require('../classifier/StreetPrefixClassifier')
-const StreetSuffixClassifier = require('../classifier/StreetSuffixClassifier')
-const RoadTypeClassifier = require('../classifier/RoadTypeClassifier')
-const DirectionalClassifier = require('../classifier/DirectionalClassifier')
-const PersonClassifier = require('../classifier/PersonClassifier')
-const GivenNameClassifier = require('../classifier/GivenNameClassifier')
-const SurnameClassifier = require('../classifier/SurnameClassifier')
-const PersonalSuffixClassifier = require('../classifier/PersonalSuffixClassifier')
-const PersonalTitleClassifier = require('../classifier/PersonalTitleClassifier')
-const ChainClassifier = require('../classifier/ChainClassifier')
 const PlaceClassifier = require('../classifier/PlaceClassifier')
-const IntersectionClassifier = require('../classifier/IntersectionClassifier')
 // const MultiStreetClassifier = require('../classifier/MultiStreetClassifier')
-const CentralEuropeanStreetNameClassifier = require('../classifier/CentralEuropeanStreetNameClassifier')
 const CompositeClassifier = require('../classifier/CompositeClassifier')
 // const AdjacencyClassifier = require('../classifier/AdjacencyClassifier')
 const ExclusiveCartesianSolver = require('../solver/ExclusiveCartesianSolver')
 const LeadingAreaDeclassifier = require('../solver/LeadingAreaDeclassifier')
-const MultiStreetSolver = require('../solver/MultiStreetSolver')
 const InvalidSolutionFilter = require('../solver/InvalidSolutionFilter')
 const TokenDistanceFilter = require('../solver/TokenDistanceFilter')
-const OrphanedUnitTypeDeclassifier = require('../solver/OrphanedUnitTypeDeclassifier')
 const MustNotPreceedFilter = require('../solver/MustNotPreceedFilter')
 const MustNotFollowFilter = require('../solver/MustNotFollowFilter')
 const SubsetFilter = require('../solver/SubsetFilter')
@@ -40,40 +24,23 @@ class AddressParser extends Parser {
       [
         // generic word classifiers
         new AlphaNumericClassifier(),
-        new UnitTypeUnitClassifier(),
         new TokenPositionClassifier(),
 
         // word classifiers
-        new UnitTypeClassifier(),
         new HouseNumberClassifier(),
-        new UnitClassifier(),
         new PostcodeClassifier(),
         new StreetPrefixClassifier(),
-        new StreetSuffixClassifier(),
-        new RoadTypeClassifier(),
-        new DirectionalClassifier(),
 
         // phrase classifiers
-        new IntersectionClassifier(),
-        new PersonClassifier(),
-        new GivenNameClassifier(),
-        new SurnameClassifier(),
-        new PersonalSuffixClassifier(),
-        new PersonalTitleClassifier(),
-        new ChainClassifier(),
         new PlaceClassifier(),
 
         // composite classifiers
-        new CompositeClassifier(require('../classifier/scheme/street')),
-
-        // additional classifiers which act on unclassified tokens
-        new CentralEuropeanStreetNameClassifier()
+        new CompositeClassifier(require('../classifier/scheme/street'))
       ],
       // solvers
       [
         new ExclusiveCartesianSolver(),
         new LeadingAreaDeclassifier(),
-        new MultiStreetSolver(),
         new SubsetFilter(),
         new InvalidSolutionFilter([
           ['HouseNumberClassification', 'LocalityClassification'],
@@ -107,12 +74,10 @@ class AddressParser extends Parser {
         new MustNotPreceedFilter('CountryClassification', 'PostcodeClassification'),
         new MustNotPreceedFilter('CountryClassification', 'StreetClassification'),
         new MustNotPreceedFilter('CountryClassification', 'HouseNumberClassification'),
-        new MustNotPreceedFilter('VenueClassification', 'UnitClassification'),
         new MustNotFollowFilter('LocalityClassification', 'RegionClassification'),
         new MustNotFollowFilter('LocalityClassification', 'CountryClassification'),
         new HouseNumberPositionPenalty(),
         new TokenDistanceFilter(),
-        new OrphanedUnitTypeDeclassifier(),
         new SubsetFilter()
       ],
       options
