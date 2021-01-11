@@ -9,10 +9,7 @@ const PostcodeClassifier = require('../classifier/PostcodeClassifier')
 const StreetPrefixClassifier = require('../classifier/StreetPrefixClassifier')
 const StreetSuffixClassifier = require('../classifier/StreetSuffixClassifier')
 const RoadTypeClassifier = require('../classifier/RoadTypeClassifier')
-const ToponymClassifier = require('../classifier/ToponymClassifier')
 const DirectionalClassifier = require('../classifier/DirectionalClassifier')
-const OrdinalClassifier = require('../classifier/OrdinalClassifier')
-const StopWordClassifier = require('../classifier/StopWordClassifier')
 const PersonClassifier = require('../classifier/PersonClassifier')
 const GivenNameClassifier = require('../classifier/GivenNameClassifier')
 const SurnameClassifier = require('../classifier/SurnameClassifier')
@@ -24,7 +21,6 @@ const IntersectionClassifier = require('../classifier/IntersectionClassifier')
 // const MultiStreetClassifier = require('../classifier/MultiStreetClassifier')
 const CentralEuropeanStreetNameClassifier = require('../classifier/CentralEuropeanStreetNameClassifier')
 const CompositeClassifier = require('../classifier/CompositeClassifier')
-const WhosOnFirstClassifier = require('../classifier/WhosOnFirstClassifier')
 // const AdjacencyClassifier = require('../classifier/AdjacencyClassifier')
 const ExclusiveCartesianSolver = require('../solver/ExclusiveCartesianSolver')
 const LeadingAreaDeclassifier = require('../solver/LeadingAreaDeclassifier')
@@ -55,10 +51,7 @@ class AddressParser extends Parser {
         new StreetPrefixClassifier(),
         new StreetSuffixClassifier(),
         new RoadTypeClassifier(),
-        new ToponymClassifier(),
         new DirectionalClassifier(),
-        new OrdinalClassifier(),
-        new StopWordClassifier(),
 
         // phrase classifiers
         new IntersectionClassifier(),
@@ -69,14 +62,9 @@ class AddressParser extends Parser {
         new PersonalTitleClassifier(),
         new ChainClassifier(),
         new PlaceClassifier(),
-        new WhosOnFirstClassifier(),
 
         // composite classifiers
-        new CompositeClassifier(require('../classifier/scheme/person')),
-        new CompositeClassifier(require('../classifier/scheme/street_name')),
         new CompositeClassifier(require('../classifier/scheme/street')),
-        new CompositeClassifier(require('../classifier/scheme/venue')),
-        new CompositeClassifier(require('../classifier/scheme/intersection')),
 
         // additional classifiers which act on unclassified tokens
         new CentralEuropeanStreetNameClassifier()

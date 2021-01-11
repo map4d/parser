@@ -32,21 +32,6 @@ module.exports = [
     ]
   },
   {
-    // 26th Street
-    confidence: 0.87,
-    Class: StreetClassification,
-    scheme: [
-      {
-        is: ['OrdinalClassification'],
-        not: ['StreetClassification', 'IntersectionClassification']
-      },
-      {
-        is: ['StreetSuffixClassification'],
-        not: ['StreetClassification', 'IntersectionClassification']
-      }
-    ]
-  },
-  {
     // 26 Street
     confidence: 0.86,
     Class: StreetClassification,
@@ -62,36 +47,6 @@ module.exports = [
     ]
   },
   {
-    // The Stables
-    confidence: 0.82,
-    Class: StreetClassification,
-    scheme: [
-      {
-        is: ['StopWordClassification'],
-        not: ['StreetClassification', 'IntersectionClassification']
-      },
-      {
-        is: ['PlaceClassification'],
-        not: ['StreetClassification', 'IntersectionClassification']
-      }
-    ]
-  },
-  {
-    // SW 26th
-    confidence: 0.77,
-    Class: StreetClassification,
-    scheme: [
-      {
-        is: ['DirectionalClassification'],
-        not: ['StreetClassification', 'IntersectionClassification']
-      },
-      {
-        is: ['OrdinalClassification'],
-        not: ['StreetClassification', 'IntersectionClassification']
-      }
-    ]
-  },
-  {
     // St Kilda Road
     confidence: 0.85,
     Class: StreetClassification,
@@ -103,21 +58,6 @@ module.exports = [
       {
         is: ['StreetSuffixClassification'],
         not: ['StreetClassification', 'IntersectionClassification']
-      }
-    ]
-  },
-  {
-    // Am Falkplatz
-    confidence: 0.98,
-    Class: StreetClassification,
-    scheme: [
-      {
-        is: ['StopWordClassification'],
-        not: ['IntersectionClassification']
-      },
-      {
-        is: ['StreetClassification'],
-        not: ['StopWordClassification']
       }
     ]
   },
@@ -156,77 +96,12 @@ module.exports = [
     ]
   },
   {
-    // Rue De Paris
-    confidence: 0.8,
-    Class: StreetClassification,
-    scheme: [
-      {
-        is: ['StreetPrefixClassification'],
-        not: ['StreetClassification', 'IntersectionClassification']
-      },
-      {
-        is: ['StopWordClassification'],
-        not: ['StreetClassification', 'IntersectionClassification']
-      },
-      {
-        is: ['AlphaClassification', 'PersonClassification'],
-        not: ['StreetClassification', 'StreetPrefixClassification']
-      }
-    ]
-  },
-  {
-    // Boulevard De La Paix
-    confidence: 0.79,
-    Class: StreetClassification,
-    scheme: [
-      {
-        is: ['StreetPrefixClassification'],
-        not: ['StreetClassification', 'IntersectionClassification']
-      },
-      {
-        is: ['StopWordClassification'],
-        not: ['StreetClassification', 'IntersectionClassification']
-      },
-      {
-        is: ['StopWordClassification'],
-        not: ['StreetClassification', 'IntersectionClassification']
-      },
-      {
-        is: ['AlphaClassification'],
-        not: ['StreetClassification', 'StreetPrefixClassification']
-      }
-    ]
-  },
-  {
     // Rue Saint Anne
     confidence: 0.91,
     Class: StreetClassification,
     scheme: [
       {
         is: ['StreetPrefixClassification'],
-        not: ['StreetClassification', 'IntersectionClassification']
-      },
-      {
-        is: ['PersonalTitleClassification'],
-        not: ['StreetClassification', 'IntersectionClassification']
-      },
-      {
-        is: ['AlphaClassification', 'GivenNameClassification', 'PersonClassification'],
-        not: ['StreetClassification', 'StreetPrefixClassification']
-      }
-    ]
-  },
-  {
-    // Boulevard du Général Charles De Gaulle
-    confidence: 0.81,
-    Class: StreetClassification,
-    scheme: [
-      {
-        is: ['StreetPrefixClassification'],
-        not: ['StreetClassification', 'IntersectionClassification']
-      },
-      {
-        is: ['StopWordClassification'],
         not: ['StreetClassification', 'IntersectionClassification']
       },
       {
@@ -265,7 +140,7 @@ module.exports = [
     scheme: [
       {
         is: ['AlphaClassification'],
-        not: ['StreetClassification', 'IntersectionClassification', 'StopWordClassification']
+        not: ['StreetClassification', 'IntersectionClassification']
       },
       {
         is: ['StreetClassification'],
@@ -279,7 +154,7 @@ module.exports = [
     Class: StreetClassification,
     scheme: [
       {
-        is: ['RoadTypeClassification', 'ToponymClassification'],
+        is: ['RoadTypeClassification'],
         not: []
       },
       {
@@ -295,7 +170,7 @@ module.exports = [
     scheme: [
       {
         is: ['AlphaClassification'],
-        not: ['StreetClassification', 'IntersectionClassification', 'StopWordClassification']
+        not: ['StreetClassification', 'IntersectionClassification']
       },
       {
         is: ['StreetClassification'],
