@@ -10,7 +10,6 @@ const StreetPrefixClassifier = require('../classifier/StreetPrefixClassifier')
 const StreetSuffixClassifier = require('../classifier/StreetSuffixClassifier')
 const RoadTypeClassifier = require('../classifier/RoadTypeClassifier')
 const ToponymClassifier = require('../classifier/ToponymClassifier')
-const CompoundStreetClassifier = require('../classifier/CompoundStreetClassifier')
 const DirectionalClassifier = require('../classifier/DirectionalClassifier')
 const OrdinalClassifier = require('../classifier/OrdinalClassifier')
 const StopWordClassifier = require('../classifier/StopWordClassifier')
@@ -57,7 +56,6 @@ class AddressParser extends Parser {
         new StreetSuffixClassifier(),
         new RoadTypeClassifier(),
         new ToponymClassifier(),
-        new CompoundStreetClassifier(),
         new DirectionalClassifier(),
         new OrdinalClassifier(),
         new StopWordClassifier(),

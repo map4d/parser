@@ -8,7 +8,7 @@ const libpostal = require('../resources/libpostal/libpostal')
 class PersonalTitleClassifier extends PhraseClassifier {
   setup () {
     this.index = {}
-    libpostal.load(this.index, libpostal.languages, 'personal_titles.txt', {
+    libpostal.load(this.index, ['vn'], 'personal_titles.txt', {
       replace: [/\.$/, ''],
       minlength: 2
     })

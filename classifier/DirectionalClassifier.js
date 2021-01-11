@@ -9,12 +9,11 @@ const libpostal = require('../resources/libpostal/libpostal')
 
 // optionally control which languages are included
 // note: reducing the languages will have a considerable performance benefit
-const languages = ['en', 'es', 'de', 'fr']
 
 class DirectionalClassifier extends WordClassifier {
   setup () {
     this.index = {}
-    libpostal.load(this.index, languages, 'directionals.txt')
+    libpostal.load(this.index, ['vn'], 'directionals.txt')
   }
 
   each (span) {

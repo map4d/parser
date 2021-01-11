@@ -5,16 +5,12 @@ const libpostal = require('../resources/libpostal/libpostal')
 // dictionaries sourced from the libpostal project
 // see: https://github.com/openvenues/libpostal
 
-// prefix languages
-// languages which use a street prefix instead of a suffix
-const prefix = ['fr', 'ca', 'es', 'pt', 'ro']
-
 class StreetSuffixClassifier extends WordClassifier {
   setup () {
     // load street tokens
     this.index = {}
     // Exclude french types because they are street prefix
-    libpostal.load(this.index, libpostal.languages.filter(e => !prefix.includes(e)), 'street_types.txt')
+    libpostal.load(this.index, ['vn'], 'street_types.txt')
 
     // blacklist any token under 2 chars in length
     for (let token in this.index) {

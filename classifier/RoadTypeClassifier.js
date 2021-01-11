@@ -9,7 +9,7 @@ class RoadTypeClassifier extends WordClassifier {
   setup () {
     // load street tokens
     this.index = {}
-    libpostal.load(this.index, libpostal.languages, 'road_types.txt')
+    libpostal.load(this.index, ['vn'], 'road_types.txt')
   }
 
   each (span) {

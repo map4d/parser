@@ -6,7 +6,7 @@ class UnitTypeClassifier extends WordClassifier {
   setup () {
     // load index tokens
     this.index = {}
-    libpostal.load(this.index, ['en'], 'unit_types_numbered.txt')
+    libpostal.load(this.index, ['vn'], 'unit_types_numbered.txt')
   }
   each (span) {
     // skip spans which contain numbers
