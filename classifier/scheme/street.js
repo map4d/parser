@@ -2,17 +2,16 @@ const StreetClassification = require('../../classification/StreetClassification'
 
 module.exports = [
   {
-    // Rue Montmartre or Boulevard Charles De Gaulle
-    confidence: 0.88,
+    confidence: 1.0,
     Class: StreetClassification,
     scheme: [
       {
         is: ['StreetPrefixClassification'],
-        not: ['StreetClassification']
+        not: ['StreetClassification', 'PlaceClassification']
       },
       {
-        is: ['AlphaClassification'],
-        not: ['StreetClassification']
+        is: ['StreetClassification'],
+        not: []
       }
     ]
   }

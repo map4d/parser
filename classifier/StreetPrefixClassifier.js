@@ -9,7 +9,7 @@ class StreetPrefixClassifier extends WordClassifier {
   setup () {
     // load street tokens
     this.index = {}
-    libpostal.load(this.index, ['vn'], 'street_types.txt')
+    libpostal.load(this.index, ['vn'], 'street_prefixes.txt')
   }
 
   each (span) {

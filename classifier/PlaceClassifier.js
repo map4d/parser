@@ -1,11 +1,8 @@
-const WordClassifier = require('./super/WordClassifier')
+const PhraseClassifier = require('./super/PhraseClassifier')
 const PlaceClassification = require('../classification/PlaceClassification')
 const libpostal = require('../resources/libpostal/libpostal')
 
-// dictionaries sourced from the libpostal project
-// see: https://github.com/openvenues/libpostal
-
-class PlaceClassifier extends WordClassifier {
+class PlaceClassifier extends PhraseClassifier {
   setup () {
     // load index tokens
     this.index = {}
