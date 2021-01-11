@@ -2,7 +2,7 @@ const PhraseClassifier = require('./super/PhraseClassifier')
 const StreetClassification = require('../classification/StreetClassification')
 const libpostal = require('../resources/libpostal/libpostal')
 
-class StreetNameClassifier extends PhraseClassifier {
+class StreetClassifier extends PhraseClassifier {
   setup () {
     this.index = {}
     libpostal.load(this.index, ['vn'], 'street_names.txt', { lowercase: true })
@@ -18,4 +18,4 @@ class StreetNameClassifier extends PhraseClassifier {
   }
 }
 
-module.exports = StreetNameClassifier
+module.exports = StreetClassifier
