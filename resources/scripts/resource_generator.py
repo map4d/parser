@@ -18,8 +18,7 @@ def generate_level1_names():
 
     level1_names = []
     for level1_data in data:
-        name = level1_data['name']
-        name = normalize(name)
+        name = normalize(level1_data['name'])
         if name.startswith('tinh '):
             name = name[len('tinh '):]
         elif name.startswith('thanh pho '):
@@ -51,12 +50,24 @@ def generate_level2_names():
 
     level2_names = []
     for level1_data in data:
-        pass
+        level2_datas = level1_data['level2s']
+        for level2_data in level2_datas:
+            name = normalize(level2_data['name'])
+            level2_type = normalize(level2_data['type'])
 
+            if name.startswith(level2_type):
+                name = name[len(level2_type) + 1:]
+                if name.isnumeric():
+                    # quan 1, quan 2
+                    name = level2_type + ' ' + name + '|' + name
+
+            level2_names.append(name.strip())
+
+    level2_names = list(set(level2_names))
     level2_names.sort()
 
     with open('level2_names.txt', 'w') as level2_names_file:
-        for level2_name in level1_names:
+        for level2_name in level2_names:
             level2_names_file.write(level2_name)
             level2_names_file.write('\n')
 
@@ -70,8 +81,22 @@ def generate_level3_names():
 
     level3_names = []
     for level1_data in data:
-        pass
+        level2_datas = level1_data['level2s']
+        for level2_data in level2_datas:
+            level3_datas = level2_data['level3s']
+            for level3_data in level3_datas:
+                name = normalize(level3_data['name'])
+                level3_type = normalize(level3_data['type'])
 
+                if name.startswith(level3_type):
+                    name = name[len(level3_type) + 1:]
+                    if name.isnumeric():
+                        # phuong 1, phuong 2
+                        name = level3_type + ' ' + name + '|' + name
+
+                level3_names.append(name.strip())
+
+    level3_names = list(set(level3_names))
     level3_names.sort()
 
     with open('level3_names.txt', 'w') as level3_names_file:
