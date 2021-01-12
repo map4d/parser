@@ -16,7 +16,11 @@ class PlaceClassifier extends PhraseClassifier {
 
     // use an inverted index for full token matching as it's O(1)
     if (this.index.hasOwnProperty(span.norm)) {
+      // classify phrase
       span.classify(new PlaceClassification(1.0))
+
+      // classify child spans
+      span.graph.findAll('child').forEach(c => c.classify(new PlaceClassification(1.0)))
     }
   }
 }
