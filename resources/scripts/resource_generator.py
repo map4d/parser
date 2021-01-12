@@ -59,6 +59,7 @@ def generate_level2_names():
                 name = name[len(level2_type) + 1:]
                 if name.isnumeric():
                     # quan 1, quan 2
+                    name = name.lstrip('0')
                     name = level2_type + ' ' + name + '|' + name
 
             level2_names.append(name.strip())
@@ -92,6 +93,7 @@ def generate_level3_names():
                     name = name[len(level3_type) + 1:]
                     if name.isnumeric():
                         # phuong 1, phuong 2
+                        name = name.lstrip('0')
                         name = level3_type + ' ' + name + '|' + name
 
                 level3_names.append(name.strip())
