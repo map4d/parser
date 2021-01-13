@@ -123,7 +123,7 @@ cu chi
 cu jut
 cu kuin
 cu lao dung
-cu m'gar
+cu m'gar|cu mgar
 cua lo
 da bac
 da huoai
@@ -138,7 +138,7 @@ dak glong
 dak ha
 dak mil
 dak po
-dak r'lap
+dak r'lap|dak rlap
 dak song
 dak to
 dam doi
@@ -189,7 +189,7 @@ duong minh chau
 duy tien
 duy xuyen
 duyen hai
-ea h'leo
+ea h'leo|ea hleo
 ea kar
 ea sup
 gia binh
@@ -264,7 +264,7 @@ huong thuy
 huong tra
 huu lung
 ia grai
-ia h' drai
+ia h'drai|ia hdrai
 ia pa
 kbang
 ke sach
@@ -333,7 +333,7 @@ luong son
 luong tai
 ly nhan
 ly son
-m'drak
+m'drak|mdrak
 mai chau
 mai son
 mang thit
@@ -411,7 +411,7 @@ nong son
 nui thanh
 o mon
 pac nam
-phan rang-thap cham
+phan rang - thap cham|phan rang thap cham|phan rang
 phan thiet
 pho yen
 phong dien

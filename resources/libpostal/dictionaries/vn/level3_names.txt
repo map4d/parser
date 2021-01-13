@@ -166,8 +166,8 @@ au co
 au lau
 ayun
 ayun ha
-b' la
-b'lao
+b'lao|blao
+b'la|bla
 ba
 ba bich
 ba che
@@ -723,7 +723,7 @@ cay duong
 cay gao
 cay thi
 cay truong ii
-ch'om
+ch'om|chom
 cha cang
 cha la
 cha nua
@@ -964,7 +964,7 @@ cu bao
 cu bi
 cu bong
 cu chi
-cu dlie m'nong
+cu dlie m'nong|cu dlie mnong
 cu dong
 cu dram
 cu e wi
@@ -981,9 +981,9 @@ cu knia
 cu kty
 cu lao dung
 cu le
-cu m'gar
-cu m'lan
-cu m'ta
+cu m'gar|cu mgar
+cu m'lan|cu mlan
+cu m'ta|cu mta
 cu mot
 cu nam
 cu ne
@@ -1020,12 +1020,12 @@ cuor dang
 cuor knia
 cuu an
 cuu cao
-d'ran
+d'ran|dran
 da bac
 da chais
 da do
 da don
-da k' nang
+da k'nang|da knang
 da kai
 da kao
 da kho
@@ -1035,8 +1035,8 @@ da lay
 da loan
 da loc
 da long
-da m' rong
-da m'ri
+da m'ri|da mri
+da m'rong|da mrong
 da mai
 da mi
 da nhim
@@ -1153,8 +1153,8 @@ dak mar
 dak mil
 dak mol
 dak mon
-dak n'drot
-dak n'dung
+dak n'drot|dak ndrot
+dak n'dung|dak ndung
 dak na
 dak nang
 dak nen
@@ -1174,10 +1174,10 @@ dak pne
 dak po
 dak po pho
 dak pxi
-dak r'la
-dak r'mang
-dak r'moan
-dak r'tih
+dak r'la|dak rla
+dak r'mang|dak rmang
+dak r'moan|dak rmoan
+dak r'tih|dak rtih
 dak ring
 dak ro nga
 dak ro ong
@@ -1688,14 +1688,14 @@ ea bhok
 ea blang
 ea bong
 ea bung
-ea d'rong
+ea d'rong|ea drong
 ea dah
 ea dar
 ea drang
 ea drong
-ea h'dinh
-ea h'leo
-ea h'mlay
+ea h'dinh|ea hdinh
+ea h'leo|ea hleo
+ea h'mlay|ea hmlay
 ea hiao
 ea hiu
 ea ho
@@ -1717,9 +1717,9 @@ ea kueh
 ea lai
 ea lam
 ea le
-ea m' doal
-ea m'droh
-ea m'nang
+ea m'doal|ea mdoal
+ea m'droh|ea mdroh
+ea m'nang|ea mnang
 ea na
 ea nam
 ea ngai
@@ -1732,7 +1732,7 @@ ea pil
 ea po
 ea pok
 ea puk
-ea r'bin
+ea r'bin|ea rbin
 ea ral
 ea rieng
 ea rok
@@ -1742,7 +1742,7 @@ ea sin
 ea so
 ea sol
 ea sup
-ea t'ling
+ea t'ling|ea tling
 ea tam
 ea tan
 ea tar
@@ -1881,7 +1881,7 @@ go quao
 goi
 gung re
 h bong
-h' neng
+h'neng|hneng
 ha an
 ha bac
 ha bang
@@ -2610,7 +2610,7 @@ iii
 it ong
 iv
 jo ngay
-k' dang
+k'dang|kdang
 ka dang
 ka do
 ka don
@@ -3233,7 +3233,7 @@ ly thanh
 ly thuong kiet
 ly trach
 ly van lam
-m'drak
+m'drak|mdrak
 ma ba
 ma cooi
 ma da
@@ -3520,7 +3520,7 @@ my xuan
 my xuong
 my xuyen
 my yen
-n'thol ha
+n'thol ha|nthol ha
 n.t phong hai
 na bung
 na chi
@@ -3613,8 +3613,8 @@ nam mau
 nam mon
 nam muoi
 nam my
-nam n'dir
-nam n'jang
+nam n'dir|nam ndir
+nam n'jang|nam njang
 nam nen
 nam ngan
 nam nghia
@@ -5825,7 +5825,7 @@ tong qua lin
 tong sanh
 tong tran
 tot dong
-tr'hy
+tr'hy|trhy
 tra an
 tra ba
 tra binh

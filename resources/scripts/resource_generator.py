@@ -62,6 +62,13 @@ def generate_level2_names():
                     name = name.lstrip('0')
                     name = level2_type + ' ' + name + '|' + name
 
+            if name == 'phan rang-thap cham':
+                name = 'phan rang - thap cham|phan rang thap cham|phan rang'
+            elif name == 'ia h\' drai':
+                name = 'ia h\'drai|ia hdrai'
+            elif '\'' in name:
+                name = name + '|' + name.replace('\'', '')
+
             level2_names.append(name.strip())
 
     level2_names = list(set(level2_names))
@@ -95,6 +102,20 @@ def generate_level3_names():
                         # phuong 1, phuong 2
                         name = name.lstrip('0')
                         name = level3_type + ' ' + name + '|' + name
+                if name == 'b\' la':
+                    name = 'b\'la|bla'
+                elif name == 'da k\' nang':
+                    name = 'da k\'nang|da knang'
+                elif name == 'da m\' rong':
+                    name = 'da m\'rong|da mrong'
+                elif name == 'ea m\' doal':
+                    name = 'ea m\'doal|ea mdoal'
+                elif name == 'h\' neng':
+                    name = 'h\'neng|hneng'
+                elif name == 'k\' dang':
+                    name = 'k\'dang|kdang'
+                elif '\'' in name:
+                    name = name + '|' + name.replace('\'', '')
 
                 level3_names.append(name.strip())
 
