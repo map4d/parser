@@ -2,14 +2,12 @@ const _ = require('lodash')
 const fs = require('fs')
 const path = require('path')
 const pluralize = require('pluralize')
-const pelias = require('../pelias/pelias')
-const custom = require('../custom/custom')
 const dictPath = path.join(__dirname, `./dictionaries`)
 const allLanguages = fs.readdirSync(dictPath).filter(p => !p.includes('.'))
 
 function load (index, langs, filename, options) {
   const add = _add(index, options)
-  const remove = _remove(index, options)
+  _remove(index, options)
 
   langs.forEach(lang => {
     let filepath = path.join(dictPath, lang, filename)
@@ -19,14 +17,6 @@ function load (index, langs, filename, options) {
       row.split('|').forEach(add.bind(null, lang))
     }, this)
   }, this)
-
-  langs.forEach(lang => {
-    pelias.load(path.join('libpostal', lang, filename), add.bind(null, lang), remove)
-  })
-
-  langs.forEach(lang => {
-    custom.load(path.join('libpostal', lang, filename), add.bind(null, lang), remove)
-  })
 }
 
 function _normalize (cell, options) {
