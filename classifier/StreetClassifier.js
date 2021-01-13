@@ -20,7 +20,12 @@ class StreetClassifier extends PhraseClassifier {
       if (prev && prev.classifications.hasOwnProperty('PlaceClassification')) {
         return
       }
+
+      // classify phrase
       span.classify(new StreetClassification(1))
+
+      // classify child spans
+      span.graph.findAll('child').forEach(c => c.classify(new StreetClassification(1)))
     }
   }
 }

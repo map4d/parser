@@ -9,6 +9,14 @@ class HouseNumberClassifier extends WordClassifier {
     // skip spans which do not contain numbers
     if (!span.contains.numerals) { return }
 
+    // do not classify tokens if they already have a 'StreetClassification'
+    // in viet nam, we have some street which has the number in it eg: duong 29 thang 3, duong so 1
+    if (span.classifications.hasOwnProperty('StreetClassification') || (
+      span.graph.length('child') > 0 &&
+          span.graph.findOne('child').classifications.hasOwnProperty('StreetClassification')
+    )
+    ) { return }
+
     if (
       /^\d{1,5}[a-zA-Z\u0400-\u04FF]?$/.test(span.body) || // 10 or 10a Style
         /^(\d{1,5})-(\d{1,5})[a-zA-Z\u0400-\u04FF]?$/.test(span.body) || // 10-19 or 10-19a Style

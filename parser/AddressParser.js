@@ -6,6 +6,7 @@ const PostcodeClassifier = require('../classifier/PostcodeClassifier')
 const StreetClassifier = require('../classifier/StreetClassifier')
 const StreetPrefixClassifier = require('../classifier/StreetPrefixClassifier')
 const PlaceClassifier = require('../classifier/PlaceClassifier')
+const FirstLevelAdministrativePrefixClassifier = require('../classifier/FirstLevelAdministrativePrefixClassifier')
 const FirstLevelAdministrativeClassifier = require('../classifier/FirstLevelAdministrativeClassifier')
 const SecondLevelAdministrativeClassifier = require('../classifier/SecondLevelAdministrativeClassifier')
 const ThirdLevelAdministrativeClassifier = require('../classifier/ThirdLevelAdministrativeClassifier')
@@ -30,20 +31,22 @@ class AddressParser extends Parser {
         new AlphaNumericClassifier(),
         new TokenPositionClassifier(),
 
+        // phrase classifiers
+        new PlaceClassifier(),
+        new StreetClassifier(),
+        new FirstLevelAdministrativePrefixClassifier(),
+        new ThirdLevelAdministrativeClassifier(),
+        new SecondLevelAdministrativeClassifier(),
+        new FirstLevelAdministrativeClassifier(),
+
         // word classifiers
         new HouseNumberClassifier(),
         new PostcodeClassifier(),
         new StreetPrefixClassifier(),
 
-        // phrase classifiers
-        new PlaceClassifier(),
-        new StreetClassifier(),
-        new ThirdLevelAdministrativeClassifier(),
-        new SecondLevelAdministrativeClassifier(),
-        new FirstLevelAdministrativeClassifier(),
-
         // composite classifiers
-        new CompositeClassifier(require('../classifier/scheme/street'))
+        new CompositeClassifier(require('../classifier/scheme/street')),
+        new CompositeClassifier(require('../classifier/scheme/level1'))
       ],
       // solvers
       [
