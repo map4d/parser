@@ -2,14 +2,15 @@ import sys
 import getopt
 import json
 import unicodedata
-
+import re
 
 def normalize(value: str) -> str:
     result = value.lower().replace('đ', 'd')
-    result = unicodedata.normalize('NFKD', result).encode('ascii', 'ignore')
+    result = unicodedata.normalize('NFKD', result).encode('ascii', 'ignore').decode('ascii')
+    result = re.sub(' +', ' ', result)
+    result = result.strip()
 
-    return result.decode('ascii')
-
+    return result
 
 def generate_level1_names():
     print('Generating level1_names.txt...')
@@ -64,19 +65,27 @@ def generate_level2_names():
 
             if name.startswith(level2_type):
                 name = name[len(level2_type) + 1:]
-                if name.isnumeric():
-                    # quan 1, quan 2
-                    name = name.lstrip('0')
-                    name = level2_type + ' ' + name + '|' + name
 
-            if name == 'phan rang-thap cham':
-                name = 'phan rang - thap cham|phan rang thap cham|phan rang'
-            elif name == 'ia h\' drai':
+            if name == 'ia h\' drai':
                 name = 'ia h\'drai|ia hdrai'
             elif '\'' in name:
                 name = name + '|' + name.replace('\'', '')
 
-            level2_names.append(name.strip())
+            if name == 'phan rang-thap cham':
+                name = 'phan rang thap cham|thanh pho phan rang thap cham|tp phan rang thap cham|tp. phan rang thap cham|phan rang|thanh pho phan rang|tp phan rang|tp.phan rang'
+            else:
+                if level2_type == 'thanh pho':
+                    name = name + '|thanh pho ' + name + '|tp ' + name + '|tp. ' + name
+                elif name.isnumeric():
+                    name = name.lstrip('0')
+                    name = level2_type + ' ' + name
+                elif ' ' in name:
+                    name = name + '|' + level2_type + ' ' + name
+                else:
+                    # one word only
+                    name = level2_type + ' ' + name
+
+            level2_names.append(name)
 
     level2_names = list(set(level2_names))
     level2_names.sort()
@@ -105,10 +114,7 @@ def generate_level3_names():
 
                 if name.startswith(level3_type):
                     name = name[len(level3_type) + 1:]
-                    if name.isnumeric():
-                        # phuong 1, phuong 2
-                        name = name.lstrip('0')
-                        name = level3_type + ' ' + name + '|' + name
+
                 if name == 'b\' la':
                     name = 'b\'la|bla'
                 elif name == 'da k\' nang':
@@ -124,7 +130,16 @@ def generate_level3_names():
                 elif '\'' in name:
                     name = name + '|' + name.replace('\'', '')
 
-                level3_names.append(name.strip())
+                if name.isnumeric():
+                    name = name.lstrip('0')
+                    name = level3_type + ' ' + name
+                elif ' ' in name:
+                    name = name + '|' + level3_type + ' ' + name
+                else:
+                    # one word only
+                    name = level3_type + ' ' + name
+
+                level3_names.append(name)
 
     level3_names = list(set(level3_names))
     level3_names.sort()
