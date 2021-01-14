@@ -1,29 +1,29 @@
-const WordClassifier = require('./super/WordClassifier')
+const PhraseClassifier = require('./super/PhraseClassifier')
 const HouseNumberClassification = require('../classification/HouseNumberClassification')
 
 // copied from: https://github.com/mapbox/carmen/blob/5489f0e67a4f31280ae1b9d091952c97280b83e7/lib/text-processing/termops.js#L269-L290
-// note: \u0400-\u04FF represents a-z in the Cyrillic alphabet
 
-class HouseNumberClassifier extends WordClassifier {
+class HouseNumberClassifier extends PhraseClassifier {
   each (span) {
     // skip spans which do not contain numbers
     if (!span.contains.numerals) { return }
 
-    // do not classify tokens if they already have a 'StreetClassification'
-    // in viet nam, we have some street which has the number in it eg: duong 29 thang 3, duong so 1
-    if (span.classifications.hasOwnProperty('StreetClassification') || (
+    // do not classify tokens if they already have a 'StreetClassification' or 'AdministrativeClassification'
+    // in viet nam, we have some street/ administrative which has the number in it eg: duong 29 thang 3, duong so 1, quan 1, phuong 12...
+    if (span.classifications.hasOwnProperty('StreetClassification') || span.classifications.hasOwnProperty('AdministrativeClassification') || (
       span.graph.length('child') > 0 &&
-          span.graph.findOne('child').classifications.hasOwnProperty('StreetClassification')
+          (span.graph.findOne('child').classifications.hasOwnProperty('StreetClassification') ||
+              span.graph.findOne('child').classifications.hasOwnProperty('AdministrativeClassification'))
     )
     ) { return }
 
     if (
-      /^\d{1,5}[a-zA-Z\u0400-\u04FF]?$/.test(span.body) || // 10 or 10a Style
-        /^(\d{1,5})-(\d{1,5})[a-zA-Z\u0400-\u04FF]?$/.test(span.body) || // 10-19 or 10-19a Style
-        /^(\d{1,5})[a-zA-Z\u0400-\u04FF]?\/(\d{1,5})$/.test(span.body) || // 1/135 or 1b/135 Style
-        /^(\d{1,5})([nsewNSEW])(\d{1,5})[a-zA-Z]?$/.test(span.body) || // 6N23 Style (ie Kane County, IL)
-        /^([nsewNSEW])(\d{1,5})([nsewNSEW]\d{1,5})?$/.test(span.body) // W350N5337 or N453 Style (ie Waukesha County, WI)
-        // /^\d{1,5}(к\d{1,5})?(с\d{1,5})?$/.test(span.body) // Russian style including korpus (cyrillic к) and stroenie (cyrillic с)
+      /^\d{1,5}[a-zA-Z]?$/.test(span.body) || // 10 or 10a Style
+        /^(\d{1,5})-(\d{1,5})[a-zA-Z]?$/.test(span.body) || // 10-19 or 10-19a Style
+        /^(\d{1,5})[a-zA-Z]?\/(\d{1,5})$/.test(span.body) || // 1/135 or 1b/135 Style
+        /^(\d{1,5})(\/(\d{1,5}))*$/.test(span.body) || // 1/2/3/4/5  Style
+        /^([KkHh]){1}(\d{1,5})(\/(\d{1,5}))*$/.test(span.body) || // k448 or h18/10 Style
+        /^(ngo|ngach|so)\s(\d{1,5})$/.test(span.body) // ngo 1 or so 1 Style
     ) {
       let confidence = 1
 
