@@ -1,5 +1,5 @@
 const PhraseClassifier = require('./super/PhraseClassifier')
-const SecondLevelAdministrativeClassification = require('../classification/SecondLevelAdministrativeClassification')
+const AdministrativeClassification = require('../classification/AdministrativeClassification')
 const libpostal = require('../resources/libpostal/libpostal')
 
 class SecondLevelAdministrativeClassifier extends PhraseClassifier {
@@ -18,7 +18,7 @@ class SecondLevelAdministrativeClassifier extends PhraseClassifier {
 
     // use an inverted index for full token matching as it's O(1)
     if (this.index.hasOwnProperty(span.norm)) {
-      span.classify(new SecondLevelAdministrativeClassification(1))
+      span.classify(new AdministrativeClassification(2, 1))
     }
   }
 }
