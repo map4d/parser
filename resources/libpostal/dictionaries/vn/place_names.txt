@@ -22,3 +22,6 @@ vuon quoc gia
 trung tam
 nha nghi
 karaoke
+benh vien
+nha may
+cua hang

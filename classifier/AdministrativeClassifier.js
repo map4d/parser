@@ -24,6 +24,14 @@ class AdministrativeClassifier extends PhraseClassifier {
 
     // use an inverted index for full token matching as it's O(1)
     if (this.index.hasOwnProperty(span.norm)) {
+      let firstChild = span.graph.findOne('child:first') || span
+      let prev = firstChild.graph.findOne('prev')
+
+      // street must not be preceded by place
+      if (prev && prev.classifications.hasOwnProperty('PlaceClassification')) {
+        return
+      }
+
       span.classify(new AdministrativeClassification(this.level, 1))
     }
   }

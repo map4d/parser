@@ -34,11 +34,11 @@ class AddressParser extends Parser {
         new AdministrativeClassifier(3),
         new AdministrativeClassifier(2),
         new AdministrativeClassifier(1),
+        new HouseNumberClassifier(),
+        new StreetPrefixClassifier(),
 
         // word classifiers
-        new HouseNumberClassifier(),
         new PostcodeClassifier(),
-        new StreetPrefixClassifier(),
 
         // composite classifiers
         new CompositeClassifier(require('../classifier/scheme/housenumber')),
