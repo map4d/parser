@@ -51,23 +51,23 @@ class Parser {
   // @todo: possibly move the admin penalty scoring to another file
   comparitor (a, b) {
     // if scores are equal then enforce a slight penalty for administrative ordering
-    if (b.score === a.score) {
-      let areas = {
-        a: a.pair.filter(p => p.span.classifications.hasOwnProperty('AreaClassification')),
-        b: b.pair.filter(p => p.span.classifications.hasOwnProperty('AreaClassification'))
-      }
-      let classification = {
-        a: (areas.a.length ? areas.a[0].classification.constructor.name : ''),
-        b: (areas.b.length ? areas.b[0].classification.constructor.name : '')
-      }
+    // if (b.score === a.score) {
+    //   let areas = {
+    //     a: a.pair.filter(p => p.span.classifications.hasOwnProperty('AreaClassification')),
+    //     b: b.pair.filter(p => p.span.classifications.hasOwnProperty('AreaClassification'))
+    //   }
+    //   let classification = {
+    //     a: (areas.a.length ? areas.a[0].classification.constructor.name : ''),
+    //     b: (areas.b.length ? areas.b[0].classification.constructor.name : '')
+    //   }
 
-      if (classification.a === 'LocalityClassification') { return -1 }
-      if (classification.b === 'LocalityClassification') { return +1 }
-      if (classification.a === 'RegionClassification') { return -1 }
-      if (classification.b === 'RegionClassification') { return +1 }
-      if (classification.a === 'CountryClassification') { return -1 }
-      if (classification.b === 'CountryClassification') { return +1 }
-    }
+    //   if (classification.a === 'LocalityClassification') { return -1 }
+    //   if (classification.b === 'LocalityClassification') { return +1 }
+    //   if (classification.a === 'RegionClassification') { return -1 }
+    //   if (classification.b === 'RegionClassification') { return +1 }
+    //   if (classification.a === 'CountryClassification') { return -1 }
+    //   if (classification.b === 'CountryClassification') { return +1 }
+    // }
 
     // sort results by score desc
     return b.score - a.score

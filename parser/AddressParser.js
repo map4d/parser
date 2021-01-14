@@ -11,7 +11,7 @@ const AdministrativeClassifier = require('../classifier/AdministrativeClassifier
 const CompositeClassifier = require('../classifier/CompositeClassifier')
 // const AdjacencyClassifier = require('../classifier/AdjacencyClassifier')
 const ExclusiveCartesianSolver = require('../solver/ExclusiveCartesianSolver')
-const LeadingAreaDeclassifier = require('../solver/LeadingAreaDeclassifier')
+const LeadingAdministrativeDeclassifier = require('../solver/LeadingAdministrativeDeclassifier')
 const InvalidSolutionFilter = require('../solver/InvalidSolutionFilter')
 const TokenDistanceFilter = require('../solver/TokenDistanceFilter')
 const MustNotPreceedFilter = require('../solver/MustNotPreceedFilter')
@@ -34,6 +34,7 @@ class AddressParser extends Parser {
         new AdministrativeClassifier(3),
         new AdministrativeClassifier(2),
         new AdministrativeClassifier(1),
+        new AdministrativeClassifier(0),
         new HouseNumberClassifier(),
         new StreetPrefixClassifier(),
 
@@ -47,42 +48,16 @@ class AddressParser extends Parser {
       // solvers
       [
         new ExclusiveCartesianSolver(),
-        new LeadingAreaDeclassifier(),
+        new LeadingAdministrativeDeclassifier(),
         new SubsetFilter(),
         new InvalidSolutionFilter([
-          ['HouseNumberClassification', 'LocalityClassification'],
-          ['HouseNumberClassification', 'LocalityClassification', 'RegionClassification'],
-          ['HouseNumberClassification', 'LocalityClassification', 'CountryClassification'],
-          ['HouseNumberClassification', 'LocalityClassification', 'RegionClassification', 'CountryClassification'],
-          ['HouseNumberClassification', 'RegionClassification'],
-          ['HouseNumberClassification', 'RegionClassification', 'CountryClassification'],
           ['HouseNumberClassification', 'CountryClassification'],
           ['HouseNumberClassification', 'PostcodeClassification'],
-          ['HouseNumberClassification', 'PostcodeClassification', 'LocalityClassification'],
-          ['HouseNumberClassification', 'PostcodeClassification', 'RegionClassification'],
-          ['HouseNumberClassification', 'PostcodeClassification', 'CountryClassification'],
-          ['VenueClassification', 'HouseNumberClassification'],
-          ['VenueClassification', 'PostcodeClassification']
+          ['HouseNumberClassification', 'PostcodeClassification', 'CountryClassification']
         ]),
-        new MustNotFollowFilter('VenueClassification', 'HouseNumberClassification'),
-        new MustNotFollowFilter('VenueClassification', 'StreetClassification'),
-        new MustNotFollowFilter('VenueClassification', 'LocalityClassification'),
-        new MustNotFollowFilter('VenueClassification', 'RegionClassification'),
-        new MustNotFollowFilter('VenueClassification', 'CountryClassification'),
-        new MustNotFollowFilter('VenueClassification', 'PostcodeClassification'),
         new MustNotPreceedFilter('PostcodeClassification', 'HouseNumberClassification'),
-        new MustNotPreceedFilter('PostcodeClassification', 'StreetClassification'),
-        new MustNotPreceedFilter('LocalityClassification', 'HouseNumberClassification'),
-        new MustNotPreceedFilter('LocalityClassification', 'StreetClassification'),
-        new MustNotPreceedFilter('RegionClassification', 'HouseNumberClassification'),
-        new MustNotPreceedFilter('RegionClassification', 'StreetClassification'),
-        new MustNotPreceedFilter('CountryClassification', 'RegionClassification'),
-        new MustNotPreceedFilter('CountryClassification', 'LocalityClassification'),
-        new MustNotPreceedFilter('CountryClassification', 'PostcodeClassification'),
-        new MustNotPreceedFilter('CountryClassification', 'StreetClassification'),
-        new MustNotPreceedFilter('CountryClassification', 'HouseNumberClassification'),
+        // Unused at the moment
         new MustNotFollowFilter('LocalityClassification', 'RegionClassification'),
-        new MustNotFollowFilter('LocalityClassification', 'CountryClassification'),
         new HouseNumberPositionPenalty(),
         new TokenDistanceFilter(),
         new SubsetFilter()

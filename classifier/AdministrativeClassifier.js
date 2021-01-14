@@ -1,5 +1,6 @@
 const PhraseClassifier = require('./super/PhraseClassifier')
 const AdministrativeClassification = require('../classification/AdministrativeClassification')
+const CountryClassification = require('../classification/CountryClassification')
 const libpostal = require('../resources/libpostal/libpostal')
 
 class AdministrativeClassifier extends PhraseClassifier {
@@ -7,7 +8,12 @@ class AdministrativeClassifier extends PhraseClassifier {
     super()
 
     this.level = level
-    libpostal.load(this.index, ['vn'], 'level' + level + '_names.txt', { lowercase: true })
+    if (this.level === 0) {
+      this.index.vn = true
+      this.index['viet nam'] = true
+    } else {
+      libpostal.load(this.index, ['vn'], 'level' + level + '_names.txt', { lowercase: true })
+    }
   }
 
   setup () {
@@ -27,12 +33,16 @@ class AdministrativeClassifier extends PhraseClassifier {
       let firstChild = span.graph.findOne('child:first') || span
       let prev = firstChild.graph.findOne('prev')
 
-      // street must not be preceded by place
+      // administrative must not be preceded by place
       if (prev && prev.classifications.hasOwnProperty('PlaceClassification')) {
         return
       }
 
-      span.classify(new AdministrativeClassification(this.level, 1))
+      if (this.level === 0) {
+        span.classify(new CountryClassification(1))
+      } else {
+        span.classify(new AdministrativeClassification(this.level, 1))
+      }
     }
   }
 }

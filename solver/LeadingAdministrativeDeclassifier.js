@@ -7,12 +7,11 @@ const NETURAL_CLASSIFICATIONS = [
 ]
 
 const ADMIN_CLASSIFICATIONS = [
-  'LocalityClassification',
-  'RegionClassification',
+  'AdministrativeClassification',
   'CountryClassification'
 ]
 
-class LeadingAreaDeclassifier {
+class LeadingAdministrativeDeclassifier {
   solve (tokenizer) {
     tokenizer.solution.forEach(s => {
       // record the position of the last non-admin cursor position
@@ -40,4 +39,4 @@ class LeadingAreaDeclassifier {
   }
 }
 
-module.exports = LeadingAreaDeclassifier
+module.exports = LeadingAdministrativeDeclassifier
