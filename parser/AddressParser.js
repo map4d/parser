@@ -31,12 +31,12 @@ class AddressParser extends Parser {
         // phrase classifiers
         new PlaceClassifier(),
         new StreetClassifier(),
+        new StreetPrefixClassifier(),
         new AdministrativeClassifier(3),
         new AdministrativeClassifier(2),
         new AdministrativeClassifier(1),
         new AdministrativeClassifier(0),
         new HouseNumberClassifier(),
-        new StreetPrefixClassifier(),
 
         // word classifiers
         new PostcodeClassifier(),
