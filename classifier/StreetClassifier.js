@@ -1,5 +1,6 @@
 const PhraseClassifier = require('./super/PhraseClassifier')
 const StreetClassification = require('../classification/StreetClassification')
+const StreetComponentClassification = require('../classification/StreetComponentClassification')
 const libpostal = require('../resources/libpostal/libpostal')
 
 class StreetClassifier extends PhraseClassifier {
@@ -25,7 +26,7 @@ class StreetClassifier extends PhraseClassifier {
       span.classify(new StreetClassification(1))
 
       // classify child spans
-      span.graph.findAll('child').forEach(c => c.classify(new StreetClassification(1)))
+      span.graph.findAll('child').forEach(c => c.classify(new StreetComponentClassification(1)))
     }
   }
 }

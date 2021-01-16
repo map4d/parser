@@ -8,11 +8,11 @@ class HouseNumberClassifier extends PhraseClassifier {
     // skip spans which do not contain numbers
     if (!span.contains.numerals) { return }
 
-    // do not classify tokens if they already have a 'StreetClassification' or 'AdministrativeClassification'
+    // do not classify tokens if they already have a 'StreetComponentClassification' or 'AdministrativeClassification'
     // in viet nam, we have some street/ administrative which has the number in it eg: duong 29 thang 3, duong so 1, quan 1, phuong 12...
-    if (span.classifications.hasOwnProperty('StreetClassification') || span.classifications.hasOwnProperty('AdministrativeClassification') || (
+    if (span.classifications.hasOwnProperty('StreetComponentClassification') || span.classifications.hasOwnProperty('AdministrativeClassification') || (
       span.graph.length('child') > 0 &&
-          (span.graph.findOne('child').classifications.hasOwnProperty('StreetClassification') ||
+          (span.graph.findOne('child').classifications.hasOwnProperty('StreetComponentClassification') ||
               span.graph.findOne('child').classifications.hasOwnProperty('AdministrativeClassification'))
     )
     ) { return }
