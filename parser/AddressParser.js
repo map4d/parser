@@ -53,6 +53,7 @@ class AddressParser extends Parser {
           ['HouseNumberClassification', 'PostcodeClassification', 'CountryClassification']
         ]),
         new MustNotPreceedFilter('PostcodeClassification', 'HouseNumberClassification'),
+        new MustNotPreceedFilter('StreetClassification', 'HouseNumberClassification'),
         // Unused at the moment
         new MustNotFollowFilter('LocalityClassification', 'RegionClassification'),
         new HouseNumberPositionPenalty(),
