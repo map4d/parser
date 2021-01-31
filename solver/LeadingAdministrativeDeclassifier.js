@@ -31,8 +31,8 @@ class LeadingAdministrativeDeclassifier {
           return false
         }
         let next = p.span.graph.findOne('child:last').graph.findOne('next')
-        if (isAdmin && next != null && 
-            !next.classifications.hasOwnProperty('AdministrativeClassification') && 
+        if (isAdmin && next != null &&
+            !next.classifications.hasOwnProperty('AdministrativeClassification') &&
             !next.classifications.hasOwnProperty('CountryClassification')) {
           return false
         }
