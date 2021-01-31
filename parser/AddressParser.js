@@ -15,6 +15,7 @@ const LeadingAdministrativeDeclassifier = require('../solver/LeadingAdministrati
 const InvalidSolutionFilter = require('../solver/InvalidSolutionFilter')
 const TokenDistanceFilter = require('../solver/TokenDistanceFilter')
 const MustNotPreceedFilter = require('../solver/MustNotPreceedFilter')
+const MustNotPreceedPlaceFilter = require('../solver/MustNotPreceedPlaceFilter')
 const MustNotFollowFilter = require('../solver/MustNotFollowFilter')
 const SubsetFilter = require('../solver/SubsetFilter')
 const HouseNumberPositionPenalty = require('../solver/HouseNumberPositionPenalty')
@@ -40,7 +41,8 @@ class AddressParser extends Parser {
 
         // composite classifiers
         new CompositeClassifier(require('../classifier/scheme/housenumber')),
-        new CompositeClassifier(require('../classifier/scheme/street'))
+        new CompositeClassifier(require('../classifier/scheme/street')),
+        new CompositeClassifier(require('../classifier/scheme/venue'))
       ],
       // solvers
       [
@@ -54,6 +56,7 @@ class AddressParser extends Parser {
         ]),
         new MustNotPreceedFilter('PostcodeClassification', 'HouseNumberClassification'),
         new MustNotPreceedFilter('StreetClassification', 'HouseNumberClassification'),
+        new MustNotPreceedPlaceFilter(),
         // Unused at the moment
         new MustNotFollowFilter('LocalityClassification', 'RegionClassification'),
         new HouseNumberPositionPenalty(),
