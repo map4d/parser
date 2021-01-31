@@ -41,8 +41,7 @@ class AddressParser extends Parser {
 
         // composite classifiers
         new CompositeClassifier(require('../classifier/scheme/housenumber')),
-        new CompositeClassifier(require('../classifier/scheme/street')),
-        new CompositeClassifier(require('../classifier/scheme/venue'))
+        new CompositeClassifier(require('../classifier/scheme/street'))
       ],
       // solvers
       [
