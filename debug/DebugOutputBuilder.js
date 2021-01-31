@@ -162,6 +162,9 @@ class DebugOutputBuilder {
     // print all solutions
     tokenizer.solution.forEach((s) => {
       let score = chalk.yellow.bold('(' + s.score.toFixed(2) + ')')
+      if (isNaN(score)) {
+        return
+      }
       this.writeLine(
         score,
         ' ➜ ',
