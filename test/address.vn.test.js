@@ -1,7 +1,7 @@
 const testcase = (test, common) => {
   let assert = common.assert(test)
 
-  assert('viet nam', [{ country: 'viet nam' }])
+  assert('viet nam', [{ level0: 'viet nam' }])
 
   assert('da nang', [{ level1: 'da nang' }])
 
@@ -37,12 +37,14 @@ const testcase = (test, common) => {
     { level3: 'phuong hoa thuan dong' },
     { level2: 'hai chau' },
     { level1: 'da nang' },
-    { country: 'vn' }
+    { level0: 'vn' }
   ])
 
   assert('cong vien 29 thang 3', undefined)
 
   assert('truong hoang dieu', undefined)
+
+  assert('truong trung nu vuong', undefined)
 
   assert('truong thpt cam le, hoa tho dong, cam le, da nang', [
     { level3: 'hoa tho dong' },
@@ -63,6 +65,14 @@ const testcase = (test, common) => {
     { street: 'ton duc thang' },
     { level2: 'tp Vung Tau' },
     { level1: 'Ba Ria Vung Tau' }
+  ])
+
+  assert('truong trung nu vuong da nang', [
+    { level1: 'da nang' }
+  ])
+
+  assert('108 truong trung nu vuong da nang', [
+    { level1: 'da nang' }
   ])
 }
 

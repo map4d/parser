@@ -7,8 +7,7 @@ const NETURAL_CLASSIFICATIONS = [
 ]
 
 const ADMIN_CLASSIFICATIONS = [
-  'AdministrativeClassification',
-  'CountryClassification'
+  'AdministrativeClassification'
 ]
 
 class LeadingAdministrativeDeclassifier {
@@ -30,12 +29,11 @@ class LeadingAdministrativeDeclassifier {
         if (isAdmin && p.span.end < lastNonAdminCursorPosition) {
           return false
         }
-        // let next = p.span.graph.findOne('child:last').graph.findOne('next')
-        // if (isAdmin && next != null &&
-        //     !next.classifications.hasOwnProperty('AdministrativeClassification') &&
-        //     !next.classifications.hasOwnProperty('CountryClassification')) {
-        //   return false
-        // }
+        let next = p.span.graph.findOne('child:last').graph.findOne('next')
+        if (isAdmin && next != null &&
+            !next.classifications.hasOwnProperty('AdministrativeComponentClassification')) {
+          return false
+        }
 
         return true
       })

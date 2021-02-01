@@ -1,13 +1,13 @@
-const Classification = require('./CountryClassification')
+const Classification = require('./AdministrativeComponentClassification')
 
 module.exports.tests = {}
 
 module.exports.tests.constructor = (test) => {
   test('constructor', (t) => {
     let c = new Classification()
-    t.true(c.public)
-    t.equals(c.label, 'country')
-    t.equals(c.confidence, 0.9)
+    t.false(c.public)
+    t.equals(c.label, 'administrative-component')
+    t.equals(c.confidence, 1.0)
     t.deepEqual(c.meta, {})
     t.end()
   })
@@ -15,7 +15,7 @@ module.exports.tests.constructor = (test) => {
 
 module.exports.all = (tape, common) => {
   function test (name, testFunction) {
-    return tape(`CountryClassification: ${name}`, testFunction)
+    return tape(`AdministrativeComponentClassification: ${name}`, testFunction)
   }
 
   for (var testCase in module.exports.tests) {

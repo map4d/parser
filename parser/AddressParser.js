@@ -49,9 +49,7 @@ class AddressParser extends Parser {
         new LeadingAdministrativeDeclassifier(),
         new SubsetFilter(),
         new InvalidSolutionFilter([
-          ['HouseNumberClassification', 'CountryClassification'],
-          ['HouseNumberClassification', 'PostcodeClassification'],
-          ['HouseNumberClassification', 'PostcodeClassification', 'CountryClassification']
+          ['HouseNumberClassification', 'PostcodeClassification']
         ]),
         new MustNotPreceedFilter('PostcodeClassification', 'HouseNumberClassification'),
         new MustNotPreceedFilter('StreetClassification', 'HouseNumberClassification'),

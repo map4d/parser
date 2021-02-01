@@ -1,6 +1,6 @@
 const PhraseClassifier = require('./super/PhraseClassifier')
 const AdministrativeClassification = require('../classification/AdministrativeClassification')
-const CountryClassification = require('../classification/CountryClassification')
+const AdministrativeComponentClassification = require('../classification/AdministrativeComponentClassification')
 const libpostal = require('../resources/libpostal/libpostal')
 
 const administratives = {
@@ -44,11 +44,11 @@ class AdministrativeClassifier extends PhraseClassifier {
     Object.keys(administratives).forEach(level => {
       // use an inverted index for full token matching as it's O(1)
       if (this.index[level].hasOwnProperty(span.norm)) {
-        if (administratives[level].level === 0) {
-          span.classify(new CountryClassification(1))
-        } else {
-          span.classify(new AdministrativeClassification(administratives[level].level, 1))
-        }
+        // classify phrase
+        span.classify(new AdministrativeClassification(administratives[level].level, 1))
+
+        // classify child spans
+        span.graph.findAll('child').forEach(c => c.classify(new AdministrativeComponentClassification(1.0)))
       }
     })
   }
