@@ -21,4 +21,3 @@ class MustNotPreceedPlaceFilter {
 }
 
 module.exports = MustNotPreceedPlaceFilter
-
