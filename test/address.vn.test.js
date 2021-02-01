@@ -42,7 +42,7 @@ const testcase = (test, common) => {
 
   assert('cong vien 29 thang 3', undefined)
 
-  assert('truong hoang dieu', [])
+  assert('truong hoang dieu', undefined)
 
   assert('truong thpt cam le, hoa tho dong, cam le, da nang', [
     { level3: 'hoa tho dong' },

@@ -17,6 +17,9 @@ class MustNotPreceedPlaceFilter {
         return true
       })
     })
+    tokenizer.solution = tokenizer.solution.filter(s => {
+      return s.pair.length !== 0
+    })
   }
 }
 
