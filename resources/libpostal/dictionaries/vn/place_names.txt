@@ -2,12 +2,16 @@ cao dang
 dai hoc|dh
 truong
 truong hoc
+truong tieu hoc
+truong trung hoc co so|truong thcs
+truong trung hoc pho thong| truong thpt
 cau lac bo|clb|club
 cong ty co phan
 cong ty|cty
 cong vien
 khu cong nghiep|kcn
 quan nhau
+quan ca phe|quan cf
 khu du lich|kdl
 nha hang
 khach san|ks
@@ -20,8 +24,30 @@ san van dong
 vien bao tang
 vuon quoc gia
 trung tam
+trung tam thuong mai|tttm
+sieu thi
 nha nghi
 karaoke
 benh vien
 nha may
 cua hang
+chua
+bat dong san|bds
+ngan hang
+phong giao dich
+khu dan cu|kdc
+doanh nghiep tu nhan|dntn
+doanh nghiep nha nuoc|dnnn
+tap hoa|tiem tap hoa
+chung cu|khu chung cu
+nha thuoc
+quan an
+quan giai khat
+massage
+cua hang|shop
+truong mam non
+cua hang tien loi
+tiem sua xe
+shop quan ao
+shop my pham|shop mi pham
+cho
