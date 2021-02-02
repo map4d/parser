@@ -51,3 +51,6 @@ tiem sua xe
 shop quan ao
 shop my pham|shop mi pham
 cho
+ho boi
+rap chieu phim|rap phim
+cay xang

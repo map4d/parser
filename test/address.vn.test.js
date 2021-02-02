@@ -67,12 +67,22 @@ const testcase = (test, common) => {
     { level1: 'Ba Ria Vung Tau' }
   ])
 
-  assert('truong trung nu vuong da nang', [
-    { level1: 'da nang' }
+  assert('truong trung nu vuong da nang', [{ level1: 'da nang' }])
+
+  assert('108 truong trung nu vuong da nang', [{ level1: 'da nang' }])
+
+  assert('Dai hoc Duy Tan Da Nang', [{ level1: 'Da Nang' }])
+
+  assert('tt. Ai Nghia, Dai Loc, Quang Nam', [
+    { level3: 'Ai Nghia' },
+    { level2: 'Dai Loc' },
+    { level1: 'Quang Nam' }
   ])
 
-  assert('108 truong trung nu vuong da nang', [
-    { level1: 'da nang' }
+  assert('Kiet 24/3 Duong Le Duan Da Nang', [
+    { housenumber: '24/3' },
+    { street: 'Duong Le Duan' },
+    { level1: 'Da Nang' }
   ])
 }
 
