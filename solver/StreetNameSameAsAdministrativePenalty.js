@@ -9,7 +9,9 @@ class StreetNameSameAsAdministrativePenalty extends BaseSolver {
       // Do nothing if there is no street
       if (!street) { return }
 
-      if (street.span.classifications.hasOwnProperty('AdministrativeClassification')) {
+      if (street.span.classifications.hasOwnProperty('AdministrativeClassification') &&
+          (street.span.classifications.AdministrativeClassification.label === 'level0' || street.span.classifications.AdministrativeClassification.label === 'level1')
+      ) {
         s.penalty += 0.2
       }
     })
