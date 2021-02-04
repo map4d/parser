@@ -108,6 +108,21 @@ const testcase = (test, common) => {
       { level1: 'Ho Chi Minh' }
     ]
   )
+
+  assert(
+    '007 -  Lo F, chung cu   Xom Cai, 5, Ho Chi Minh',
+    [
+      { level1: 'Ho Chi Minh' }
+    ]
+  )
+
+  assert(
+    'truong trung nu vuong da nang hai phong',
+    [
+      { street: 'da nang' },
+      { level1: 'hai phong' }
+    ]
+  )
 }
 
 module.exports.all = (tape, common) => {
