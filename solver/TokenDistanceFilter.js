@@ -21,7 +21,8 @@ class TokenDistanceFilter {
       // ensure tokens are less than n distance apart
       if (housenumber.length > 0 && street.length > 0) {
         if (street[0].span.distance(housenumber[0].span) > MAX_DISTANCE) {
-          return false
+          // Remove house number
+          s.pair = s.pair.filter(p => p.classification.constructor.name !== 'HouseNumberClassification')
         }
       }
 

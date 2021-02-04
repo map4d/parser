@@ -9,7 +9,9 @@ class MustNotPreceedPlaceFilter {
       s.pair = s.pair.filter(p => {
         let isAdmin = CLASSIFICATIONS.some(c => p.classification.constructor.name === c)
         let prev = p.span.graph.findOne('child:first').graph.findOne('prev')
-        if (isAdmin && prev != null && prev.classifications.hasOwnProperty('PlaceClassification')) {
+        if (isAdmin && prev != null &&
+            prev.classifications.hasOwnProperty('PlaceClassification') &&
+            !prev.classifications.hasOwnProperty('StreetComponentClassification')) {
           return false
         }
 
