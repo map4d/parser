@@ -19,7 +19,7 @@ const MustNotPreceedFilter = require('../solver/MustNotPreceedFilter')
 const MustNotPreceedPlaceFilter = require('../solver/MustNotPreceedPlaceFilter')
 const MustNotFollowFilter = require('../solver/MustNotFollowFilter')
 const SubsetFilter = require('../solver/SubsetFilter')
-const HouseNumberPositionPenalty = require('../solver/HouseNumberPositionPenalty')
+const HouseNumberPositionFilter = require('../solver/HouseNumberPositionFilter')
 const StreetNameSameAsAdministrativePenalty = require('../solver/StreetNameSameAsAdministrativePenalty')
 
 class AddressParser extends Parser {
@@ -55,11 +55,10 @@ class AddressParser extends Parser {
           ['HouseNumberClassification', 'PostcodeClassification']
         ]),
         new MustNotPreceedFilter('PostcodeClassification', 'HouseNumberClassification'),
-        new MustNotPreceedFilter('StreetClassification', 'HouseNumberClassification'),
         new MustNotPreceedPlaceFilter(),
         // Unused at the moment
         new MustNotFollowFilter('LocalityClassification', 'RegionClassification'),
-        new HouseNumberPositionPenalty(),
+        new HouseNumberPositionFilter(),
         new StreetNameSameAsAdministrativePenalty(),
         new TokenDistanceFilter(),
         new SubsetFilter()
