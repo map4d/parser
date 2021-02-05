@@ -12,6 +12,7 @@ const CompositeClassifier = require('../classifier/CompositeClassifier')
 // const AdjacencyClassifier = require('../classifier/AdjacencyClassifier')
 const ExclusiveCartesianSolver = require('../solver/ExclusiveCartesianSolver')
 const LeadingAdministrativeDeclassifier = require('../solver/LeadingAdministrativeDeclassifier')
+const AdministrativeFilter = require('../solver/AdministrativeFilter')
 const InvalidSolutionFilter = require('../solver/InvalidSolutionFilter')
 const TokenDistanceFilter = require('../solver/TokenDistanceFilter')
 const MustNotPreceedFilter = require('../solver/MustNotPreceedFilter')
@@ -48,6 +49,7 @@ class AddressParser extends Parser {
       [
         new ExclusiveCartesianSolver(),
         new LeadingAdministrativeDeclassifier(),
+        new AdministrativeFilter(),
         new SubsetFilter(),
         new InvalidSolutionFilter([
           ['HouseNumberClassification', 'PostcodeClassification']
