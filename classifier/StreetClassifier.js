@@ -15,10 +15,10 @@ class StreetClassifier extends PhraseClassifier {
     // use an inverted index for full token matching as it's O(1)
     if (this.index.hasOwnProperty(span.norm)) {
       // classify phrase
-      span.classify(new StreetClassification(1))
+      span.classify(new StreetClassification(0.8))
 
       // classify child spans
-      span.graph.findAll('child').forEach(c => c.classify(new StreetComponentClassification(1)))
+      span.graph.findAll('child').forEach(c => c.classify(new StreetComponentClassification()))
     }
   }
 }

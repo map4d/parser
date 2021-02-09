@@ -1,8 +1,8 @@
 const Classification = require('./Classification')
 
 class StreetComponentClassification extends Classification {
-  constructor (confidence, meta) {
-    super(confidence, meta)
+  constructor (meta) {
+    super(1.0, meta)
     this.public = false
     this.label = 'street-component'
   }
