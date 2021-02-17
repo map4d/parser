@@ -23,7 +23,7 @@ class HouseNumberClassifier extends PhraseClassifier {
         /^(\d{1,5})[a-zA-Z]?\/(\d{1,5})$/.test(span.body) || // 1/135 or 1b/135 Style
         /^(\d{1,5})(\/(\d{1,5}))*$/.test(span.body) || // 1/2/3/4/5  Style
         /^([KkHh]){1}(\d{1,5})(\/(\d{1,5}))*$/.test(span.body) || // k448 or h18/10 Style
-        /^(ngo|ngach|so)\s(\d{1,5})$/.test(span.body) // ngo 1 or so 1 Style
+        /^(ngo|ngach|so|kiet|hem)\s(\d{1,5})$/.test(span.body) // ngo 1 or so 1 Style
     ) {
       let confidence = 1
 
