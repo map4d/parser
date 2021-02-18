@@ -6,19 +6,23 @@ const libpostal = require('../resources/libpostal/libpostal')
 const administratives = {
   'level0': {
     file: 'level0_names.txt',
-    level: 0
+    level: 0,
+    confidence: 1.0
   },
   'level1': {
     file: 'level1_names.txt',
-    level: 1
+    level: 1,
+    confidence: 1.0
   },
   'level2': {
     file: 'level2_names.txt',
-    level: 2
+    level: 2,
+    confidence: 0.8
   },
   'level3': {
     file: 'level3_names.txt',
-    level: 3
+    level: 3,
+    confidence: 0.8
   }
 }
 
@@ -45,10 +49,10 @@ class AdministrativeClassifier extends PhraseClassifier {
       // use an inverted index for full token matching as it's O(1)
       if (this.index[level].hasOwnProperty(span.norm)) {
         // classify phrase
-        span.classify(new AdministrativeClassification(administratives[level].level, 1))
+        span.classify(new AdministrativeClassification(administratives[level].level, administratives[level].confidence))
 
         // classify child spans
-        span.graph.findAll('child').forEach(c => c.classify(new AdministrativeComponentClassification(1.0)))
+        span.graph.findAll('child').forEach(c => c.classify(new AdministrativeComponentClassification()))
       }
     })
   }
