@@ -1,6 +1,7 @@
 const BaseSolver = require('./super/BaseSolver')
 const StreetClassification = require('../classification/StreetClassification')
 const AdministrativeClassification = require('../classification/AdministrativeClassification')
+const HouseNumberClassification = require('../classification/HouseNumberClassification')
 
 class StreetBooster extends BaseSolver {
   solve (tokenizer) {
@@ -11,13 +12,10 @@ class StreetBooster extends BaseSolver {
       if (!street) { return }
 
       const next = street.span.graph.findOne('child:last').graph.findOne('next')
+      const prev = street.span.graph.findOne('child:first').graph.findOne('prev')
 
-      // Do nothing if street in the last position
-      if (!next) { return }
-
-      const nextAdministrativeOfStreet = s.pair.find(p => p.classification.constructor === AdministrativeClassification && p.span.start === next.start)
-
-      if (nextAdministrativeOfStreet) {
+      if ((next && s.pair.find(p => p.classification.constructor === AdministrativeClassification && p.span.start === next.start)) ||
+          (prev && s.pair.find(p => p.classification.constructor === HouseNumberClassification && p.span.start === prev.start))) {
         street.classification.confidence = 1.0
       }
     })
