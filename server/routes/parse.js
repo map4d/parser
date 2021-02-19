@@ -20,22 +20,45 @@ module.exports = function (req, res) {
       start: t.span.start,
       end: t.span.end
     },
-    solutions: t.solution.map(jsonify),
+    solutions: t.solution.length === 0 ? [] : [jsonify(text, t.solution[0])],
     debug: req.query.debug && new DebugOutputBuilder().parse(text).toString()
   })
 }
 
-function jsonify (solution) {
+function jsonify (text, solution) {
+  let endQueryIndex = solution.pair[0].span.start
+  if (endQueryIndex <= 1) {
+    return {
+      score: solution.score,
+      classifications: solution.pair.map(c => {
+        return {
+          label: c.classification.label,
+          value: c.span.body,
+          // confidence: c.classification.confidence,
+          start: c.span.start,
+          end: c.span.end
+        }
+      })
+    }
+  }
+  let query = text.substring(0, endQueryIndex)
+  let classifications = solution.pair.map(c => {
+    return {
+      label: c.classification.label,
+      value: c.span.body,
+      // confidence: c.classification.confidence,
+      start: c.span.start,
+      end: c.span.end
+    }
+  })
+  classifications.push({
+    label: 'query',
+    value: query,
+    start: 0,
+    end: endQueryIndex - 1
+  })
   return {
     score: solution.score,
-    classifications: solution.pair.map(c => {
-      return {
-        label: c.classification.label,
-        value: c.span.body,
-        // confidence: c.classification.confidence,
-        start: c.span.start,
-        end: c.span.end
-      }
-    })
+    classifications: classifications
   }
 }
