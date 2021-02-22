@@ -13,6 +13,7 @@ const CompositeClassifier = require('../classifier/CompositeClassifier')
 const ExclusiveCartesianSolver = require('../solver/ExclusiveCartesianSolver')
 const LeadingAdministrativeDeclassifier = require('../solver/LeadingAdministrativeDeclassifier')
 const AdministrativeFilter = require('../solver/AdministrativeFilter')
+const AdministrativeUnitRemoval = require('../solver/AdministrativeUnitRemoval')
 const InvalidSolutionFilter = require('../solver/InvalidSolutionFilter')
 const TokenDistanceFilter = require('../solver/TokenDistanceFilter')
 const MustNotPreceedFilter = require('../solver/MustNotPreceedFilter')
@@ -63,7 +64,8 @@ class AddressParser extends Parser {
         new StreetNameSameAsAdministrativePenalty(),
         new StreetBooster(),
         new TokenDistanceFilter(),
-        new SubsetFilter()
+        new SubsetFilter(),
+        new AdministrativeUnitRemoval()
       ],
       options
     )

@@ -49,7 +49,13 @@ class AdministrativeClassifier extends PhraseClassifier {
       // use an inverted index for full token matching as it's O(1)
       if (this.index[level].hasOwnProperty(span.norm)) {
         // classify phrase
-        span.classify(new AdministrativeClassification(administratives[level].level, administratives[level].confidence))
+        span.classify(
+          new AdministrativeClassification(
+            administratives[level].level,
+            administratives[level].confidence,
+            { original: this.index[level][span.norm].original }
+          )
+        )
 
         // classify child spans
         span.graph.findAll('child').forEach(c => c.classify(new AdministrativeComponentClassification()))

@@ -14,7 +14,8 @@ function load (index, langs, filename, options) {
     if (!fs.existsSync(filepath)) { return }
     let dict = fs.readFileSync(filepath, 'utf8')
     dict.split('\n').forEach(row => {
-      row.split('|').forEach(add.bind(null, lang))
+      let indices = row.split('|')
+      indices.forEach(add.bind(null, lang, indices[0]))
     }, this)
   }, this)
 }
@@ -34,11 +35,12 @@ function _normalize (cell, options) {
 }
 
 function _add (index, options) {
-  return (lang, cell) => {
+  return (lang, original, cell) => {
     const value = _normalize(cell, options)
     if (value && value.length) {
       index[value] = index[value] || { langs: {} }
       index[value].langs[lang] = true
+      index[value].original = original
     }
   }
 }
