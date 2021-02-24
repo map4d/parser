@@ -1,5 +1,5 @@
-cao dang
-dai hoc|dh
+cao dang|truong cao dang
+dai hoc|dh|truong dh|truong dai hoc
 truong
 truong hoc
 truong tieu hoc
@@ -24,6 +24,7 @@ san van dong
 vien bao tang
 vuon quoc gia
 trung tam
+trung tam dien may
 trung tam thuong mai|tttm
 sieu thi
 nha nghi

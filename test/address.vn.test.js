@@ -16,6 +16,7 @@ const testcase = (test, common) => {
   assert('trung nu vuong', [{ street: 'trung nu vuong' }])
 
   assert('quan bun co tam k448 h20/2 hoang dieu da nang', [
+    { venue: 'quan bun co tam' },
     { housenumber: 'k448 h20/2' },
     { street: 'hoang dieu' },
     { level1: 'da nang' }
@@ -40,13 +41,20 @@ const testcase = (test, common) => {
     { level0: 'viet nam' }
   ])
 
-  assert('cong vien 29 thang 3', undefined)
+  assert('cong vien 29 thang 3', [
+    { venue: 'cong vien 29 thang 3' }
+  ])
 
-  assert('truong hoang dieu', undefined)
+  assert('truong hoang dieu', [
+    { venue: 'truong hoang dieu' }
+  ])
 
-  assert('truong trung nu vuong', undefined)
+  assert('truong trung nu vuong', [
+    { venue: 'truong trung nu vuong' }
+  ])
 
   assert('truong thpt cam le, cam le, da nang', [
+    { venue: 'truong thpt cam le' },
     { level2: 'cam le' },
     { level1: 'da nang' }
   ])
@@ -54,6 +62,7 @@ const testcase = (test, common) => {
   assert('1  duong so 5 khu dan cu dai phuc binh hung binh chanh ho chi minh', [
     { housenumber: '1' },
     { street: 'duong so 5' },
+    { venue: 'khu dan cu dai phuc' },
     { level3: 'binh hung' },
     { level2: 'binh chanh' },
     { level1: 'ho chi minh' }
@@ -66,11 +75,20 @@ const testcase = (test, common) => {
     { level1: 'ba ria vung tau' }
   ])
 
-  assert('truong trung nu vuong da nang', [{ level1: 'da nang' }])
+  assert('truong trung nu vuong da nang', [
+    { venue: 'truong trung nu vuong' },
+    { level1: 'da nang' }
+  ])
 
-  assert('108 truong trung nu vuong da nang', [{ level1: 'da nang' }])
+  assert('108 truong trung nu vuong da nang', [
+    { venue: 'truong trung nu vuong' },
+    { level1: 'da nang' }
+  ])
 
-  assert('dai hoc duy tan da nang', [{ level1: 'da nang' }])
+  assert('dai hoc duy tan da nang', [
+    { venue: 'dai hoc duy tan' },
+    { level1: 'da nang' }
+  ])
 
   assert('tt. ai nghia, dai loc, quang nam', [
     { level3: 'ai nghia' },
@@ -92,6 +110,7 @@ const testcase = (test, common) => {
   assert(
     '4429a  nha hang dai hy, nguyen cuu phu, tan tao a, binh tan, ho chi minh',
     [
+      { venue: 'nha hang dai' },
       { street: 'nguyen cuu phu' },
       { level3: 'tan tao a' },
       { level2: 'binh tan' },
@@ -102,6 +121,7 @@ const testcase = (test, common) => {
   assert(
     '><  chung cu conic, nguyen van linh  huong ve quan 7, binh chanh, ho chi minh',
     [
+      { venue: 'chung cu conic' },
       { street: 'nguyen van linh' },
       { level2: 'binh chanh' },
       { level1: 'ho chi minh' }
@@ -109,8 +129,9 @@ const testcase = (test, common) => {
   )
 
   assert(
-    '007 -  lo f, chung cu   xom cai, 5, ho chi minh',
+    '007 -  lo f, chung cu xom cai, 5, ho chi minh',
     [
+      { venue: 'chung cu xom' },
       { level1: 'ho chi minh' }
     ]
   )
@@ -118,6 +139,7 @@ const testcase = (test, common) => {
   assert(
     'truong trung nu vuong da nang hai phong',
     [
+      { venue: 'truong trung nu vuong' },
       { street: 'da nang' },
       { level1: 'hai phong' }
     ]
@@ -126,6 +148,7 @@ const testcase = (test, common) => {
   assert(
     'truong dh hong bang, dien bien phu, 15, binh thanh, ho chi minh',
     [
+      { venue: 'truong dh hong bang' },
       { street: 'dien bien phu' },
       { level2: 'binh thanh' },
       { level1: 'ho chi minh' }
@@ -135,6 +158,7 @@ const testcase = (test, common) => {
   assert(
     'trung tam thuong mai nguyen kim hai phong da nang',
     [
+      { venue: 'trung tam thuong mai nguyen kim' },
       { street: 'hai phong' },
       { level1: 'da nang' }
     ]
@@ -143,6 +167,7 @@ const testcase = (test, common) => {
   assert(
     'trung tam dien may nguyen kim hai phong da nang',
     [
+      { venue: 'trung tam dien may nguyen kim' },
       { street: 'hai phong' },
       { level1: 'da nang' }
     ]
@@ -152,6 +177,7 @@ const testcase = (test, common) => {
     'duong nguyen thi minh khai, trung tam anh ngu hoang dieu, da nang',
     [
       { street: 'duong nguyen thi minh khai' },
+      { venue: 'trung tam anh ngu hoang dieu' },
       { level1: 'da nang' }
     ]
   )
@@ -168,6 +194,7 @@ const testcase = (test, common) => {
   assert(
     'khu cong nghiep an don, son tra, da nang, 550000 duong so 1, phuong an hai bac, quan son tra, thanh pho da nang, viet nam',
     [
+      { venue: 'khu cong nghiep an don' },
       { postcode: '550000' },
       { street: 'duong so 1' },
       { level3: 'an hai bac' },
@@ -208,6 +235,7 @@ const testcase = (test, common) => {
   assert(
     '104---chung cu botanica, pho quang, tan binh, ho chi minh',
     [
+      { venue: 'chung cu botanica' },
       { street: 'pho quang' },
       { level2: 'tan binh' },
       { level1: 'ho chi minh' }
@@ -217,6 +245,7 @@ const testcase = (test, common) => {
   assert(
     '118  -  chung cu tan huong, tan huong, quan tan phu, thanh pho ho chi minh',
     [
+      { venue: 'chung cu tan huong' },
       { street: 'tan huong' },
       { level2: 'tan phu' },
       { level1: 'ho chi minh' }

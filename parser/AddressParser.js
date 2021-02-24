@@ -44,6 +44,7 @@ class AddressParser extends Parser {
         new PostcodeClassifier(),
 
         // composite classifiers
+        new CompositeClassifier(require('../classifier/scheme/venue')),
         new CompositeClassifier(require('../classifier/scheme/housenumber')),
         new CompositeClassifier(require('../classifier/scheme/street'))
       ],
