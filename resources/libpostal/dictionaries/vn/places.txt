@@ -10,6 +10,7 @@ cong ty co phan
 cong ty|cty
 cong vien
 khu cong nghiep|kcn
+quan
 quan nhau
 quan ca phe|quan cf
 khu du lich|kdl
@@ -55,5 +56,8 @@ ho boi
 rap chieu phim|rap phim
 cay xang
 quan bun
+quan pho
 trung tam anh ngu
 trung tam dien may
+trung tam giao duc quoc phong
+ho boi
