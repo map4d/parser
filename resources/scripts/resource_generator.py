@@ -46,38 +46,50 @@ def generate_street_names():
     
 def generate_level1_names():
     print('Generating level1_names.txt...')
-    with open('dvhcvn.json') as f:
+    with open('dvhcvn.json', encoding="utf8") as f:
         data = json.load(f)['data']
 
     level1_names = []
     for level1_data in data:
         name = normalize(level1_data['name'])
         level1_type = ''
+        type_viet = ''
+        name_viet = ''
 
         if name.startswith('tinh '):
             level1_type = 'tinh'
             name = name[len('tinh '):]
+            type_viet = 'tỉnh'
+            name_viet = level1_data['name'][len('tinh'):].lower().strip()
         elif name.startswith('thanh pho '):
             level1_type = 'thanh pho'
             name = name[len('thanh pho '):]
+            type_viet = 'thành phố'
+            name_viet = level1_data['name'][len('thanh pho'):].lower().strip()
 
         if name == 'ba ria - vung tau':
-            name = 'ba ria vung tau|ba ria|tinh ba ria vung tau|tinh ba ria'
+            name = 'ba ria vung tau|ba ria|tinh ba ria vung tau|tinh ba ria|bà rịa vũng tàu|bà rịa|tỉnh bà rịa vũng tàu|tỉnh bà rịa'
         elif name == 'ho chi minh':
-            name = 'ho chi minh|tp ho chi minh|tp. ho chi minh|thanh pho ho chi minh|hcm|tp hcm|tp. hcm|thanh pho hcm'
+            name = 'ho chi minh|tp ho chi minh|tp. ho chi minh|thanh pho ho chi minh|hcm|tp hcm|tp. hcm|thanh pho hcm|hồ chí minh|tp. hồ chí minh|thành phố hồ chí minh|thành phố hcm'
         elif name == 'ha noi':
-            name = 'ha noi|tp ha noi|tp. ha noi|thanh pho ha noi|hn|tp hn|tp. hn|thanh pho hn'
+            name = 'ha noi|tp ha noi|tp. ha noi|thanh pho ha noi|hn|tp hn|tp. hn|thanh pho hn|thu do ha noi|hà nội|tp. hà nội|thành phố hà nội|thành phố hn|thủ đô hà nội'
         else:
-            if level1_type == 'thanh pho':
-                name = name + '|thanh pho ' + name + '|tp ' + name + '|tp. ' + name
+            if name == name_viet:
+                if level1_type == 'thanh pho':
+                    name = name + '|thanh pho ' + name + '|tp ' + name + '|tp. ' + name + '|thành phố ' + name_viet
+                else:
+                    name = name + '|' + level1_type + ' ' + name + '|' + type_viet + ' ' + name_viet
             else:
-                name = name + '|' + level1_type + ' ' + name
+                if level1_type == 'thanh pho':
+                    name = name + '|thanh pho ' + name + '|tp ' + name + '|tp. ' + name + '|' + name_viet + '|thành phố ' + name_viet + '|tp ' + name_viet + '|tp. ' + name_viet
+                else:
+                    name = name + '|' + level1_type + ' ' + name + '|' + name_viet + '|' + type_viet + ' ' + name_viet
 
         level1_names.append(name)
 
     level1_names.sort()
 
-    with open('level1_names.txt', 'w') as level1_names_file:
+    with open('level1_names.txt', 'w', encoding="utf8") as level1_names_file:
         for level1_name in level1_names:
             level1_names_file.write(level1_name)
             level1_names_file.write('\n')
@@ -87,7 +99,7 @@ def generate_level1_names():
 
 def generate_level2_names():
     print('Generating level2_names.txt...')
-    with open('dvhcvn.json') as f:
+    with open('dvhcvn.json', encoding="utf8") as f:
         data = json.load(f)['data']
 
     level2_names = []
@@ -96,6 +108,8 @@ def generate_level2_names():
         for level2_data in level2_datas:
             name = normalize(level2_data['name'])
             level2_type = normalize(level2_data['type'])
+            name_viet = level2_data['name'][len(level2_data['type']):].strip().lower()
+            type_viet = level2_data['type'].lower();
 
             if name.startswith(level2_type):
                 name = name[len(level2_type) + 1:]
@@ -108,23 +122,35 @@ def generate_level2_names():
             if name == 'phan rang-thap cham':
                 name = 'phan rang thap cham|thanh pho phan rang thap cham|tp phan rang thap cham|tp. phan rang thap cham|phan rang|thanh pho phan rang|tp phan rang|tp.phan rang'
             else:
-                if level2_type == 'thanh pho':
-                    name = name + '|thanh pho ' + name + '|tp ' + name + '|tp. ' + name
-                elif name.isnumeric():
-                    name = name.lstrip('0')
-                    name = level2_type + ' ' + name
-                elif ' ' in name:
-                    name = name + '|' + level2_type + ' ' + name
+                if name_viet == name:
+                    if level2_type == 'thanh pho':
+                        name = name + '|thanh pho ' + name + '|tp ' + name + '|tp. ' + name + '|thành phố ' + name_viet
+                    elif name.isnumeric():
+                        name = name.lstrip('0')
+                        name = level2_type + ' ' + name + '|' + level2_data['type'].lower() + ' ' + name
+                    elif ' ' in name:
+                        name = name + '|' + level2_type + ' ' + name + '|' + type_viet + ' ' + name_viet
+                    else:
+                        # one word only
+                        name = level2_type + ' ' + name + '|' + type_viet + ' ' + name_viet
                 else:
-                    # one word only
-                    name = level2_type + ' ' + name
+                    if level2_type == 'thanh pho':
+                        name = name + '|thanh pho ' + name + '|tp ' + name + '|tp. ' + name + '|' + name_viet + '|thành phố ' + name_viet + '|tp ' + name_viet + '|tp. ' + name_viet
+                    elif name.isnumeric():
+                        name = name.lstrip('0')
+                        name = level2_type + ' ' + name + '|' + level2_data['type'].lower() + ' ' + name
+                    elif ' ' in name:
+                        name = name + '|' + level2_type + ' ' + name + '|' + name_viet + '|' + type_viet + ' ' + name_viet
+                    else:
+                        # one word only
+                        name = level2_type + ' ' + name + '|' + type_viet + ' ' + name_viet
 
             level2_names.append(name)
 
     level2_names = list(set(level2_names))
     level2_names.sort()
 
-    with open('level2_names.txt', 'w') as level2_names_file:
+    with open('level2_names.txt', 'w', encoding="utf8") as level2_names_file:
         for level2_name in level2_names:
             level2_names_file.write(level2_name)
             level2_names_file.write('\n')
@@ -134,7 +160,7 @@ def generate_level2_names():
 
 def generate_level3_names():
     print('Generating level3_names.txt...')
-    with open('dvhcvn.json') as f:
+    with open('dvhcvn.json', encoding="utf8") as f:
         data = json.load(f)['data']
 
     level3_names = []
@@ -145,40 +171,46 @@ def generate_level3_names():
             for level3_data in level3_datas:
                 name = normalize(level3_data['name'])
                 level3_type = normalize(level3_data['type'])
+                type_viet = level3_data['type'].lower();
+                name_viet = level3_data['name'][len(type_viet):].lstrip().lower()
 
                 if name.startswith(level3_type):
                     name = name[len(level3_type) + 1:]
 
                 if name == 'b\' la':
-                    name = 'b\'la|bla'
+                    name = 'xa b\'la|bla|b\'lá|xã b\'lá'
                 elif name == 'da k\' nang':
-                    name = 'da k\'nang|da knang'
+                    name = 'da k\'nang|da knang|xa da k\'nang|da knang|đạ k\'nàng|đạ knàng|xã đạ k\'nàng|xã đạ knàng'
                 elif name == 'da m\' rong':
-                    name = 'da m\'rong|da mrong'
+                    name = 'da m\'rong|da mrong|đạ m\'rong|xã đạ m\'rong|đạ mrong|xã đạ mrong'
                 elif name == 'ea m\' doal':
-                    name = 'ea m\'doal|ea mdoal'
+                    name = 'ea m\'doal|ea mdoal|xã ea m\'doal|xã ea mdoal'
                 elif name == 'h\' neng':
-                    name = 'h\'neng|hneng'
+                    name = 'h\'neng|hneng|xã h\'neng|xã hneng'
                 elif name == 'k\' dang':
-                    name = 'k\'dang|kdang'
+                    name = 'k\'dang|kdang|xã k\'dang|xã kdang'
                 elif '\'' in name:
-                    name = name + '|' + name.replace('\'', '')
-
-                if name.isnumeric():
-                    name = name.lstrip('0')
-                    name = level3_type + ' ' + name
-                elif ' ' in name:
-                    name = name + '|' + level3_type + ' ' + name
+                    name = name + '|' + name.replace('\'', '') + '|xã ' + name_viet + '|xã ' + name_viet.replace('\'', '')
                 else:
-                    # one word only
-                    name = level3_type + ' ' + name
+                    if name.isnumeric():
+                        name = name.lstrip('0')
+                        name_viet = name
+                        name = level3_type + ' ' + name + '|' + type_viet + ' ' + name_viet
+                    elif ' ' in name:
+                        if name == name_viet:
+                            name = name + '|' + level3_type + ' ' + name + '|' + type_viet + ' ' + name_viet
+                        else:
+                            name = name + '|' + level3_type + ' ' + name + '|' + name_viet + '|' + type_viet + ' ' + name_viet
+                    else:
+                        # one word only
+                        name = level3_type + ' ' + name + '|' + type_viet + ' ' + name_viet
 
                 level3_names.append(name)
 
     level3_names = list(set(level3_names))
     level3_names.sort()
 
-    with open('level3_names.txt', 'w') as level3_names_file:
+    with open('level3_names.txt', 'w', encoding="utf8") as level3_names_file:
         for level3_name in level3_names:
             level3_names_file.write(level3_name)
             level3_names_file.write('\n')
