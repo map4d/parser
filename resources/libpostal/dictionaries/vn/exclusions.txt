@@ -1,0 +1,22 @@
+truong trung hoc
+cau lac bo
+khu cong nghiep
+trung tam dien may
+trung tam thuong mai
+trung tam anh ngu
+trung tam tin hoc
+trung tam gia su
+trung tam dich thuat
+trung tam giao duc quoc phong
+doanh nghiep tu nhan
+cua hang tien loi
+ho boi nuoc nong
+quan khu 2
+quan khu 4
+quan khu 5
+co so 1|cs 1
+co so 2|cs 2
+co so 3|cs 3
+co so 4|cs 4
+co so 5|cs 5
+    

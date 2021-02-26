@@ -25,17 +25,19 @@ class HouseNumberClassifier extends PhraseClassifier {
         /^([KkHh]){1}(\d{1,5})(\/(\d{1,5}))*$/.test(span.body) || // k448 or h18/10 Style
         /^(ngo|ngach|so|kiet|hem)\s(\d{1,5})$/.test(span.body) // ngo 1 or so 1 Style
     ) {
-      let confidence = 1
+      let child = span.graph.findOne('child:first')
+      let last = span.graph.findOne('child:last')
+      let isValid = !last.classifications.hasOwnProperty('ExclusionClassification')
 
-      // it's possible to have 5 digit housenumbers
-      // but they are fairly uncommon
-      if (/^\d{5}/.test(span.norm)) {
-        confidence = 0.2
-      } else if (/^\d{4}/.test(span.norm)) {
-        confidence = 0.9
+      while (isValid && child !== last && child) {
+        isValid = !child.classifications.hasOwnProperty('ExclusionClassification')
+
+        child = child.graph.findOne('next')
       }
 
-      span.classify(new HouseNumberClassification(confidence))
+      if (isValid) {
+        span.classify(new HouseNumberClassification(1.0))
+      }
     }
   }
 }

@@ -7,7 +7,6 @@ class PlaceClassifier extends PhraseClassifier {
     // load index tokens
     this.index = {}
     libpostal.load(this.index, ['vn'], 'place_names.txt')
-    libpostal.generatePlurals(this.index)
   }
 
   each (span) {

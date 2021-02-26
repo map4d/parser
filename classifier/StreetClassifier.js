@@ -14,11 +14,23 @@ class StreetClassifier extends PhraseClassifier {
 
     // use an inverted index for full token matching as it's O(1)
     if (this.index.hasOwnProperty(span.norm)) {
-      // classify phrase
-      span.classify(new StreetClassification(0.8))
+      let child = span.graph.findOne('child:first')
+      let last = span.graph.findOne('child:last')
+      let isValid = !last.classifications.hasOwnProperty('ExclusionClassification')
 
-      // classify child spans
-      span.graph.findAll('child').forEach(c => c.classify(new StreetComponentClassification()))
+      while (isValid && child !== last && child) {
+        isValid = !child.classifications.hasOwnProperty('ExclusionClassification')
+
+        child = child.graph.findOne('next')
+      }
+
+      if (isValid) {
+        // classify phrase
+        span.classify(new StreetClassification(0.8))
+
+        // classify child spans
+        span.graph.findAll('child').forEach(c => c.classify(new StreetComponentClassification()))
+      }
     }
   }
 }
