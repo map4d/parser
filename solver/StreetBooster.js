@@ -15,7 +15,7 @@ class StreetBooster extends BaseSolver {
       const prev = street.span.graph.findOne('child:first').graph.findOne('prev')
 
       if ((next && s.pair.find(p => p.classification.constructor === AdministrativeClassification && p.span.start === next.start)) ||
-          (prev && s.pair.find(p => p.classification.constructor === HouseNumberClassification && p.span.start === prev.start))) {
+          (prev && s.pair.find(p => p.classification.constructor === HouseNumberClassification && p.start <= prev.start && p.end >= prev.start))) {
         street.classification.confidence = 1.0
       }
     })

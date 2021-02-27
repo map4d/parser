@@ -53,7 +53,12 @@ class AdministrativeClassifier extends PhraseClassifier {
           new AdministrativeClassification(
             administratives[level].level,
             administratives[level].confidence,
-            { original: this.index[level][span.norm].original }
+            {
+              original: this.index[level][span.norm].original,
+              level: administratives[level].level,
+              parentLevel1: this.index[level][span.norm].parentLevel1,
+              parentLevel2: this.index[level][span.norm].parentLevel2
+            }
           )
         )
 

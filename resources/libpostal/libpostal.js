@@ -14,8 +14,16 @@ function load (index, langs, filename, options) {
     if (!fs.existsSync(filepath)) { return }
     let dict = fs.readFileSync(filepath, 'utf8')
     dict.split('\n').forEach(row => {
-      let indices = row.split('|')
-      indices.forEach(add.bind(null, lang, indices[0]))
+      let graph = row.split('/')
+      let reduceFunction = function (accumulator, currentValue) {
+        accumulator[currentValue] = currentValue
+
+        return accumulator
+      }
+      let parentLevel1 = graph[1] && graph[1].split('|').reduce(reduceFunction, {})
+      let parentLevel2 = graph[2] && graph[2].split('|').reduce(reduceFunction, {})
+      let indices = graph[0].split('|')
+      indices.forEach(add.bind(null, lang, indices[0], parentLevel1, parentLevel2))
     }, this)
   }, this)
 }
@@ -35,12 +43,24 @@ function _normalize (cell, options) {
 }
 
 function _add (index, options) {
-  return (lang, original, cell) => {
+  return (lang, original, parentLevel1, parentLevel2, cell) => {
     const value = _normalize(cell, options)
     if (value && value.length) {
       index[value] = index[value] || { langs: {} }
       index[value].langs[lang] = true
       index[value].original = original
+
+      if (parentLevel1 && index[value].parentLevel1) {
+        index[value].parentLevel1 = Object.assign({}, index[value].parentLevel1, parentLevel1)
+      } else if (parentLevel1) {
+        index[value].parentLevel1 = parentLevel1
+      }
+
+      if (parentLevel2 && index[value].parentLevel2) {
+        index[value].parentLevel2 = Object.assign({}, index[value].parentLevel2, parentLevel2)
+      } else if (parentLevel2) {
+        index[value].parentLevel2 = parentLevel2
+      }
     }
   }
 }

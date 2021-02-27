@@ -21,7 +21,7 @@ dong thap|tinh dong thap
 gia lai|tinh gia lai
 ha giang|tinh ha giang
 ha nam|tinh ha nam
-ha noi|thanh pho ha noi|tp ha noi|tp. ha noi
+ha noi|tp ha noi|tp. ha noi|thanh pho ha noi|hn|tp hn|tp. hn|thanh pho hn
 ha tinh|tinh ha tinh
 hai duong|tinh hai duong
 hai phong|thanh pho hai phong|tp hai phong|tp. hai phong

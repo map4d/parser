@@ -247,6 +247,71 @@ const testcase = (test, common) => {
       { level1: 'da nang' }
     ]
   )
+
+  assert(
+    'cho bac my an ho chi minh',
+    [
+      { level1: 'ho chi minh' }
+    ]
+  )
+
+  assert(
+    'massage hoang nhi hoa thuan dong quan hai chau thanh pho da nang',
+    [
+      { level3: 'hoa thuan dong' },
+      { level2: 'hai chau' },
+      { level1: 'da nang' }
+    ]
+  )
+
+  assert(
+    'massage hoang nhi quan hai chau hoa thuan dong thanh pho da nang',
+    [
+      { level2: 'hai chau' },
+      { level3: 'hoa thuan dong' },
+      { level1: 'da nang' }
+    ]
+  )
+
+  assert(
+    'massage hoang nhi quan hai chau thanh pho da nang hoa thuan dong',
+    [
+      { level2: 'hai chau' },
+      { level1: 'da nang' },
+      { level3: 'hoa thuan dong' }
+    ]
+  )
+
+  assert(
+    'massage hoang nhi quan hai chau ha tinh hoa thuan dong',
+    [
+      { level3: 'hoa thuan dong' }
+    ]
+  )
+
+  assert(
+    'massage a-z ha tinh quan hai chau hoa thuan dong',
+    [
+      { level2: 'hai chau' },
+      { level3: 'hoa thuan dong' }
+    ]
+  )
+
+  assert(
+    'massage a-y phuong hoa thuan dong quan 1 ho chi minh',
+    [
+      { level2: 'quan 1' },
+      { level1: 'ho chi minh' }
+    ]
+  )
+
+  assert(
+    'massage a-y dong quan 1 ho chi minh',
+    [
+      { level2: 'quan 1' },
+      { level1: 'ho chi minh' }
+    ]
+  )
 }
 
 module.exports.all = (tape, common) => {
