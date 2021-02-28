@@ -16,7 +16,7 @@ class StreetBooster extends BaseSolver {
 
       if ((next && s.pair.find(p => p.classification.constructor === AdministrativeClassification && p.span.start === next.start)) ||
           (prev && s.pair.find(p => p.classification.constructor === HouseNumberClassification && p.start <= prev.start && p.end >= prev.start))) {
-        street.classification.confidence = 1.0
+        street.classification.confidence = 0.9
       }
     })
   }
