@@ -17,7 +17,7 @@ class StreetPenalty extends BaseSolver {
       // Base penalty
       s.penalty += 0.1
       if (nextStreet !== null && !administratives.some(administrative => administrative.span.start === nextStreet.start)) {
-        if (!prevStreet || !(housenumber && !(housenumber.start <= prevStreet.start && housenumber.end >= prevStreet.start))) {
+        if (prevStreet && !(housenumber && !(housenumber.start <= prevStreet.start && housenumber.end >= prevStreet.start))) {
           s.penalty += 0.3
         }
       }
