@@ -23,6 +23,7 @@ const SubsetFilter = require('../solver/SubsetFilter')
 const HouseNumberPositionFilter = require('../solver/HouseNumberPositionFilter')
 const StreetPenalty = require('../solver/StreetPenalty')
 const StreetBooster = require('../solver/StreetBooster')
+const HierarchyFilter = require('../solver/HierarchyFilter')
 
 class AddressParser extends Parser {
   constructor (options) {
@@ -63,8 +64,9 @@ class AddressParser extends Parser {
         new StreetPenalty(),
         new StreetBooster(),
         new TokenDistanceFilter(),
-        new SubsetFilter(),
-        new AdministrativeUnitRemoval()
+        new AdministrativeUnitRemoval(),
+        new HierarchyFilter(),
+        new SubsetFilter()
       ],
       options
     )
