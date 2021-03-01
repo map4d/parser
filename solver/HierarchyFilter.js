@@ -50,8 +50,7 @@ class HierarchyFilter {
 
           skip = !(originalName in administrativeParent.level2)
           return !skip
-        } else {
-          // level3
+        } else if (metaData.level === 3) {
           if (
             administrativeParent.level1 &&
             !Object.keys(administrativeParent.level1).some(function (
@@ -84,6 +83,9 @@ class HierarchyFilter {
             administrativeParent.level2 = metaData.parentLevel2
           }
 
+          return true
+        } else {
+          // level 0 ignore it for now since we only have the location data in viet nam
           return true
         }
       })
