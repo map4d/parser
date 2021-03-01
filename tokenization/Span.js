@@ -1,5 +1,5 @@
 const Graph = require('./Graph')
-const MAX_SPAN_LENGTH = 140
+const MAX_SPAN_LENGTH = 250
 
 class Span {
   constructor (body, start) {
