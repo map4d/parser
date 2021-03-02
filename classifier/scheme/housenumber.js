@@ -2,15 +2,15 @@ const HouseNumberClassification = require('../../classification/HouseNumberClass
 
 module.exports = [
   {
-    confidence: 1.0,
+    confidence: 0.9,
     Class: HouseNumberClassification,
     scheme: [
       {
-        is: ['HouseNumberClassification'],
+        is: ['HouseNumberComponentClassification'],
         not: []
       },
       {
-        is: ['HouseNumberClassification'],
+        is: ['HouseNumberComponentClassification'],
         not: []
       }
     ]
@@ -20,16 +20,16 @@ module.exports = [
     Class: HouseNumberClassification,
     scheme: [
       {
-        is: ['HouseNumberClassification'],
+        is: ['HouseNumberComponentClassification'],
         not: []
       },
       {
-        is: ['HouseNumberClassification'],
+        is: ['HouseNumberComponentClassification'],
         not: []
       },
 
       {
-        is: ['HouseNumberClassification'],
+        is: ['HouseNumberComponentClassification'],
         not: []
       }
     ]
