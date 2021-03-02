@@ -22,7 +22,7 @@ const administratives = {
   'level3': {
     file: 'level3_names.txt',
     level: 3,
-    confidence: 0.85
+    confidence: 0.65
   }
 }
 

@@ -347,6 +347,20 @@ const testcase = (test, common) => {
       { level1: 'da nang' }
     ]
   )
+
+  assert(
+    'casio tttm takashimaya le loi',
+    [
+      { street: 'le loi' }
+    ]
+  )
+
+  assert(
+    'casio tttm takashimaya phuong le loi',
+    [
+      { level3: 'le loi' }
+    ]
+  )
 }
 
 module.exports.all = (tape, common) => {
