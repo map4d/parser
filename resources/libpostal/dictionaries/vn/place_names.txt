@@ -11,7 +11,7 @@ cong ty|cty
 cong vien
 khu cong nghiep|kcn
 quan nhau
-quan ca phe|quan cf
+quan ca phe|quan cf|quan coffee
 khu du lich|kdl
 nha hang
 khach san|ks
@@ -56,3 +56,5 @@ rap chieu phim|rap phim
 cay xang
 quan bun
 trung tam anh ngu
+khu do thi
+cau lac bo the duc the thao|cau lac bo the duc|cau lac bo the thao|clb the duc the thao|clb the duc| clb the thao
