@@ -51,7 +51,7 @@ function jsonify (text, solution) {
       end: c.span.end
     }
   })
-  classifications.push({
+  classifications.unshift({
     label: 'query',
     value: query,
     start: 0,
