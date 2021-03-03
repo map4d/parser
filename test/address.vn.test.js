@@ -370,6 +370,60 @@ const testcase = (test, common) => {
   )
 
   assert('cau lac bo the duc the thao tao dan', undefined)
+
+  assert('trung tam tieng anh', undefined)
+
+  assert('san bong da nguyen chanh', undefined)
+
+  assert(
+    'trung tam thanh pho da nang',
+    [
+      { level1: 'da nang' }
+    ]
+  )
+
+  assert(
+    'trung tam tiec cuoi hoi nghi for you da nang',
+    [
+      { level1: 'da nang' }
+    ]
+  )
+
+  assert(
+    'trung tam the thao tuyen son, da nang',
+    [
+      { level1: 'da nang' }
+    ]
+  )
+
+  assert(
+    'quan che hoang dieu, le duan, da nang',
+    [
+      { street: 'le duan' },
+      { level1: 'da nang' }
+    ]
+  )
+
+  assert(
+    'my quang dung nguyen trung truc',
+    [
+      { street: 'nguyen trung truc' }
+    ]
+  )
+
+  assert(
+    'ben xe trung tam da nang',
+    [
+      { level1: 'da nang' }
+    ]
+  )
+
+  assert(
+    'cong an xa hoa chau',
+    [
+      { level3: 'hoa chau' }
+    ]
+  )
 }
 
 module.exports.all = (tape, common) => {
