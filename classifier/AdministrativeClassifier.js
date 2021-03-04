@@ -41,7 +41,10 @@ class AdministrativeClassifier extends PhraseClassifier {
     let prev = firstChild.graph.findOne('prev')
 
     // administrative must not be preceded by street prefix
-    if (prev && prev.classifications.hasOwnProperty('StreetPrefixClassification')) {
+    if (prev &&
+            prev.classifications.hasOwnProperty('StreetPrefixClassification') &&
+            !prev.classifications.hasOwnProperty('StreetComponentClassification') &&
+            !prev.classifications.hasOwnProperty('AdministrativeComponentClassification')) {
       return
     }
 
