@@ -8,7 +8,7 @@ class HouseNumberPositionFilter extends BaseSolver {
       const housenumber = s.pair.find(p => p.classification.constructor === HouseNumberClassification)
       const street = s.pair.find(p => p.classification.constructor === StreetClassification)
 
-      // Do nothing if there is no street/housenumber or no meta in street classification
+      // Do nothing if there is no street/housenumber
       if (!housenumber || !street) { return }
 
       if (housenumber.span.start > street.span.start) {

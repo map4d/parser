@@ -24,6 +24,7 @@ const SubsetFilter = require('../solver/SubsetFilter')
 const HouseNumberPositionFilter = require('../solver/HouseNumberPositionFilter')
 const StreetPenalty = require('../solver/StreetPenalty')
 const StreetBooster = require('../solver/StreetBooster')
+const StreetFilter = require('../solver/StreetFilter')
 const HierarchyFilter = require('../solver/HierarchyFilter')
 
 class AddressParser extends Parser {
@@ -68,6 +69,7 @@ class AddressParser extends Parser {
         new AdministrativeUnitRemoval(),
         new StreetPrefixRemoval(),
         new HierarchyFilter(),
+        new StreetFilter(),
         new SubsetFilter()
       ],
       options

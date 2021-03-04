@@ -25,6 +25,15 @@ trung tam luyen thi
 trung tam tieng
 trung tam the thao
 trung tam the duc
+buu dien xa
+buu dien quan
+buu dien huyen
+buu dien tinh
+buu dien thanh pho
+buu dien phuong
+buu dien quan
+buu dien thi xa
+buu dien thi tran
 cong an xa
 cong an quan
 cong an huyen
@@ -49,3 +58,4 @@ co so 4|cs 4
 co so 5|cs 5
 khu do thi
 van phong giao dich
+yamaha 3s
