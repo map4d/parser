@@ -18,21 +18,23 @@ class HouseNumberClassifier extends PhraseClassifier {
     )
     ) { return }
 
-    if (
-      /^\d{1,5}[a-zA-Z/]?$/.test(span.body) || // 10 or 10a Style
-        /^(\d{1,5})-(\d{1,5})[a-zA-Z]?$/.test(span.body) || // 10-19 or 10-19a Style
-        /^(\d{1,5})[a-zA-Z]?\/(\d{1,5})$/.test(span.body) || // 1/135 or 1b/135 Style
-        /^(\d{1,5})(\/(\d{1,5}))*$/.test(span.body) // 1/2/3/4/5  Style
-    ) {
-      if (this.isSpanValid(span)) {
-        span.classify(new HouseNumberClassification(1.0))
-      }
-    } else if (/^([KkHh]){1}(\d{1,5})(\/(\d{1,5}))*$/.test(span.body) || // k448 or h18/10 Style
+    if (/^([KkHh]){1}(\d{1,5})(\/(\d{1,5}))*$/.test(span.body) || // k448 or h18/10 Style
         /^(ngo|ngach|so|kiet|hem)\s(\d{1,5})(\/(\d{1,5}))*$/.test(span.body) // ngo 1 or so 1 Style
     ) {
       if (this.isSpanValid(span)) {
         span.classify(new HouseNumberClassification(1.0))
         span.classify(new HouseNumberComponentClassification())
+      }
+    } else if (
+      /^[a-zA-Z/]?\d{1,5}[a-zA-Z/]?$/.test(span.body) || // 10 or 10a or a16 Style
+          /^([a-zA-Z]?\d{1,5}[a-zA-Z]?)(-([a-zA-Z]?\d{1,5})[a-zA-Z]?)*$/.test(span.body) || // 10-19 or 10-19a Style
+          /^([a-zA-Z]?\d{1,5})[a-zA-Z]?\/(\d{1,5})$/.test(span.body) || // 1/135 or 1b/135 Style
+          /^(\d{1,5})(\/(\d{1,5}))*$/.test(span.body) || // 1/2/3/4/5  Style
+          /^(\d{1,5})bis(\/(\d{1,5}))*$/.test(span.body) || // 18bis or 18bis/12 Style
+          /^(lo)\s[a-zA-Z]?(\d{1,5})[a-zA-Z]?(\/([a-zA-Z]?\d{1,5}[a-zA-Z]?))*$/.test(span.body) // lo 2 or lo 2a Style
+    ) {
+      if (this.isSpanValid(span)) {
+        span.classify(new HouseNumberClassification(1.0))
       }
     }
   }

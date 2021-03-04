@@ -6,8 +6,8 @@ const testcase = (test, common) => {
     { street: 'nguyen van linh' }
   ])
 
-  assert('23A nguyen van linh', [
-    { housenumber: '23A' },
+  assert('23a nguyen van linh', [
+    { housenumber: '23a' },
     { street: 'nguyen van linh' }
   ])
 
@@ -94,16 +94,81 @@ const testcase = (test, common) => {
     { level1: 'ho chi minh' }
   ])
 
-  assert('cafe Long 1 so 2 quang trung da nang', [
+  assert('cafe long 1 so 2 quang trung da nang', [
     { housenumber: 'so 2' },
     { street: 'quang trung' },
     { level1: 'da nang' }
   ])
+
+  assert('188-189-190 nguyen van linh', [
+    { housenumber: '188-189-190' },
+    { street: 'nguyen van linh' }
+  ])
+
+  assert('188-189-190-191a nguyen van linh', [
+    { housenumber: '188-189-190-191a' },
+    { street: 'nguyen van linh' }
+  ])
+
+  assert('a12-a13 nguyen van linh', [
+    { housenumber: 'a12-a13' },
+    { street: 'nguyen van linh' }
+  ])
+
+  assert('p1-23 nguyen van linh', [
+    { housenumber: 'p1-23' },
+    { street: 'nguyen van linh' }
+  ])
+
+  assert('12a-12-12-13a nguyen van linh', [
+    { housenumber: '12a-12-12-13a' },
+    { street: 'nguyen van linh' }
+  ])
+
+  assert('lo 32 nguyen van linh', [
+    { housenumber: 'lo 32' },
+    { street: 'nguyen van linh' }
+  ])
+
+  assert('lo 32a nguyen van linh', [
+    { housenumber: 'lo 32a' },
+    { street: 'nguyen van linh' }
+  ])
+
+  assert('lo a68 nguyen van linh', [
+    { housenumber: 'lo a68' },
+    { street: 'nguyen van linh' }
+  ])
+
+  assert('lo 6/a64/54a/54 nguyen van linh', [
+    { housenumber: 'lo 6/a64/54a/54' },
+    { street: 'nguyen van linh' }
+  ])
+
+  assert('18bis nguyen van linh', [
+    { housenumber: '18bis' },
+    { street: 'nguyen van linh' }
+  ])
+
+  assert('18bis/12/1 nguyen van linh', [
+    { housenumber: '18bis/12/1' },
+    { street: 'nguyen van linh' }
+  ])
+
+  assert('a16 nguyen van linh', [
+    { housenumber: 'a16' },
+    { street: 'nguyen van linh' }
+  ])
+
+  assert('z16/23 nguyen van linh', [
+    { housenumber: 'z16/23' },
+    { street: 'nguyen van linh' }
+  ])
 }
 
 module.exports.all = (tape, common) => {
-  function test (name, testFunction) {
-    return tape(`house number: ${name}`, testFunction)
+  function test (name, testfunction) {
+    return tape(`house number: ${name}`, testfunction)
   }
 
   testcase(test, common)
