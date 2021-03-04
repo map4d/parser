@@ -90,7 +90,10 @@ def get_level2_name(level2_data) -> str:
             name = name + '|thanh pho ' + name + '|tp ' + name + '|tp. ' + name
         elif name.isnumeric():
             name = name.lstrip('0')
-            name = level2_type + ' ' + name
+            if len(name) == 1:
+                name = level2_type + ' ' + name + '|' + level2_type + ' 0' + name
+            else:
+                name = level2_type + ' ' + name
         elif ' ' in name:
             name = name + '|' + level2_type + ' ' + name
         else:
@@ -124,7 +127,10 @@ def get_level3_name(level3_data) -> str:
 
     if name.isnumeric():
         name = name.lstrip('0')
-        name = level3_type + ' ' + name
+        if len(name) == 1:
+            name = level3_type + ' ' + name + '|' + level3_type + ' 0' + name
+        else:
+            name = level3_type + ' ' + name
     elif ' ' in name:
         name = name + '|' + level3_type + ' ' + name
     else:

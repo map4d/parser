@@ -453,18 +453,18 @@ phuoc long|huyen phuoc long/bac lieu
 phuoc long|thi xa phuoc long/binh phuoc
 phuoc son|huyen phuoc son/quang nam
 pleiku|thanh pho pleiku|tp pleiku|tp. pleiku/gia lai
-quan 1/ho chi minh
 quan 10/ho chi minh
 quan 11/ho chi minh
 quan 12/ho chi minh
-quan 2/ho chi minh
-quan 3/ho chi minh
-quan 4/ho chi minh
-quan 5/ho chi minh
-quan 6/ho chi minh
-quan 7/ho chi minh
-quan 8/ho chi minh
-quan 9/ho chi minh
+quan 1|quan 01/ho chi minh
+quan 2|quan 02/ho chi minh
+quan 3|quan 03/ho chi minh
+quan 4|quan 04/ho chi minh
+quan 5|quan 05/ho chi minh
+quan 6|quan 06/ho chi minh
+quan 7|quan 07/ho chi minh
+quan 8|quan 08/ho chi minh
+quan 9|quan 09/ho chi minh
 quan ba|huyen quan ba/ha giang
 quan hoa|huyen quan hoa/thanh hoa
 quan son|huyen quan son/thanh hoa
