@@ -20,10 +20,10 @@ function load (index, langs, filename, options) {
 
         return accumulator
       }
-      let parentLevel1 = graph[1] && graph[1].split('|').reduce(reduceFunction, {})
-      let parentLevel2 = graph[2] && graph[2].split('|').reduce(reduceFunction, {})
+      let parentLevel2 = graph[1] && graph[1].split('|').reduce(reduceFunction, {})
+      let parentLevel3 = graph[2] && graph[2].split('|').reduce(reduceFunction, {})
       let indices = graph[0].split('|')
-      indices.forEach(add.bind(null, lang, indices[0], parentLevel1, parentLevel2))
+      indices.forEach(add.bind(null, lang, indices[0], parentLevel2, parentLevel3))
     }, this)
   }, this)
 }
@@ -43,23 +43,23 @@ function _normalize (cell, options) {
 }
 
 function _add (index, options) {
-  return (lang, original, parentLevel1, parentLevel2, cell) => {
+  return (lang, original, parentLevel2, parentLevel3, cell) => {
     const value = _normalize(cell, options)
     if (value && value.length) {
       index[value] = index[value] || { langs: {} }
       index[value].langs[lang] = true
       index[value].original = original
 
-      if (parentLevel1 && index[value].parentLevel1) {
-        index[value].parentLevel1 = Object.assign({}, index[value].parentLevel1, parentLevel1)
-      } else if (parentLevel1) {
-        index[value].parentLevel1 = parentLevel1
-      }
-
       if (parentLevel2 && index[value].parentLevel2) {
         index[value].parentLevel2 = Object.assign({}, index[value].parentLevel2, parentLevel2)
       } else if (parentLevel2) {
         index[value].parentLevel2 = parentLevel2
+      }
+
+      if (parentLevel3 && index[value].parentLevel3) {
+        index[value].parentLevel3 = Object.assign({}, index[value].parentLevel3, parentLevel3)
+      } else if (parentLevel3) {
+        index[value].parentLevel3 = parentLevel3
       }
     }
   }
