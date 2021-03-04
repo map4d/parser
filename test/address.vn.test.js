@@ -1,24 +1,24 @@
 const testcase = (test, common) => {
   let assert = common.assert(test)
 
-  assert('viet nam', [{ level0: 'viet nam' }])
+  assert('viet nam', [{ level1: 'viet nam' }])
 
-  assert('da nang', [{ level1: 'da nang' }])
+  assert('da nang', [{ level2: 'da nang' }])
 
-  assert('quan hai chau', [{ level2: 'hai chau' }])
+  assert('quan hai chau', [{ level3: 'hai chau' }])
 
-  assert('hai chau', [{ level2: 'hai chau' }])
+  assert('hai chau', [{ level3: 'hai chau' }])
 
-  assert('hoa thuan dong', [{ level3: 'hoa thuan dong' }])
+  assert('hoa thuan dong', [{ level4: 'hoa thuan dong' }])
 
-  assert('phuong hoa thuan dong', [{ level3: 'hoa thuan dong' }])
+  assert('phuong hoa thuan dong', [{ level4: 'hoa thuan dong' }])
 
   assert('trung nu vuong', [{ street: 'trung nu vuong' }])
 
   assert('quan bun co tam k448 h20/2 hoang dieu da nang', [
     { housenumber: 'k448 h20/2' },
     { street: 'hoang dieu' },
-    { level1: 'da nang' }
+    { level2: 'da nang' }
   ])
 
   assert('1 cuon vao so 2 quang trung', [
@@ -29,15 +29,15 @@ const testcase = (test, common) => {
   assert('23 nguyen van linh da nang', [
     { housenumber: '23' },
     { street: 'nguyen van linh' },
-    { level1: 'da nang' }
+    { level2: 'da nang' }
   ])
 
   assert('trung nu vuong phuong hoa thuan dong hai chau da nang vn', [
     { street: 'trung nu vuong' },
-    { level3: 'hoa thuan dong' },
-    { level2: 'hai chau' },
-    { level1: 'da nang' },
-    { level0: 'viet nam' }
+    { level4: 'hoa thuan dong' },
+    { level3: 'hai chau' },
+    { level2: 'da nang' },
+    { level1: 'viet nam' }
   ])
 
   assert('cong vien 29 thang 3', undefined)
@@ -47,70 +47,70 @@ const testcase = (test, common) => {
   assert('truong trung nu vuong', undefined)
 
   assert('truong thpt cam le, cam le, da nang', [
-    { level2: 'cam le' },
-    { level1: 'da nang' }
+    { level3: 'cam le' },
+    { level2: 'da nang' }
   ])
 
   assert('1  duong so 5 khu dan cu dai phuc binh hung binh chanh ho chi minh', [
     { housenumber: '1' },
     { street: 'duong so 5' },
-    { level3: 'binh hung' },
-    { level2: 'binh chanh' },
-    { level1: 'ho chi minh' }
+    { level4: 'binh hung' },
+    { level3: 'binh chanh' },
+    { level2: 'ho chi minh' }
   ])
 
   assert('109 ton duc thang tp vung tau ba ria vung tau', [
     { housenumber: '109' },
     { street: 'ton duc thang' },
-    { level2: 'vung tau' },
-    { level1: 'ba ria vung tau' }
+    { level3: 'vung tau' },
+    { level2: 'ba ria vung tau' }
   ])
 
-  assert('truong trung nu vuong da nang', [{ level1: 'da nang' }])
+  assert('truong trung nu vuong da nang', [{ level2: 'da nang' }])
 
-  assert('108 truong trung nu vuong da nang', [{ level1: 'da nang' }])
+  assert('108 truong trung nu vuong da nang', [{ level2: 'da nang' }])
 
-  assert('dai hoc duy tan da nang', [{ level1: 'da nang' }])
+  assert('dai hoc duy tan da nang', [{ level2: 'da nang' }])
 
   assert('tt. ai nghia, dai loc, quang nam', [
-    { level3: 'ai nghia' },
-    { level2: 'dai loc' },
-    { level1: 'quang nam' }
+    { level4: 'ai nghia' },
+    { level3: 'dai loc' },
+    { level2: 'quang nam' }
   ])
 
   assert('kiet 24/3 duong le duan da nang', [
     { housenumber: 'kiet 24/3' },
     { street: 'le duan' },
-    { level1: 'da nang' }
+    { level2: 'da nang' }
   ])
 
   assert('huyen tran cong chua ho chi minh', [
     { street: 'huyen tran cong chua' },
-    { level1: 'ho chi minh' }
+    { level2: 'ho chi minh' }
   ])
 
   assert(
     '4429a  nha hang dai hy, nguyen cuu phu, tan tao a, binh tan, ho chi minh',
     [
       { street: 'nguyen cuu phu' },
-      { level3: 'tan tao a' },
-      { level2: 'binh tan' },
-      { level1: 'ho chi minh' }
+      { level4: 'tan tao a' },
+      { level3: 'binh tan' },
+      { level2: 'ho chi minh' }
     ]
   )
 
   assert(
     '><  chung cu conic, nguyen van linh  huong ve quan 7, binh chanh, ho chi minh',
     [
-      { level2: 'binh chanh' },
-      { level1: 'ho chi minh' }
+      { level3: 'binh chanh' },
+      { level2: 'ho chi minh' }
     ]
   )
 
   assert(
     '007 -  lo f, chung cu   xom cai, 5, ho chi minh',
     [
-      { level1: 'ho chi minh' }
+      { level2: 'ho chi minh' }
     ]
   )
 
@@ -118,7 +118,7 @@ const testcase = (test, common) => {
     'truong trung nu vuong da nang hai phong',
     [
       { street: 'da nang' },
-      { level1: 'hai phong' }
+      { level2: 'hai phong' }
     ]
   )
 
@@ -126,8 +126,8 @@ const testcase = (test, common) => {
     'truong dh hong bang, dien bien phu, 15, binh thanh, ho chi minh',
     [
       { street: 'dien bien phu' },
-      { level2: 'binh thanh' },
-      { level1: 'ho chi minh' }
+      { level3: 'binh thanh' },
+      { level2: 'ho chi minh' }
     ]
   )
 
@@ -135,7 +135,7 @@ const testcase = (test, common) => {
     'trung tam thuong mai nguyen kim hai phong da nang',
     [
       { street: 'hai phong' },
-      { level1: 'da nang' }
+      { level2: 'da nang' }
     ]
   )
 
@@ -143,7 +143,7 @@ const testcase = (test, common) => {
     'trung tam dien may nguyen kim hai phong da nang',
     [
       { street: 'hai phong' },
-      { level1: 'da nang' }
+      { level2: 'da nang' }
     ]
   )
 
@@ -151,7 +151,7 @@ const testcase = (test, common) => {
     'duong nguyen thi minh khai, trung tam anh ngu hoang dieu, da nang',
     [
       { street: 'nguyen thi minh khai' },
-      { level1: 'da nang' }
+      { level2: 'da nang' }
     ]
   )
 
@@ -160,7 +160,7 @@ const testcase = (test, common) => {
     [
       { housenumber: '04' },
       { street: 'tran quang khai' },
-      { level2: 'hue' }
+      { level3: 'hue' }
     ]
   )
 
@@ -169,10 +169,10 @@ const testcase = (test, common) => {
     [
       { postcode: '550000' },
       { street: 'duong so 1' },
-      { level3: 'an hai bac' },
-      { level2: 'son tra' },
-      { level1: 'da nang' },
-      { level0: 'viet nam' }
+      { level4: 'an hai bac' },
+      { level3: 'son tra' },
+      { level2: 'da nang' },
+      { level1: 'viet nam' }
     ]
   )
 
@@ -181,8 +181,8 @@ const testcase = (test, common) => {
     [
       { housenumber: '09' },
       { street: 'tran quang dieu' },
-      { level2: 'vung tau' },
-      { level1: 'ba ria vung tau' }
+      { level3: 'vung tau' },
+      { level2: 'ba ria vung tau' }
     ]
   )
 
@@ -191,7 +191,7 @@ const testcase = (test, common) => {
     [
       { housenumber: '04' },
       { street: 'tran quang khai' },
-      { level2: 'hue' }
+      { level3: 'hue' }
     ]
   )
 
@@ -200,7 +200,7 @@ const testcase = (test, common) => {
     [
       { housenumber: '02' },
       { street: 'le thanh nghi' },
-      { level1: 'da nang' }
+      { level2: 'da nang' }
     ]
   )
 
@@ -208,8 +208,8 @@ const testcase = (test, common) => {
     '104---chung cu botanica, pho quang, tan binh, ho chi minh',
     [
       { street: 'pho quang' },
-      { level2: 'tan binh' },
-      { level1: 'ho chi minh' }
+      { level3: 'tan binh' },
+      { level2: 'ho chi minh' }
     ]
   )
 
@@ -217,15 +217,15 @@ const testcase = (test, common) => {
     '118  -  chung cu tan huong, tan huong, quan tan phu, thanh pho ho chi minh',
     [
       { street: 'tan huong' },
-      { level2: 'tan phu' },
-      { level1: 'ho chi minh' }
+      { level3: 'tan phu' },
+      { level2: 'ho chi minh' }
     ]
   )
 
   assert(
     'ho boi nuoc nong da nang',
     [
-      { level1: 'da nang' }
+      { level2: 'da nang' }
     ]
   )
 
@@ -235,7 +235,7 @@ const testcase = (test, common) => {
     'truong duy tan co so 2 nguyen van linh da nang',
     [
       { street: 'nguyen van linh' },
-      { level1: 'da nang' }
+      { level2: 'da nang' }
     ]
   )
 
@@ -243,72 +243,72 @@ const testcase = (test, common) => {
     'truong duy tan cs 2 nguyen van linh da nang',
     [
       { street: 'nguyen van linh' },
-      { level1: 'da nang' }
+      { level2: 'da nang' }
     ]
   )
 
   assert(
     'cho bac my an ho chi minh',
     [
-      { level1: 'ho chi minh' }
+      { level2: 'ho chi minh' }
     ]
   )
 
   assert(
     'massage hoang nhi hoa thuan dong quan hai chau thanh pho da nang',
     [
-      { level3: 'hoa thuan dong' },
-      { level2: 'hai chau' },
-      { level1: 'da nang' }
+      { level4: 'hoa thuan dong' },
+      { level3: 'hai chau' },
+      { level2: 'da nang' }
     ]
   )
 
   assert(
     'massage hoang nhi quan hai chau hoa thuan dong thanh pho da nang',
     [
-      { level2: 'hai chau' },
-      { level3: 'hoa thuan dong' },
-      { level1: 'da nang' }
+      { level3: 'hai chau' },
+      { level4: 'hoa thuan dong' },
+      { level2: 'da nang' }
     ]
   )
 
   assert(
     'massage hoang nhi quan hai chau thanh pho da nang hoa thuan dong',
     [
-      { level2: 'hai chau' },
-      { level1: 'da nang' },
-      { level3: 'hoa thuan dong' }
+      { level3: 'hai chau' },
+      { level2: 'da nang' },
+      { level4: 'hoa thuan dong' }
     ]
   )
 
   assert(
     'massage hoang nhi quan hai chau ha tinh hoa thuan dong',
     [
-      { level3: 'hoa thuan dong' }
+      { level4: 'hoa thuan dong' }
     ]
   )
 
   assert(
     'massage a-z ha tinh quan hai chau hoa thuan dong',
     [
-      { level2: 'hai chau' },
-      { level3: 'hoa thuan dong' }
+      { level3: 'hai chau' },
+      { level4: 'hoa thuan dong' }
     ]
   )
 
   assert(
     'massage a-y phuong hoa thuan dong quan 1 ho chi minh',
     [
-      { level2: 'quan 1' },
-      { level1: 'ho chi minh' }
+      { level3: 'quan 1' },
+      { level2: 'ho chi minh' }
     ]
   )
 
   assert(
     'massage a-y dong quan 1 ho chi minh',
     [
-      { level2: 'quan 1' },
-      { level1: 'ho chi minh' }
+      { level3: 'quan 1' },
+      { level2: 'ho chi minh' }
     ]
   )
 
@@ -317,9 +317,9 @@ const testcase = (test, common) => {
     [
       { housenumber: '10' },
       { street: 'duong so 32' },
-      { level3: 'binh tri dong b' },
-      { level2: 'binh tan' },
-      { level1: 'ho chi minh' }
+      { level4: 'binh tri dong b' },
+      { level3: 'binh tan' },
+      { level2: 'ho chi minh' }
     ]
   )
 
@@ -327,7 +327,7 @@ const testcase = (test, common) => {
     'duong so 3, da nang',
     [
       { street: 'duong so 3' },
-      { level1: 'da nang' }
+      { level2: 'da nang' }
     ]
   )
 
@@ -335,7 +335,7 @@ const testcase = (test, common) => {
     'duong duong so 3, da nang',
     [
       { street: 'duong so 3' },
-      { level1: 'da nang' }
+      { level2: 'da nang' }
     ]
   )
 
@@ -343,7 +343,7 @@ const testcase = (test, common) => {
     'duong 152, da nang',
     [
       { street: 'duong 152' },
-      { level1: 'da nang' }
+      { level2: 'da nang' }
     ]
   )
 
@@ -357,14 +357,14 @@ const testcase = (test, common) => {
   assert(
     'casio tttm takashimaya phuong le loi',
     [
-      { level3: 'le loi' }
+      { level4: 'le loi' }
     ]
   )
 
   assert(
     'van phong giao dich hoang lan da nang',
     [
-      { level1: 'da nang' }
+      { level2: 'da nang' }
     ]
   )
 
@@ -377,21 +377,21 @@ const testcase = (test, common) => {
   assert(
     'trung tam thanh pho da nang',
     [
-      { level1: 'da nang' }
+      { level2: 'da nang' }
     ]
   )
 
   assert(
     'trung tam tiec cuoi hoi nghi for you da nang',
     [
-      { level1: 'da nang' }
+      { level2: 'da nang' }
     ]
   )
 
   assert(
     'trung tam the thao tuyen son, da nang',
     [
-      { level1: 'da nang' }
+      { level2: 'da nang' }
     ]
   )
 
@@ -399,7 +399,7 @@ const testcase = (test, common) => {
     'quan che hoang dieu, le duan, da nang',
     [
       { street: 'le duan' },
-      { level1: 'da nang' }
+      { level2: 'da nang' }
     ]
   )
 
@@ -413,14 +413,14 @@ const testcase = (test, common) => {
   assert(
     'ben xe trung tam da nang',
     [
-      { level1: 'da nang' }
+      { level2: 'da nang' }
     ]
   )
 
   assert(
     'cong an xa hoa chau',
     [
-      { level3: 'hoa chau' }
+      { level4: 'hoa chau' }
     ]
   )
 
@@ -428,23 +428,23 @@ const testcase = (test, common) => {
     'le duan, phuong 06 quan 08 ho chi minh',
     [
       { street: 'le duan' },
-      { level3: 'phuong 6' },
-      { level2: 'quan 8' },
-      { level1: 'ho chi minh' }
+      { level4: 'phuong 6' },
+      { level3: 'quan 8' },
+      { level2: 'ho chi minh' }
     ]
   )
 
   assert(
     'huyen tran cong chua my an hai chau',
     [
-      { level2: 'hai chau' }
+      { level3: 'hai chau' }
     ]
   )
 
   assert(
     'quan nam ranh da nang',
     [
-      { level1: 'da nang' }
+      { level2: 'da nang' }
     ]
   )
 
@@ -455,22 +455,22 @@ const testcase = (test, common) => {
   assert(
     'buu dien huyen duy xuyen quang nam',
     [
-      { level2: 'duy xuyen' },
-      { level1: 'quang nam' }
+      { level3: 'duy xuyen' },
+      { level2: 'quang nam' }
     ]
   )
 
   assert(
     'yamaha 3s da nang',
     [
-      { level1: 'da nang' }
+      { level2: 'da nang' }
     ]
   )
 
   assert(
     'nha tho la vang hai lang',
     [
-      { level2: 'hai lang' }
+      { level3: 'hai lang' }
     ]
   )
 
@@ -479,15 +479,15 @@ const testcase = (test, common) => {
     [
       { housenumber: '23' },
       { street: 'duong so 1' },
-      { level1: 'da nang' }
+      { level2: 'da nang' }
     ]
   )
 
   assert(
     'cau thu thiem binh an quan 2 cau thu thiem phuong an khanh quan 2',
     [
-      { level3: 'an khanh' },
-      { level2: 'quan 2' }
+      { level4: 'an khanh' },
+      { level3: 'quan 2' }
     ]
   )
 
@@ -495,15 +495,15 @@ const testcase = (test, common) => {
     'nguyen van duong hai chau',
     [
       { street: 'nguyen van duong' },
-      { level2: 'hai chau' }
+      { level3: 'hai chau' }
     ]
   )
 
   assert(
     'don duong lam dong',
     [
-      { level2: 'don duong' },
-      { level1: 'lam dong' }
+      { level3: 'don duong' },
+      { level2: 'lam dong' }
     ]
   )
 }
