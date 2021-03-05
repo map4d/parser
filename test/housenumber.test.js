@@ -155,6 +155,11 @@ const testcase = (test, common) => {
     { street: 'nguyen van linh' }
   ])
 
+  assert('18bis/2a/a2 nguyen van linh', [
+    { housenumber: '18bis/2a/a2' },
+    { street: 'nguyen van linh' }
+  ])
+
   assert('a16 nguyen van linh', [
     { housenumber: 'a16' },
     { street: 'nguyen van linh' }
@@ -162,6 +167,11 @@ const testcase = (test, common) => {
 
   assert('z16/23 nguyen van linh', [
     { housenumber: 'z16/23' },
+    { street: 'nguyen van linh' }
+  ])
+
+  assert('1052/52e nguyen van linh', [
+    { housenumber: '1052/52e' },
     { street: 'nguyen van linh' }
   ])
 }

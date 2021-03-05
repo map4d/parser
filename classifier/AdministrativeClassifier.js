@@ -37,17 +37,6 @@ class AdministrativeClassifier extends PhraseClassifier {
   }
 
   each (span) {
-    let firstChild = span.graph.findOne('child:first') || span
-    let prev = firstChild.graph.findOne('prev')
-
-    // administrative must not be preceded by street prefix
-    if (prev &&
-            prev.classifications.hasOwnProperty('StreetPrefixClassification') &&
-            !prev.classifications.hasOwnProperty('StreetComponentClassification') &&
-            !prev.classifications.hasOwnProperty('AdministrativeComponentClassification')) {
-      return
-    }
-
     Object.keys(administratives).forEach(level => {
       // use an inverted index for full token matching as it's O(1)
       if (this.index[level].hasOwnProperty(span.norm)) {
