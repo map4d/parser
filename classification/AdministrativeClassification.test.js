@@ -27,6 +27,14 @@ module.exports.tests.constructor = (test) => {
     t.deepEqual(c.meta, {})
     t.end()
   })
+  test('constructor administrative level 4', (t) => {
+    let c = new Classification(4)
+    t.true(c.public)
+    t.equals(c.label, 'level4')
+    t.equals(c.confidence, 1.0)
+    t.deepEqual(c.meta, {})
+    t.end()
+  })
 }
 
 module.exports.all = (tape, common) => {

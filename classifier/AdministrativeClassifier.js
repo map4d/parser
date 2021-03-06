@@ -4,11 +4,6 @@ const AdministrativeComponentClassification = require('../classification/Adminis
 const libpostal = require('../resources/libpostal/libpostal')
 
 const administratives = {
-  'level0': {
-    file: 'level0_names.txt',
-    level: 0,
-    confidence: 1.0
-  },
   'level1': {
     file: 'level1_names.txt',
     level: 1,
@@ -17,11 +12,16 @@ const administratives = {
   'level2': {
     file: 'level2_names.txt',
     level: 2,
-    confidence: 0.85
+    confidence: 1.0
   },
   'level3': {
     file: 'level3_names.txt',
     level: 3,
+    confidence: 0.85
+  },
+  'level4': {
+    file: 'level4_names.txt',
+    level: 4,
     confidence: 0.65
   }
 }
@@ -48,8 +48,8 @@ class AdministrativeClassifier extends PhraseClassifier {
             {
               original: this.index[level][span.norm].original,
               level: administratives[level].level,
-              parentLevel1: this.index[level][span.norm].parentLevel1,
-              parentLevel2: this.index[level][span.norm].parentLevel2
+              parentLevel2: this.index[level][span.norm].parentLevel2,
+              parentLevel3: this.index[level][span.norm].parentLevel3
             }
           )
         )
