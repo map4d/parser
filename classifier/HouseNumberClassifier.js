@@ -9,6 +9,13 @@ class HouseNumberClassifier extends PhraseClassifier {
     // skip spans which do not contain numbers
     if (!span.contains.numerals) { return }
 
+    let firstChild = span.graph.findOne('child:first') || span
+    let prev = firstChild.graph.findOne('prev')
+    // housenumber must not be preceded by housenumber exclusion classification
+    if (prev && prev.classifications.hasOwnProperty('HouseNumberExclusionClassification')) {
+      return
+    }
+
     // do not classify tokens if they already have a 'StreetComponentClassification' or 'AdministrativeComponentClassification'
     // in viet nam, we have some street/ administrative which has the number in it eg: duong 29 thang 3, duong so 1, quan 1, phuong 12...
     if (span.classifications.hasOwnProperty('StreetComponentClassification') || span.classifications.hasOwnProperty('AdministrativeComponentClassification') || (
