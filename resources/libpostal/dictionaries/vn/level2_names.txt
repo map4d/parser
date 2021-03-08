@@ -10,9 +10,9 @@ binh duong|tinh binh duong
 binh phuoc|tinh binh phuoc
 binh thuan|tinh binh thuan
 ca mau|tinh ca mau
-can tho|thanh pho can tho|tp can tho|tp. can tho
+can tho|thanh pho can tho|tp can tho|tp. can tho|can tho city
 cao bang|tinh cao bang
-da nang|thanh pho da nang|tp da nang|tp. da nang
+da nang|thanh pho da nang|tp da nang|tp. da nang|da nang city
 dak lak|tinh dak lak
 dak nong|tinh dak nong
 dien bien|tinh dien bien
@@ -21,12 +21,12 @@ dong thap|tinh dong thap
 gia lai|tinh gia lai
 ha giang|tinh ha giang
 ha nam|tinh ha nam
-ha noi|tp ha noi|tp. ha noi|thanh pho ha noi|hn|tp hn|tp. hn|thanh pho hn
+ha noi|tp ha noi|tp. ha noi|thanh pho ha noi|hn|tp hn|tp. hn|thanh pho hn|ha noi city|ha noi capital|hn city|hn capital
 ha tinh|tinh ha tinh
 hai duong|tinh hai duong
-hai phong|thanh pho hai phong|tp hai phong|tp. hai phong
+hai phong|thanh pho hai phong|tp hai phong|tp. hai phong|hai phong city
 hau giang|tinh hau giang
-ho chi minh|tp ho chi minh|tp. ho chi minh|thanh pho ho chi minh|hcm|tp hcm|tp. hcm|thanh pho hcm
+ho chi minh|tp ho chi minh|tp. ho chi minh|thanh pho ho chi minh|hcm|tp hcm|tp. hcm|thanh pho hcm|ho chi minh city|hcm city
 hoa binh|tinh hoa binh
 hung yen|tinh hung yen
 khanh hoa|tinh khanh hoa

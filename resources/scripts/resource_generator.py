@@ -59,12 +59,12 @@ def get_level1_name(level1_data) -> str:
     if name == 'ba ria - vung tau':
         name = 'ba ria vung tau|ba ria|tinh ba ria vung tau|tinh ba ria'
     elif name == 'ho chi minh':
-        name = 'ho chi minh|tp ho chi minh|tp. ho chi minh|thanh pho ho chi minh|hcm|tp hcm|tp. hcm|thanh pho hcm'
+        name = 'ho chi minh|tp ho chi minh|tp. ho chi minh|thanh pho ho chi minh|hcm|tp hcm|tp. hcm|thanh pho hcm|ho chi minh city|hcm city'
     elif name == 'ha noi':
-        name = 'ha noi|tp ha noi|tp. ha noi|thanh pho ha noi|hn|tp hn|tp. hn|thanh pho hn'
+        name = 'ha noi|tp ha noi|tp. ha noi|thanh pho ha noi|hn|tp hn|tp. hn|thanh pho hn|ha noi city|ha noi capital|hn city|hn capital'
     else:
         if level1_type == 'thanh pho':
-            name = name + '|thanh pho ' + name + '|tp ' + name + '|tp. ' + name
+            name = name + '|thanh pho ' + name + '|tp ' + name + '|tp. ' + name + '|' + name + ' city'
         else:
             name = name + '|' + level1_type + ' ' + name
     
