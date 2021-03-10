@@ -8,6 +8,7 @@ const StreetClassifier = require('../classifier/StreetClassifier')
 const StreetPrefixClassifier = require('../classifier/StreetPrefixClassifier')
 const PlaceClassifier = require('../classifier/PlaceClassifier')
 const AdministrativeClassifier = require('../classifier/AdministrativeClassifier')
+const AdministrativeAcronymClassifier = require('../classifier/AdministrativeAcronymClassifier')
 const ExclusionClassifier = require('../classifier/ExclusionClassifier')
 // const MultiStreetClassifier = require('../classifier/MultiStreetClassifier')
 const CompositeClassifier = require('../classifier/CompositeClassifier')
@@ -21,6 +22,7 @@ const InvalidSolutionFilter = require('../solver/InvalidSolutionFilter')
 const TokenDistanceFilter = require('../solver/TokenDistanceFilter')
 const MustNotPreceedFilter = require('../solver/MustNotPreceedFilter')
 const MustNotPreceedPlaceFilter = require('../solver/MustNotPreceedPlaceFilter')
+const MustNotFollowFilter = require('../solver/MustNotFollowFilter')
 const SubsetFilter = require('../solver/SubsetFilter')
 const HouseNumberPositionFilter = require('../solver/HouseNumberPositionFilter')
 const StreetPenalty = require('../solver/StreetPenalty')
@@ -45,6 +47,7 @@ class AddressParser extends Parser {
         new AdministrativeClassifier(),
         new HouseNumberExclusionClassifier(),
         new HouseNumberClassifier(),
+        new AdministrativeAcronymClassifier(),
 
         // word classifiers
         new PostcodeClassifier(),
@@ -63,6 +66,7 @@ class AddressParser extends Parser {
           ['HouseNumberClassification', 'PostcodeClassification']
         ]),
         new MustNotPreceedFilter('PostcodeClassification', 'HouseNumberClassification'),
+        new MustNotFollowFilter('AdministrativeLevel4AcronymClassification', 'AdministrativeLevel3AcronymClassification'),
         new MustNotPreceedPlaceFilter(),
         new HouseNumberPositionFilter(),
         new StreetPenalty(),

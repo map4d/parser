@@ -110,6 +110,7 @@ const testcase = (test, common) => {
   assert(
     '007 -  lo f, chung cu   xom cai, 5, ho chi minh',
     [
+      { level3: '5' },
       { level2: 'ho chi minh' }
     ]
   )
@@ -126,6 +127,7 @@ const testcase = (test, common) => {
     'truong dh hong bang, dien bien phu, 15, binh thanh, ho chi minh',
     [
       { street: 'dien bien phu' },
+      { level4: '15' },
       { level3: 'binh thanh' },
       { level2: 'ho chi minh' }
     ]

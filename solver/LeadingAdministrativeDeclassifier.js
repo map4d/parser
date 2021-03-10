@@ -7,7 +7,9 @@ const NETURAL_CLASSIFICATIONS = [
 ]
 
 const ADMIN_CLASSIFICATIONS = [
-  'AdministrativeClassification'
+  'AdministrativeClassification',
+  'AdministrativeAdminLevel3AcronymClassification',
+  'AdministrativeAdminLevel4AcronymClassification'
 ]
 
 class LeadingAdministrativeDeclassifier {

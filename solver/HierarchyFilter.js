@@ -5,7 +5,9 @@ class HierarchyFilter {
       let skip = false
       s.pair = s.pair.reverse().filter((p) => {
         if (
-          p.classification.constructor.name !== 'AdministrativeClassification'
+          p.classification.constructor.name !== 'AdministrativeClassification' &&
+                    p.classification.constructor.name !== 'AdministrativeLevel3AcronymClassification' &&
+                    p.classification.constructor.name !== 'AdministrativeLevel4AcronymClassification'
         ) {
           return true
         }
