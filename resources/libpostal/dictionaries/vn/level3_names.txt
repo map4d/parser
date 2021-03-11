@@ -1,18 +1,18 @@
 a luoi|huyen a luoi|h. a luoi|h.a luoi/thua thien hue
 an bien|huyen an bien|h. an bien|h.an bien/kien giang
 an duong|huyen an duong|h. an duong|h.an duong/hai phong
-an khe|thi xa an khe|t. an khe|t.an khe/gia lai
+an khe|thi xa an khe|tx. an khe|tx.an khe/gia lai
 an lao|huyen an lao|h. an lao|h.an lao/hai phong|binh dinh
 an minh|huyen an minh|h. an minh|h.an minh/kien giang
-an nhon|thi xa an nhon|t. an nhon|t.an nhon/binh dinh
+an nhon|thi xa an nhon|tx. an nhon|tx.an nhon/binh dinh
 an phu|huyen an phu|h. an phu|h.an phu/an giang
 an thi|huyen an thi|h. an thi|h.an thi/hung yen
 anh son|huyen anh son|h. anh son|h.anh son/nghe an
-ayun pa|thi xa ayun pa|t. ayun pa|t.ayun pa/gia lai
+ayun pa|thi xa ayun pa|tx. ayun pa|tx.ayun pa/gia lai
 ba be|huyen ba be|h. ba be|h.ba be/bac kan
 ba che|huyen ba che|h. ba che|h.ba che/quang ninh
 ba dinh|quan ba dinh|q. ba dinh|q.ba dinh/ha noi
-ba don|thi xa ba don|t. ba don|t.ba don/quang binh
+ba don|thi xa ba don|tx. ba don|tx.ba don/quang binh
 ba ria|thanh pho ba ria|tp ba ria|tp. ba ria|tp.ba ria/ba ria vung tau
 ba thuoc|huyen ba thuoc|h. ba thuoc|h.ba thuoc/thanh hoa
 ba to|huyen ba to|h. ba to|h.ba to/quang ngai
@@ -35,26 +35,26 @@ bac yen|huyen bac yen|h. bac yen|h.bac yen/son la
 bach long vi|huyen bach long vi|h. bach long vi|h.bach long vi/hai phong
 bach thong|huyen bach thong|h. bach thong|h.bach thong/bac kan
 bao lac|huyen bao lac|h. bao lac|h.bao lac/cao bang
-bao lam|huyen bao lam|h. bao lam|h.bao lam/lam dong|cao bang
+bao lam|huyen bao lam|h. bao lam|h.bao lam/cao bang|lam dong
 bao loc|thanh pho bao loc|tp bao loc|tp. bao loc|tp.bao loc/lam dong
 bao thang|huyen bao thang|h. bao thang|h.bao thang/lao cai
 bao yen|huyen bao yen|h. bao yen|h.bao yen/lao cai
 bat xat|huyen bat xat|h. bat xat|h.bat xat/lao cai
 bau bang|huyen bau bang|h. bau bang|h.bau bang/binh duong
-ben cat|thi xa ben cat|t. ben cat|t.ben cat/binh duong
+ben cat|thi xa ben cat|tx. ben cat|tx.ben cat/binh duong
 ben cau|huyen ben cau|h. ben cau|h.ben cau/tay ninh
 ben luc|huyen ben luc|h. ben luc|h.ben luc/long an
 ben tre|thanh pho ben tre|tp ben tre|tp. ben tre|tp.ben tre/ben tre
 bien hoa|thanh pho bien hoa|tp bien hoa|tp. bien hoa|tp.bien hoa/dong nai
-bim son|thi xa bim son|t. bim son|t.bim son/thanh hoa
+bim son|thi xa bim son|tx. bim son|tx.bim son/thanh hoa
 binh chanh|huyen binh chanh|h. binh chanh|h.binh chanh/ho chi minh
 binh dai|huyen binh dai|h. binh dai|h.binh dai/ben tre
 binh giang|huyen binh giang|h. binh giang|h.binh giang/hai duong
 binh gia|huyen binh gia|h. binh gia|h.binh gia/lang son
 binh lieu|huyen binh lieu|h. binh lieu|h.binh lieu/quang ninh
-binh long|thi xa binh long|t. binh long|t.binh long/binh phuoc
+binh long|thi xa binh long|tx. binh long|tx.binh long/binh phuoc
 binh luc|huyen binh luc|h. binh luc|h.binh luc/ha nam
-binh minh|thi xa binh minh|t. binh minh|t.binh minh/vinh long
+binh minh|thi xa binh minh|tx. binh minh|tx.binh minh/vinh long
 binh son|huyen binh son|h. binh son|h.binh son/quang ngai
 binh tan|huyen binh tan|h. binh tan|h.binh tan/vinh long
 binh tan|quan binh tan|q. binh tan|q.binh tan/ho chi minh
@@ -66,12 +66,12 @@ bu dang|huyen bu dang|h. bu dang|h.bu dang/binh phuoc
 bu dop|huyen bu dop|h. bu dop|h.bu dop/binh phuoc
 bu gia map|huyen bu gia map|h. bu gia map|h.bu gia map/binh phuoc
 buon don|huyen buon don|h. buon don|h.buon don/dak lak
-buon ho|thi xa buon ho|t. buon ho|t.buon ho/dak lak
+buon ho|thi xa buon ho|tx. buon ho|tx.buon ho/dak lak
 buon ma thuot|thanh pho buon ma thuot|tp buon ma thuot|tp. buon ma thuot|tp.buon ma thuot/dak lak
 ca mau|thanh pho ca mau|tp ca mau|tp. ca mau|tp.ca mau/ca mau
 cai be|huyen cai be|h. cai be|h.cai be/tien giang
 cai lay|huyen cai lay|h. cai lay|h.cai lay/tien giang
-cai lay|thi xa cai lay|t. cai lay|t.cai lay/tien giang
+cai lay|thi xa cai lay|tx. cai lay|tx.cai lay/tien giang
 cai nuoc|huyen cai nuoc|h. cai nuoc|h.cai nuoc/ca mau
 cai rang|quan cai rang|q. cai rang|q.cai rang/can tho
 cam giang|huyen cam giang|h. cam giang|h.cam giang/hai duong
@@ -103,7 +103,7 @@ chau doc|thanh pho chau doc|tp chau doc|tp. chau doc|tp.chau doc/an giang
 chau duc|huyen chau duc|h. chau duc|h.chau duc/ba ria vung tau
 chau phu|huyen chau phu|h. chau phu|h.chau phu/an giang
 chau thanh a|huyen chau thanh a|h. chau thanh a|h.chau thanh a/hau giang
-chau thanh|huyen chau thanh|h. chau thanh|h.chau thanh/tay ninh|tra vinh|long an|dong thap|tien giang|kien giang|hau giang|an giang|soc trang|ben tre
+chau thanh|huyen chau thanh|h. chau thanh|h.chau thanh/tay ninh|hau giang|tien giang|kien giang|dong thap|an giang|long an|ben tre|tra vinh|soc trang
 chi lang|huyen chi lang|h. chi lang|h.chi lang/lang son
 chi linh|thanh pho chi linh|tp chi linh|tp. chi linh|tp.chi linh/hai duong
 chiem hoa|huyen chiem hoa|h. chiem hoa|h.chiem hoa/tuyen quang
@@ -127,7 +127,7 @@ cu jut|huyen cu jut|h. cu jut|h.cu jut/dak nong
 cu kuin|huyen cu kuin|h. cu kuin|h.cu kuin/dak lak
 cu lao dung|huyen cu lao dung|h. cu lao dung|h.cu lao dung/soc trang
 cu m'gar|cu mgar|huyen cu m'gar|cu mgar|h. cu m'gar|cu mgar|h.cu m'gar|cu mgar/dak lak
-cua lo|thi xa cua lo|t. cua lo|t.cua lo/nghe an
+cua lo|thi xa cua lo|tx. cua lo|tx.cua lo/nghe an
 da bac|huyen da bac|h. da bac|h.da bac/hoa binh
 da huoai|huyen da huoai|h. da huoai|h.da huoai/lam dong
 da krong|huyen da krong|h. da krong|h.da krong/quang tri
@@ -152,7 +152,7 @@ dat do|huyen dat do|h. dat do|h.dat do/ba ria vung tau
 dau tieng|huyen dau tieng|h. dau tieng|h.dau tieng/binh duong
 di an|thanh pho di an|tp di an|tp. di an|tp.di an/binh duong
 di linh|huyen di linh|h. di linh|h.di linh/lam dong
-dien ban|thi xa dien ban|t. dien ban|t.dien ban/quang nam
+dien ban|thi xa dien ban|tx. dien ban|tx.dien ban/quang nam
 dien bien dong|huyen dien bien dong|h. dien bien dong|h.dien bien dong/dien bien
 dien bien phu|thanh pho dien bien phu|tp dien bien phu|tp. dien bien phu|tp.dien bien phu/dien bien
 dien bien|huyen dien bien|h. dien bien|h.dien bien/dien bien
@@ -170,13 +170,13 @@ dong da|quan dong da|q. dong da|q.dong da/ha noi
 dong giang|huyen dong giang|h. dong giang|h.dong giang/quang nam
 dong hai|huyen dong hai|h. dong hai|h.dong hai/bac lieu
 dong ha|thanh pho dong ha|tp dong ha|tp. dong ha|tp.dong ha/quang tri
-dong hoa|thi xa dong hoa|t. dong hoa|t.dong hoa/phu yen
+dong hoa|thi xa dong hoa|tx. dong hoa|tx.dong hoa/phu yen
 dong hoi|thanh pho dong hoi|tp dong hoi|tp. dong hoi|tp.dong hoi/quang binh
 dong hung|huyen dong hung|h. dong hung|h.dong hung/thai binh
 dong hy|huyen dong hy|h. dong hy|h.dong hy/thai nguyen
 dong phu|huyen dong phu|h. dong phu|h.dong phu/binh phuoc
 dong son|huyen dong son|h. dong son|h.dong son/thanh hoa
-dong trieu|thi xa dong trieu|t. dong trieu|t.dong trieu/quang ninh
+dong trieu|thi xa dong trieu|tx. dong trieu|tx.dong trieu/quang ninh
 dong van|huyen dong van|h. dong van|h.dong van/ha giang
 dong xoai|thanh pho dong xoai|tp dong xoai|tp. dong xoai|tp.dong xoai/binh phuoc
 dong xuan|huyen dong xuan|h. dong xuan|h.dong xuan/phu yen
@@ -184,15 +184,15 @@ duc co|huyen duc co|h. duc co|h.duc co/gia lai
 duc hoa|huyen duc hoa|h. duc hoa|h.duc hoa/long an
 duc hue|huyen duc hue|h. duc hue|h.duc hue/long an
 duc linh|huyen duc linh|h. duc linh|h.duc linh/binh thuan
-duc pho|thi xa duc pho|t. duc pho|t.duc pho/quang ngai
+duc pho|thi xa duc pho|tx. duc pho|tx.duc pho/quang ngai
 duc tho|huyen duc tho|h. duc tho|h.duc tho/ha tinh
 duc trong|huyen duc trong|h. duc trong|h.duc trong/lam dong
 duong kinh|quan duong kinh|q. duong kinh|q.duong kinh/hai phong
 duong minh chau|huyen duong minh chau|h. duong minh chau|h.duong minh chau/tay ninh
-duy tien|thi xa duy tien|t. duy tien|t.duy tien/ha nam
+duy tien|thi xa duy tien|tx. duy tien|tx.duy tien/ha nam
 duy xuyen|huyen duy xuyen|h. duy xuyen|h.duy xuyen/quang nam
 duyen hai|huyen duyen hai|h. duyen hai|h.duyen hai/tra vinh
-duyen hai|thi xa duyen hai|t. duyen hai|t.duyen hai/tra vinh
+duyen hai|thi xa duyen hai|tx. duyen hai|tx.duyen hai/tra vinh
 ea h'leo|ea hleo|huyen ea h'leo|ea hleo|h. ea h'leo|ea hleo|h.ea h'leo|ea hleo/dak lak
 ea kar|huyen ea kar|h. ea kar|h.ea kar/dak lak
 ea sup|huyen ea sup|h. ea sup|h.ea sup/dak lak
@@ -200,7 +200,7 @@ gia binh|huyen gia binh|h. gia binh|h.gia binh/bac ninh
 gia lam|huyen gia lam|h. gia lam|h.gia lam/ha noi
 gia loc|huyen gia loc|h. gia loc|h.gia loc/hai duong
 gia nghia|thanh pho gia nghia|tp gia nghia|tp. gia nghia|tp.gia nghia/dak nong
-gia rai|thi xa gia rai|t. gia rai|t.gia rai/bac lieu
+gia rai|thi xa gia rai|tx. gia rai|tx.gia rai/bac lieu
 gia vien|huyen gia vien|h. gia vien|h.gia vien/ninh binh
 giang thanh|huyen giang thanh|h. giang thanh|h.giang thanh/kien giang
 giao thuy|huyen giao thuy|h. giao thuy|h.giao thuy/nam dinh
@@ -209,7 +209,7 @@ giong rieng|huyen giong rieng|h. giong rieng|h.giong rieng/kien giang
 giong trom|huyen giong trom|h. giong trom|h.giong trom/ben tre
 go cong dong|huyen go cong dong|h. go cong dong|h.go cong dong/tien giang
 go cong tay|huyen go cong tay|h. go cong tay|h.go cong tay/tien giang
-go cong|thi xa go cong|t. go cong|t.go cong/tien giang
+go cong|thi xa go cong|tx. go cong|tx.go cong/tien giang
 go dau|huyen go dau|h. go dau|h.go dau/tay ninh
 go quao|huyen go quao|h. go quao|h.go quao/kien giang
 go vap|quan go vap|q. go vap|q.go vap/ho chi minh
@@ -240,15 +240,15 @@ hoa an|huyen hoa an|h. hoa an|h.hoa an/cao bang
 hoa binh|huyen hoa binh|h. hoa binh|h.hoa binh/bac lieu
 hoa binh|thanh pho hoa binh|tp hoa binh|tp. hoa binh|tp.hoa binh/hoa binh
 hoa lu|huyen hoa lu|h. hoa lu|h.hoa lu/ninh binh
-hoa thanh|thi xa hoa thanh|t. hoa thanh|t.hoa thanh/tay ninh
+hoa thanh|thi xa hoa thanh|tx. hoa thanh|tx.hoa thanh/tay ninh
 hoa vang|huyen hoa vang|h. hoa vang|h.hoa vang/da nang
 hoai an|huyen hoai an|h. hoai an|h.hoai an/binh dinh
 hoai duc|huyen hoai duc|h. hoai duc|h.hoai duc/ha noi
-hoai nhon|thi xa hoai nhon|t. hoai nhon|t.hoai nhon/binh dinh
+hoai nhon|thi xa hoai nhon|tx. hoai nhon|tx.hoai nhon/binh dinh
 hoan kiem|quan hoan kiem|q. hoan kiem|q.hoan kiem/ha noi
 hoang hoa|huyen hoang hoa|h. hoang hoa|h.hoang hoa/thanh hoa
 hoang mai|quan hoang mai|q. hoang mai|q.hoang mai/ha noi
-hoang mai|thi xa hoang mai|t. hoang mai|t.hoang mai/nghe an
+hoang mai|thi xa hoang mai|tx. hoang mai|tx.hoang mai/nghe an
 hoang sa|huyen hoang sa|h. hoang sa|h.hoang sa/da nang
 hoang su phi|huyen hoang su phi|h. hoang su phi|h.hoang su phi/ha giang
 hoc mon|huyen hoc mon|h. hoc mon|h.hoc mon/ho chi minh
@@ -257,7 +257,7 @@ hon dat|huyen hon dat|h. hon dat|h.hon dat/kien giang
 hon quan|huyen hon quan|h. hon quan|h.hon quan/binh phuoc
 hong bang|quan hong bang|q. hong bang|q.hong bang/hai phong
 hong dan|huyen hong dan|h. hong dan|h.hong dan/bac lieu
-hong linh|thi xa hong linh|t. hong linh|t.hong linh/ha tinh
+hong linh|thi xa hong linh|tx. hong linh|tx.hong linh/ha tinh
 hong ngu|huyen hong ngu|h. hong ngu|h.hong ngu/dong thap
 hong ngu|thanh pho hong ngu|tp hong ngu|tp. hong ngu|tp.hong ngu/dong thap
 hue|thanh pho hue|tp hue|tp. hue|tp.hue/thua thien hue
@@ -267,8 +267,8 @@ hung yen|thanh pho hung yen|tp hung yen|tp. hung yen|tp.hung yen/hung yen
 huong hoa|huyen huong hoa|h. huong hoa|h.huong hoa/quang tri
 huong khe|huyen huong khe|h. huong khe|h.huong khe/ha tinh
 huong son|huyen huong son|h. huong son|h.huong son/ha tinh
-huong thuy|thi xa huong thuy|t. huong thuy|t.huong thuy/thua thien hue
-huong tra|thi xa huong tra|t. huong tra|t.huong tra/thua thien hue
+huong thuy|thi xa huong thuy|tx. huong thuy|tx.huong thuy/thua thien hue
+huong tra|thi xa huong tra|tx. huong tra|tx.huong tra/thua thien hue
 huu lung|huyen huu lung|h. huu lung|h.huu lung/lang son
 huyen kbang|h. kbang|h.kbang/gia lai
 huyen lak|h. lak|h.lak/dak lak
@@ -284,14 +284,14 @@ kien an|quan kien an|q. kien an|q.kien an/hai phong
 kien hai|huyen kien hai|h. kien hai|h.kien hai/kien giang
 kien luong|huyen kien luong|h. kien luong|h.kien luong/kien giang
 kien thuy|huyen kien thuy|h. kien thuy|h.kien thuy/hai phong
-kien tuong|thi xa kien tuong|t. kien tuong|t.kien tuong/long an
+kien tuong|thi xa kien tuong|tx. kien tuong|tx.kien tuong/long an
 kien xuong|huyen kien xuong|h. kien xuong|h.kien xuong/thai binh
 kim bang|huyen kim bang|h. kim bang|h.kim bang/ha nam
 kim boi|huyen kim boi|h. kim boi|h.kim boi/hoa binh
 kim dong|huyen kim dong|h. kim dong|h.kim dong/hung yen
 kim son|huyen kim son|h. kim son|h.kim son/ninh binh
 kim thanh|huyen kim thanh|h. kim thanh|h.kim thanh/hai duong
-kinh mon|thi xa kinh mon|t. kinh mon|t.kinh mon/hai duong
+kinh mon|thi xa kinh mon|tx. kinh mon|tx.kinh mon/hai duong
 kon plong|huyen kon plong|h. kon plong|h.kon plong/kon tum
 kon ray|huyen kon ray|h. kon ray|h.kon ray/kon tum
 kon tum|thanh pho kon tum|tp kon tum|tp. kon tum|tp.kon tum/kon tum
@@ -304,9 +304,9 @@ krong no|huyen krong no|h. krong no|h.krong no/dak nong
 krong pac|huyen krong pac|h. krong pac|h.krong pac/dak lak
 krong pa|huyen krong pa|h. krong pa|h.krong pa/gia lai
 ky anh|huyen ky anh|h. ky anh|h.ky anh/ha tinh
-ky anh|thi xa ky anh|t. ky anh|t.ky anh/ha tinh
+ky anh|thi xa ky anh|tx. ky anh|tx.ky anh/ha tinh
 ky son|huyen ky son|h. ky son|h.ky son/nghe an
-la gi|thi xa la gi|t. la gi|t.la gi/binh thuan
+la gi|thi xa la gi|tx. la gi|tx.la gi/binh thuan
 lac duong|huyen lac duong|h. lac duong|h.lac duong/lam dong
 lac son|huyen lac son|h. lac son|h.lac son/hoa binh
 lac thuy|huyen lac thuy|h. lac thuy|h.lac thuy/hoa binh
@@ -332,7 +332,7 @@ long dien|huyen long dien|h. long dien|h.long dien/ba ria vung tau
 long ho|huyen long ho|h. long ho|h.long ho/vinh long
 long khanh|thanh pho long khanh|tp long khanh|tp. long khanh|tp.long khanh/dong nai
 long my|huyen long my|h. long my|h.long my/hau giang
-long my|thi xa long my|t. long my|t.long my/hau giang
+long my|thi xa long my|tx. long my|tx.long my/hau giang
 long phu|huyen long phu|h. long phu|h.long phu/soc trang
 long thanh|huyen long thanh|h. long thanh|h.long thanh/dong nai
 long xuyen|thanh pho long xuyen|tp long xuyen|tp. long xuyen|tp.long xuyen/an giang
@@ -362,12 +362,12 @@ muong ang|huyen muong ang|h. muong ang|h.muong ang/dien bien
 muong cha|huyen muong cha|h. muong cha|h.muong cha/dien bien
 muong khuong|huyen muong khuong|h. muong khuong|h.muong khuong/lao cai
 muong lat|huyen muong lat|h. muong lat|h.muong lat/thanh hoa
-muong lay|thi xa muong lay|t. muong lay|t.muong lay/dien bien
+muong lay|thi xa muong lay|tx. muong lay|tx.muong lay/dien bien
 muong la|huyen muong la|h. muong la|h.muong la/son la
 muong nhe|huyen muong nhe|h. muong nhe|h.muong nhe/dien bien
 muong te|huyen muong te|h. muong te|h.muong te/lai chau
 my duc|huyen my duc|h. my duc|h.my duc/ha noi
-my hao|thi xa my hao|t. my hao|t.my hao/hung yen
+my hao|thi xa my hao|tx. my hao|tx.my hao/hung yen
 my loc|huyen my loc|h. my loc|h.my loc/nam dinh
 my tho|thanh pho my tho|tp my tho|tp. my tho|tp.my tho/tien giang
 my tu|huyen my tu|h. my tu|h.my tu/soc trang
@@ -386,16 +386,16 @@ nam tra my|huyen nam tra my|h. nam tra my|h.nam tra my/quang nam
 nam truc|huyen nam truc|h. nam truc|h.nam truc/nam dinh
 nam tu liem|quan nam tu liem|q. nam tu liem|q.nam tu liem/ha noi
 nga bay|thanh pho nga bay|tp nga bay|tp. nga bay|tp.nga bay/hau giang
-nga nam|thi xa nga nam|t. nga nam|t.nga nam/soc trang
+nga nam|thi xa nga nam|tx. nga nam|tx.nga nam/soc trang
 nga son|huyen nga son|h. nga son|h.nga son/thanh hoa
 ngan son|huyen ngan son|h. ngan son|h.ngan son/bac kan
 nghi loc|huyen nghi loc|h. nghi loc|h.nghi loc/nghe an
-nghi son|thi xa nghi son|t. nghi son|t.nghi son/thanh hoa
+nghi son|thi xa nghi son|tx. nghi son|tx.nghi son/thanh hoa
 nghi xuan|huyen nghi xuan|h. nghi xuan|h.nghi xuan/ha tinh
 nghia dan|huyen nghia dan|h. nghia dan|h.nghia dan/nghe an
 nghia hanh|huyen nghia hanh|h. nghia hanh|h.nghia hanh/quang ngai
 nghia hung|huyen nghia hung|h. nghia hung|h.nghia hung/nam dinh
-nghia lo|thi xa nghia lo|t. nghia lo|t.nghia lo/yen bai
+nghia lo|thi xa nghia lo|tx. nghia lo|tx.nghia lo/yen bai
 ngo quyen|quan ngo quyen|q. ngo quyen|q.ngo quyen/hai phong
 ngoc hien|huyen ngoc hien|h. ngoc hien|h.ngoc hien/ca mau
 ngoc hoi|huyen ngoc hoi|h. ngoc hoi|h.ngoc hoi/kon tum
@@ -411,7 +411,7 @@ nhu xuan|huyen nhu xuan|h. nhu xuan|h.nhu xuan/thanh hoa
 ninh binh|thanh pho ninh binh|tp ninh binh|tp. ninh binh|tp.ninh binh/ninh binh
 ninh giang|huyen ninh giang|h. ninh giang|h.ninh giang/hai duong
 ninh hai|huyen ninh hai|h. ninh hai|h.ninh hai/ninh thuan
-ninh hoa|thi xa ninh hoa|t. ninh hoa|t.ninh hoa/khanh hoa
+ninh hoa|thi xa ninh hoa|tx. ninh hoa|tx.ninh hoa/khanh hoa
 ninh kieu|quan ninh kieu|q. ninh kieu|q.ninh kieu/can tho
 ninh phuoc|huyen ninh phuoc|h. ninh phuoc|h.ninh phuoc/ninh thuan
 ninh son|huyen ninh son|h. ninh son|h.ninh son/ninh thuan
@@ -422,8 +422,8 @@ o mon|quan o mon|q. o mon|q.o mon/can tho
 pac nam|huyen pac nam|h. pac nam|h.pac nam/bac kan
 phan rang thap cham|thanh pho phan rang thap cham|tp phan rang thap cham|tp. phan rang thap cham|phan rang|thanh pho phan rang|tp phan rang|tp.phan rang/ninh thuan
 phan thiet|thanh pho phan thiet|tp phan thiet|tp. phan thiet|tp.phan thiet/binh thuan
-pho yen|thi xa pho yen|t. pho yen|t.pho yen/thai nguyen
-phong dien|huyen phong dien|h. phong dien|h.phong dien/can tho|thua thien hue
+pho yen|thi xa pho yen|tx. pho yen|tx.pho yen/thai nguyen
+phong dien|huyen phong dien|h. phong dien|h.phong dien/thua thien hue|can tho
 phong tho|huyen phong tho|h. phong tho|h.phong tho/lai chau
 phu binh|huyen phu binh|h. phu binh|h.phu binh/thai nguyen
 phu cat|huyen phu cat|h. phu cat|h.phu cat/binh dinh
@@ -434,7 +434,7 @@ phu loc|huyen phu loc|h. phu loc|h.phu loc/thua thien hue
 phu luong|huyen phu luong|h. phu luong|h.phu luong/thai nguyen
 phu ly|thanh pho phu ly|tp phu ly|tp. phu ly|tp.phu ly/ha nam
 phu my|huyen phu my|h. phu my|h.phu my/binh dinh
-phu my|thi xa phu my|t. phu my|t.phu my/ba ria vung tau
+phu my|thi xa phu my|tx. phu my|tx.phu my/ba ria vung tau
 phu nhuan|quan phu nhuan|q. phu nhuan|q.phu nhuan/ho chi minh
 phu ninh|huyen phu ninh|h. phu ninh|h.phu ninh/quang nam|phu tho
 phu qui|huyen phu qui|h. phu qui|h.phu qui/binh thuan
@@ -442,7 +442,7 @@ phu quoc|huyen phu quoc|h. phu quoc|h.phu quoc/kien giang
 phu rieng|huyen phu rieng|h. phu rieng|h.phu rieng/binh phuoc
 phu tan|huyen phu tan|h. phu tan|h.phu tan/ca mau|an giang
 phu thien|huyen phu thien|h. phu thien|h.phu thien/gia lai
-phu tho|thi xa phu tho|t. phu tho|t.phu tho/phu tho
+phu tho|thi xa phu tho|tx. phu tho|tx.phu tho/phu tho
 phu vang|huyen phu vang|h. phu vang|h.phu vang/thua thien hue
 phu xuyen|huyen phu xuyen|h. phu xuyen|h.phu xuyen/ha noi
 phu yen|huyen phu yen|h. phu yen|h.phu yen/son la
@@ -450,7 +450,7 @@ phuc tho|huyen phuc tho|h. phuc tho|h.phuc tho/ha noi
 phuc yen|thanh pho phuc yen|tp phuc yen|tp. phuc yen|tp.phuc yen/vinh phuc
 phung hiep|huyen phung hiep|h. phung hiep|h.phung hiep/hau giang
 phuoc long|huyen phuoc long|h. phuoc long|h.phuoc long/bac lieu
-phuoc long|thi xa phuoc long|t. phuoc long|t.phuoc long/binh phuoc
+phuoc long|thi xa phuoc long|tx. phuoc long|tx.phuoc long/binh phuoc
 phuoc son|huyen phuoc son|h. phuoc son|h.phuoc son/quang nam
 pleiku|thanh pho pleiku|tp pleiku|tp. pleiku|tp.pleiku/gia lai
 quan 10|q. 10|q.10/ho chi minh
@@ -474,9 +474,9 @@ quang hoa|huyen quang hoa|h. quang hoa|h.quang hoa/cao bang
 quang ngai|thanh pho quang ngai|tp quang ngai|tp. quang ngai|tp.quang ngai/quang ngai
 quang ninh|huyen quang ninh|h. quang ninh|h.quang ninh/quang binh
 quang trach|huyen quang trach|h. quang trach|h.quang trach/quang binh
-quang tri|thi xa quang tri|t. quang tri|t.quang tri/quang tri
+quang tri|thi xa quang tri|tx. quang tri|tx.quang tri/quang tri
 quang xuong|huyen quang xuong|h. quang xuong|h.quang xuong/thanh hoa
-quang yen|thi xa quang yen|t. quang yen|t.quang yen/quang ninh
+quang yen|thi xa quang yen|tx. quang yen|tx.quang yen/quang ninh
 que phong|huyen que phong|h. que phong|h.que phong/nghe an
 que son|huyen que son|h. que son|h.que son/quang nam
 que vo|huyen que vo|h. que vo|h.que vo/bac ninh
@@ -489,7 +489,7 @@ quynh nhai|huyen quynh nhai|h. quynh nhai|h.quynh nhai/son la
 quynh phu|huyen quynh phu|h. quynh phu|h.quynh phu/thai binh
 rach gia|thanh pho rach gia|tp rach gia|tp. rach gia|tp.rach gia/kien giang
 sa dec|thanh pho sa dec|tp sa dec|tp. sa dec|tp.sa dec/dong thap
-sa pa|thi xa sa pa|t. sa pa|t.sa pa/lao cai
+sa pa|thi xa sa pa|tx. sa pa|tx.sa pa/lao cai
 sa thay|huyen sa thay|h. sa thay|h.sa thay/kon tum
 sam son|thanh pho sam son|tp sam son|tp. sam son|tp.sam son/thanh hoa
 si ma cai|huyen si ma cai|h. si ma cai|h.si ma cai/lao cai
@@ -502,10 +502,10 @@ son ha|huyen son ha|h. son ha|h.son ha/quang ngai
 son hoa|huyen son hoa|h. son hoa|h.son hoa/phu yen
 son la|thanh pho son la|tp son la|tp. son la|tp.son la/son la
 son tay|huyen son tay|h. son tay|h.son tay/quang ngai
-son tay|thi xa son tay|t. son tay|t.son tay/ha noi
+son tay|thi xa son tay|tx. son tay|tx.son tay/ha noi
 son tinh|huyen son tinh|h. son tinh|h.son tinh/quang ngai
 son tra|quan son tra|q. son tra|q.son tra/da nang
-song cau|thi xa song cau|t. song cau|t.song cau/phu yen
+song cau|thi xa song cau|tx. song cau|tx.song cau/phu yen
 song cong|thanh pho song cong|tp song cong|tp. song cong|tp.song cong/thai nguyen
 song hinh|huyen song hinh|h. song hinh|h.song hinh/phu yen
 song lo|huyen song lo|h. song lo|h.song lo/vinh phuc
@@ -514,14 +514,14 @@ sop cop|huyen sop cop|h. sop cop|h.sop cop/son la
 tam binh|huyen tam binh|h. tam binh|h.tam binh/vinh long
 tam dao|huyen tam dao|h. tam dao|h.tam dao/vinh phuc
 tam diep|thanh pho tam diep|tp tam diep|tp. tam diep|tp.tam diep/ninh binh
-tam duong|huyen tam duong|h. tam duong|h.tam duong/lai chau|vinh phuc
+tam duong|huyen tam duong|h. tam duong|h.tam duong/vinh phuc|lai chau
 tam ky|thanh pho tam ky|tp tam ky|tp. tam ky|tp.tam ky/quang nam
 tam nong|huyen tam nong|h. tam nong|h.tam nong/dong thap|phu tho
 tan an|thanh pho tan an|tp tan an|tp. tan an|tp.tan an/long an
 tan bien|huyen tan bien|h. tan bien|h.tan bien/tay ninh
 tan binh|quan tan binh|q. tan binh|q.tan binh/ho chi minh
 tan chau|huyen tan chau|h. tan chau|h.tan chau/tay ninh
-tan chau|thi xa tan chau|t. tan chau|t.tan chau/an giang
+tan chau|thi xa tan chau|tx. tan chau|tx.tan chau/an giang
 tan hiep|huyen tan hiep|h. tan hiep|h.tan hiep/kien giang
 tan hong|huyen tan hong|h. tan hong|h.tan hong/dong thap
 tan hung|huyen tan hung|h. tan hung|h.tan hung/long an
@@ -535,7 +535,7 @@ tan son|huyen tan son|h. tan son|h.tan son/phu tho
 tan thanh|huyen tan thanh|h. tan thanh|h.tan thanh/long an
 tan tru|huyen tan tru|h. tan tru|h.tan tru/long an
 tan uyen|huyen tan uyen|h. tan uyen|h.tan uyen/lai chau
-tan uyen|thi xa tan uyen|t. tan uyen|t.tan uyen/binh duong
+tan uyen|thi xa tan uyen|tx. tan uyen|tx.tan uyen/binh duong
 tan yen|huyen tan yen|h. tan yen|h.tan yen/bac giang
 tanh linh|huyen tanh linh|h. tanh linh|h.tanh linh/binh thuan
 tay giang|huyen tay giang|h. tay giang|h.tay giang/quang nam
@@ -548,7 +548,7 @@ thach ha|huyen thach ha|h. thach ha|h.thach ha/ha tinh
 thach thanh|huyen thach thanh|h. thach thanh|h.thach thanh/thanh hoa
 thach that|huyen thach that|h. thach that|h.thach that/ha noi
 thai binh|thanh pho thai binh|tp thai binh|tp. thai binh|tp.thai binh/thai binh
-thai hoa|thi xa thai hoa|t. thai hoa|t.thai hoa/nghe an
+thai hoa|thi xa thai hoa|tx. thai hoa|tx.thai hoa/nghe an
 thai nguyen|thanh pho thai nguyen|tp thai nguyen|tp. thai nguyen|tp.thai nguyen/thai nguyen
 thai thuy|huyen thai thuy|h. thai thuy|h.thai thuy/thai binh
 than uyen|huyen than uyen|h. than uyen|h.than uyen/lai chau
@@ -566,7 +566,7 @@ thanh oai|huyen thanh oai|h. thanh oai|h.thanh oai/ha noi
 thanh phu|huyen thanh phu|h. thanh phu|h.thanh phu/ben tre
 thanh son|huyen thanh son|h. thanh son|h.thanh son/phu tho
 thanh thuy|huyen thanh thuy|h. thanh thuy|h.thanh thuy/phu tho
-thanh tri|huyen thanh tri|h. thanh tri|h.thanh tri/soc trang|ha noi
+thanh tri|huyen thanh tri|h. thanh tri|h.thanh tri/ha noi|soc trang
 thanh xuan|quan thanh xuan|q. thanh xuan|q.thanh xuan/ha noi
 thap muoi|huyen thap muoi|h. thap muoi|h.thap muoi/dong thap
 thieu hoa|huyen thieu hoa|h. thieu hoa|h.thieu hoa/thanh hoa
@@ -603,7 +603,7 @@ tram tau|huyen tram tau|h. tram tau|h.tram tau/yen bai
 tran de|huyen tran de|h. tran de|h.tran de/soc trang
 tran van thoi|huyen tran van thoi|h. tran van thoi|h.tran van thoi/ca mau
 tran yen|huyen tran yen|h. tran yen|h.tran yen/yen bai
-trang bang|thi xa trang bang|t. trang bang|t.trang bang/tay ninh
+trang bang|thi xa trang bang|tx. trang bang|tx.trang bang/tay ninh
 trang bom|huyen trang bom|h. trang bom|h.trang bom/dong nai
 trang dinh|huyen trang dinh|h. trang dinh|h.trang dinh/lang son
 tri ton|huyen tri ton|h. tri ton|h.tri ton/an giang
@@ -615,7 +615,7 @@ truong sa|huyen truong sa|h. truong sa|h.truong sa/khanh hoa
 tu ky|huyen tu ky|h. tu ky|h.tu ky/hai duong
 tu mo rong|huyen tu mo rong|h. tu mo rong|h.tu mo rong/kon tum
 tu nghia|huyen tu nghia|h. tu nghia|h.tu nghia/quang ngai
-tu son|thi xa tu son|t. tu son|t.tu son/bac ninh
+tu son|thi xa tu son|tx. tu son|tx.tu son/bac ninh
 tua chua|huyen tua chua|h. tua chua|h.tua chua/dien bien
 tuan giao|huyen tuan giao|h. tuan giao|h.tuan giao/dien bien
 tuong duong|huyen tuong duong|h. tuong duong|h.tuong duong/nghe an
@@ -647,7 +647,7 @@ vi xuyen|huyen vi xuyen|h. vi xuyen|h.vi xuyen/ha giang
 viet tri|thanh pho viet tri|tp viet tri|tp. viet tri|tp.viet tri/phu tho
 viet yen|huyen viet yen|h. viet yen|h.viet yen/bac giang
 vinh bao|huyen vinh bao|h. vinh bao|h.vinh bao/hai phong
-vinh chau|thi xa vinh chau|t. vinh chau|t.vinh chau/soc trang
+vinh chau|thi xa vinh chau|tx. vinh chau|tx.vinh chau/soc trang
 vinh cuu|huyen vinh cuu|h. vinh cuu|h.vinh cuu/dong nai
 vinh hung|huyen vinh hung|h. vinh hung|h.vinh hung/long an
 vinh linh|huyen vinh linh|h. vinh linh|h.vinh linh/quang tri

@@ -13,6 +13,13 @@ def normalize(value: str) -> str:
 
     return result
 
+def get_administrative_level_type_acronym(administrative_level_type) -> str:
+    type = ''
+    for type_component in administrative_level_type.split(' '):
+        type += type_component[0]
+
+    return type
+
 def get_content_from_url(url: str) -> str:
     response = urllib.request.urlopen(url).read()
     return json.loads(response.decode('utf-8'))
@@ -91,15 +98,15 @@ def get_level2_name(level2_data) -> str:
         elif name.isnumeric():
             name = name.lstrip('0')
             if len(name) == 1:
-                name = level2_type + ' ' + name + '|' + level2_type + ' 0' + name + '|' + level2_type[0] + '.0' + name + '|' + level2_type[0] + '. 0' + name + '|' + level2_type[0] + '.' + name + '|' + level2_type[0] + '. ' + name
+                name = level2_type + ' ' + name + '|' + level2_type + ' 0' + name + '|' + get_administrative_level_type_acronym(level2_type) + '.0' + name + '|' + get_administrative_level_type_acronym(level2_type) + '. 0' + name + '|' + get_administrative_level_type_acronym(level2_type) + '.' + name + '|' + get_administrative_level_type_acronym(level2_type) + '. ' + name
             else:
-                name = level2_type + ' ' + name + '|' + level2_type[0] +  '. ' + name + '|' + level2_type[0] +  '.' + name
+                name = level2_type + ' ' + name + '|' + get_administrative_level_type_acronym(level2_type) +  '. ' + name + '|' + get_administrative_level_type_acronym(level2_type) +  '.' + name
 
         elif ' ' in name:
-            name = name + '|' + level2_type + ' ' + name + '|' + level2_type[0] +  '. ' + name + '|' + level2_type[0] +  '.' + name
+            name = name + '|' + level2_type + ' ' + name + '|' + get_administrative_level_type_acronym(level2_type) +  '. ' + name + '|' + get_administrative_level_type_acronym(level2_type) +  '.' + name
         else:
             # one word only
-            name = level2_type + ' ' + name + '|' + level2_type[0] +  '. ' + name + '|' + level2_type[0] +  '.' + name
+            name = level2_type + ' ' + name + '|' + get_administrative_level_type_acronym(level2_type) +  '. ' + name + '|' + get_administrative_level_type_acronym(level2_type) +  '.' + name
 
     return name
 
@@ -129,14 +136,14 @@ def get_level3_name(level3_data) -> str:
     if name.isnumeric():
         name = name.lstrip('0')
         if len(name) == 1:
-            name = level3_type + ' ' + name + '|' + level3_type + ' 0' + name + '|' + level3_type[0] + '.0' + name + '|' + level3_type[0] + '. 0' + name + '|' + level3_type[0] + '.' + name + '|' + level3_type[0] + '. ' + name
+            name = level3_type + ' ' + name + '|' + level3_type + ' 0' + name + '|' + get_administrative_level_type_acronym(level3_type) + '.0' + name + '|' + get_administrative_level_type_acronym(level3_type) + '. 0' + name + '|' + get_administrative_level_type_acronym(level3_type) + '.' + name + '|' + get_administrative_level_type_acronym(level3_type) + '. ' + name
         else:
-            name = level3_type + ' ' + name + '|' + level3_type[0] +  '. ' + name + '|' + level3_type[0] +  '.' + name
+            name = level3_type + ' ' + name + '|' + get_administrative_level_type_acronym(level3_type) +  '. ' + name + '|' + get_administrative_level_type_acronym(level3_type) +  '.' + name
     elif ' ' in name:
-        name = name + '|' + level3_type + ' ' + name + '|' + level3_type[0] +  '. ' + name + '|' + level3_type[0] +  '.' + name
+        name = name + '|' + level3_type + ' ' + name + '|' + get_administrative_level_type_acronym(level3_type) +  '. ' + name + '|' + get_administrative_level_type_acronym(level3_type) +  '.' + name
     else:
         # one word only
-        name = level3_type + ' ' + name + '|' + level3_type[0] +  '. ' + name + '|' + level3_type[0] +  '.' + name
+        name = level3_type + ' ' + name + '|' + get_administrative_level_type_acronym(level3_type) +  '. ' + name + '|' + get_administrative_level_type_acronym(level3_type) +  '.' + name
 
     return name
     
