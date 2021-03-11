@@ -35,9 +35,9 @@ class HouseNumberClassifier extends PhraseClassifier {
     } else if (
       /^[a-zA-Z/]?\d{1,5}[a-zA-Z/]?$/.test(span.body) || // 10 or 10a or a16 Style
           /^([a-zA-Z]?\d{1,5}[a-zA-Z]?)(-([a-zA-Z]?\d{1,5})[a-zA-Z]?)*$/.test(span.body) || // 10-19 or 10-19a Style
-          /^([a-zA-Z]?\d{1,5}[a-zA-Z]?)(\/([a-zA-Z]?\d{1,5}[a-zA-Z]?))*$/.test(span.body) || // 1/135 or 1b/135 Style
-          /^(\d{1,5})bis(\/([a-zA-Z]?\d{1,5}[a-zA-Z]?))*$/.test(span.body) || // 18bis or 18bis/12 Style
-          /^(lo|so)\s[a-zA-Z]?(\d{1,5})[a-zA-Z]?(\/([a-zA-Z]?\d{1,5}[a-zA-Z]?))*$/.test(span.body) // lo 2 or lo 2a Style
+          /^([a-zA-Z]?\d{1,5}[a-zA-Z]?)((\/|-)([a-zA-Z]?\d{1,5}[a-zA-Z]?))*$/.test(span.body) || // 1/135 or 1b/135 Style
+          /^(\d{1,5})bis((\/|-)([a-zA-Z]?\d{1,5}[a-zA-Z]?))*$/.test(span.body) || // 18bis or 18bis/12 Style
+          /^(lo|so)\s[a-zA-Z]?(\d{1,5})[a-zA-Z]?((\/|-)([a-zA-Z]?\d{1,5}[a-zA-Z]?))*$/.test(span.body) // lo 2 or lo 2a Style
     ) {
       if (this.isSpanValid(span)) {
         span.classify(new HouseNumberClassification(1.0))

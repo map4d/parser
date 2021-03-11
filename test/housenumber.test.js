@@ -254,6 +254,19 @@ const testcase = (test, common) => {
     { housenumber: 'hem 13 kiet 234 4' },
     { street: 'nguyen van linh' }
   ])
+
+  assert('1416/35/1B-1416/35/1C le duc tho,phuong 13 go vap, tp ho chi minh', [
+    { housenumber: '1416/35/1B-1416/35/1C' },
+    { street: 'le duc tho' },
+    { level4: 'phuong 13' },
+    { level3: 'go vap' },
+    { level2: 'ho chi minh' }
+  ])
+
+  assert('1415/21-23 nguyen van linh', [
+    { housenumber: '1415/21-23' },
+    { street: 'nguyen van linh' }
+  ])
 }
 
 module.exports.all = (tape, common) => {
