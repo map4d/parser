@@ -20,6 +20,13 @@ class StreetPenalty extends BaseSolver {
         if (prevStreet && !(housenumber && !(housenumber.start <= prevStreet.start && housenumber.end >= prevStreet.start))) {
           s.penalty += 0.3
         }
+      } else if (nextStreet == null) {
+        const administrative = s.pair.find(p => p.classification.constructor === AdministrativeClassification)
+        if (administrative && administrative.span.start - street.span.end > 3) {
+          if (prevStreet && !(housenumber && !(housenumber.start <= prevStreet.start && housenumber.end >= prevStreet.start))) {
+            s.penalty += 0.3
+          }
+        }
       }
 
       const level1Administrative = administratives.find(administrative => administrative.span.classifications.AdministrativeClassification.level === 1)
