@@ -1,63 +1,63 @@
-an giang|tinh an giang
-ba ria vung tau|ba ria|tinh ba ria vung tau|tinh ba ria
-bac giang|tinh bac giang
-bac kan|tinh bac kan
-bac lieu|tinh bac lieu
-bac ninh|tinh bac ninh
-ben tre|tinh ben tre
-binh dinh|tinh binh dinh
-binh duong|tinh binh duong
-binh phuoc|tinh binh phuoc
-binh thuan|tinh binh thuan
-ca mau|tinh ca mau
-can tho|thanh pho can tho|tp can tho|tp. can tho|can tho city
-cao bang|tinh cao bang
-da nang|thanh pho da nang|tp da nang|tp. da nang|da nang city
-dak lak|tinh dak lak
-dak nong|tinh dak nong
-dien bien|tinh dien bien
-dong nai|tinh dong nai
-dong thap|tinh dong thap
-gia lai|tinh gia lai
-ha giang|tinh ha giang
-ha nam|tinh ha nam
-ha noi|tp ha noi|tp. ha noi|thanh pho ha noi|hn|tp hn|tp. hn|thanh pho hn|ha noi city|ha noi capital|hn city|hn capital
-ha tinh|tinh ha tinh
-hai duong|tinh hai duong
-hai phong|thanh pho hai phong|tp hai phong|tp. hai phong|hai phong city
-hau giang|tinh hau giang
-ho chi minh|tp ho chi minh|tp. ho chi minh|thanh pho ho chi minh|hcm|tp hcm|tp. hcm|thanh pho hcm|ho chi minh city|hcm city
-hoa binh|tinh hoa binh
-hung yen|tinh hung yen
-khanh hoa|tinh khanh hoa
-kien giang|tinh kien giang
-kon tum|tinh kon tum
-lai chau|tinh lai chau
-lam dong|tinh lam dong
-lang son|tinh lang son
-lao cai|tinh lao cai
-long an|tinh long an
-nam dinh|tinh nam dinh
-nghe an|tinh nghe an
-ninh binh|tinh ninh binh
-ninh thuan|tinh ninh thuan
-phu tho|tinh phu tho
-phu yen|tinh phu yen
-quang binh|tinh quang binh
-quang nam|tinh quang nam
-quang ngai|tinh quang ngai
-quang ninh|tinh quang ninh
-quang tri|tinh quang tri
-soc trang|tinh soc trang
-son la|tinh son la
-tay ninh|tinh tay ninh
-thai binh|tinh thai binh
-thai nguyen|tinh thai nguyen
-thanh hoa|tinh thanh hoa
-thua thien hue|tinh thua thien hue
-tien giang|tinh tien giang
-tra vinh|tinh tra vinh
-tuyen quang|tinh tuyen quang
-vinh long|tinh vinh long
-vinh phuc|tinh vinh phuc
-yen bai|tinh yen bai
+an giang|tinh an giang|t.an giang|t. an giang
+ba ria vung tau|ba ria|tinh ba ria vung tau|tinh ba ria|t. ba ria vung tau|t.ba ria vung tau|t. ba ria|t.ba ria
+bac giang|tinh bac giang|t.bac giang|t. bac giang
+bac kan|tinh bac kan|t.bac kan|t. bac kan
+bac lieu|tinh bac lieu|t.bac lieu|t. bac lieu
+bac ninh|tinh bac ninh|t.bac ninh|t. bac ninh
+ben tre|tinh ben tre|t.ben tre|t. ben tre
+binh dinh|tinh binh dinh|t.binh dinh|t. binh dinh
+binh duong|tinh binh duong|t.binh duong|t. binh duong
+binh phuoc|tinh binh phuoc|t.binh phuoc|t. binh phuoc
+binh thuan|tinh binh thuan|t.binh thuan|t. binh thuan
+ca mau|tinh ca mau|t.ca mau|t. ca mau
+can tho|thanh pho can tho|tp can tho|tp. can tho|can tho city|tp.can tho
+cao bang|tinh cao bang|t.cao bang|t. cao bang
+da nang|thanh pho da nang|tp da nang|tp. da nang|da nang city|tp.da nang
+dak lak|tinh dak lak|t.dak lak|t. dak lak
+dak nong|tinh dak nong|t.dak nong|t. dak nong
+dien bien|tinh dien bien|t.dien bien|t. dien bien
+dong nai|tinh dong nai|t.dong nai|t. dong nai
+dong thap|tinh dong thap|t.dong thap|t. dong thap
+gia lai|tinh gia lai|t.gia lai|t. gia lai
+ha giang|tinh ha giang|t.ha giang|t. ha giang
+ha nam|tinh ha nam|t.ha nam|t. ha nam
+ha noi|tp ha noi|tp. ha noi|thanh pho ha noi|hn|tp hn|tp. hn|thanh pho hn|ha noi city|ha noi capital|hn city|hn capital|thu do ha noi|thu do hn|tp.hn|tp.ha noi
+ha tinh|tinh ha tinh|t.ha tinh|t. ha tinh
+hai duong|tinh hai duong|t.hai duong|t. hai duong
+hai phong|thanh pho hai phong|tp hai phong|tp. hai phong|hai phong city|tp.hai phong
+hau giang|tinh hau giang|t.hau giang|t. hau giang
+ho chi minh|tp ho chi minh|tp. ho chi minh|thanh pho ho chi minh|hcm|tp hcm|tp. hcm|thanh pho hcm|ho chi minh city|hcm city|tp.ho chi minh|tp.hcm
+hoa binh|tinh hoa binh|t.hoa binh|t. hoa binh
+hung yen|tinh hung yen|t.hung yen|t. hung yen
+khanh hoa|tinh khanh hoa|t.khanh hoa|t. khanh hoa
+kien giang|tinh kien giang|t.kien giang|t. kien giang
+kon tum|tinh kon tum|t.kon tum|t. kon tum
+lai chau|tinh lai chau|t.lai chau|t. lai chau
+lam dong|tinh lam dong|t.lam dong|t. lam dong
+lang son|tinh lang son|t.lang son|t. lang son
+lao cai|tinh lao cai|t.lao cai|t. lao cai
+long an|tinh long an|t.long an|t. long an
+nam dinh|tinh nam dinh|t.nam dinh|t. nam dinh
+nghe an|tinh nghe an|t.nghe an|t. nghe an
+ninh binh|tinh ninh binh|t.ninh binh|t. ninh binh
+ninh thuan|tinh ninh thuan|t.ninh thuan|t. ninh thuan
+phu tho|tinh phu tho|t.phu tho|t. phu tho
+phu yen|tinh phu yen|t.phu yen|t. phu yen
+quang binh|tinh quang binh|t.quang binh|t. quang binh
+quang nam|tinh quang nam|t.quang nam|t. quang nam
+quang ngai|tinh quang ngai|t.quang ngai|t. quang ngai
+quang ninh|tinh quang ninh|t.quang ninh|t. quang ninh
+quang tri|tinh quang tri|t.quang tri|t. quang tri
+soc trang|tinh soc trang|t.soc trang|t. soc trang
+son la|tinh son la|t.son la|t. son la
+tay ninh|tinh tay ninh|t.tay ninh|t. tay ninh
+thai binh|tinh thai binh|t.thai binh|t. thai binh
+thai nguyen|tinh thai nguyen|t.thai nguyen|t. thai nguyen
+thanh hoa|tinh thanh hoa|t.thanh hoa|t. thanh hoa
+thua thien hue|tinh thua thien hue|t.thua thien hue|t. thua thien hue
+tien giang|tinh tien giang|t.tien giang|t. tien giang
+tra vinh|tinh tra vinh|t.tra vinh|t. tra vinh
+tuyen quang|tinh tuyen quang|t.tuyen quang|t. tuyen quang
+vinh long|tinh vinh long|t.vinh long|t. vinh long
+vinh phuc|tinh vinh phuc|t.vinh phuc|t. vinh phuc
+yen bai|tinh yen bai|t.yen bai|t. yen bai

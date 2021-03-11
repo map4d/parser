@@ -57,16 +57,16 @@ def get_level1_name(level1_data) -> str:
         name = name[len('thanh pho '):]
 
     if name == 'ba ria - vung tau':
-        name = 'ba ria vung tau|ba ria|tinh ba ria vung tau|tinh ba ria'
+        name = 'ba ria vung tau|ba ria|tinh ba ria vung tau|tinh ba ria|t. ba ria vung tau|t.ba ria vung tau|t. ba ria|t.ba ria'
     elif name == 'ho chi minh':
-        name = 'ho chi minh|tp ho chi minh|tp. ho chi minh|thanh pho ho chi minh|hcm|tp hcm|tp. hcm|thanh pho hcm|ho chi minh city|hcm city'
+        name = 'ho chi minh|tp ho chi minh|tp. ho chi minh|thanh pho ho chi minh|hcm|tp hcm|tp. hcm|thanh pho hcm|ho chi minh city|hcm city|tp.ho chi minh|tp.hcm'
     elif name == 'ha noi':
-        name = 'ha noi|tp ha noi|tp. ha noi|thanh pho ha noi|hn|tp hn|tp. hn|thanh pho hn|ha noi city|ha noi capital|hn city|hn capital'
+        name = 'ha noi|tp ha noi|tp. ha noi|thanh pho ha noi|hn|tp hn|tp. hn|thanh pho hn|ha noi city|ha noi capital|hn city|hn capital|thu do ha noi|thu do hn|tp.hn|tp.ha noi'
     else:
         if level1_type == 'thanh pho':
-            name = name + '|thanh pho ' + name + '|tp ' + name + '|tp. ' + name + '|' + name + ' city'
+            name = name + '|thanh pho ' + name + '|tp ' + name + '|tp. ' + name + '|' + name + ' city' + '|tp.' + name
         else:
-            name = name + '|' + level1_type + ' ' + name
+            name = name + '|' + level1_type + ' ' + name + '|' + level1_type[0] + '.' + name + '|' + level1_type[0] + '. ' + name
     
     return name
 
@@ -87,18 +87,19 @@ def get_level2_name(level2_data) -> str:
         name = 'phan rang thap cham|thanh pho phan rang thap cham|tp phan rang thap cham|tp. phan rang thap cham|phan rang|thanh pho phan rang|tp phan rang|tp.phan rang'
     else:
         if level2_type == 'thanh pho':
-            name = name + '|thanh pho ' + name + '|tp ' + name + '|tp. ' + name
+            name = name + '|thanh pho ' + name + '|tp ' + name + '|tp. ' + name + '|tp.' + name
         elif name.isnumeric():
             name = name.lstrip('0')
             if len(name) == 1:
-                name = level2_type + ' ' + name + '|' + level2_type + ' 0' + name
+                name = level2_type + ' ' + name + '|' + level2_type + ' 0' + name + '|' + level2_type[0] + '.0' + name + '|' + level2_type[0] + '. 0' + name + '|' + level2_type[0] + '.' + name + '|' + level2_type[0] + '. ' + name
             else:
-                name = level2_type + ' ' + name
+                name = level2_type + ' ' + name + '|' + level2_type[0] +  '. ' + name + '|' + level2_type[0] +  '.' + name
+
         elif ' ' in name:
-            name = name + '|' + level2_type + ' ' + name
+            name = name + '|' + level2_type + ' ' + name + '|' + level2_type[0] +  '. ' + name + '|' + level2_type[0] +  '.' + name
         else:
             # one word only
-            name = level2_type + ' ' + name
+            name = level2_type + ' ' + name + '|' + level2_type[0] +  '. ' + name + '|' + level2_type[0] +  '.' + name
 
     return name
 
@@ -128,14 +129,14 @@ def get_level3_name(level3_data) -> str:
     if name.isnumeric():
         name = name.lstrip('0')
         if len(name) == 1:
-            name = level3_type + ' ' + name + '|' + level3_type + ' 0' + name
+            name = level3_type + ' ' + name + '|' + level3_type + ' 0' + name + '|' + level3_type[0] + '.0' + name + '|' + level3_type[0] + '. 0' + name + '|' + level3_type[0] + '.' + name + '|' + level3_type[0] + '. ' + name
         else:
-            name = level3_type + ' ' + name
+            name = level3_type + ' ' + name + '|' + level3_type[0] +  '. ' + name + '|' + level3_type[0] +  '.' + name
     elif ' ' in name:
-        name = name + '|' + level3_type + ' ' + name
+        name = name + '|' + level3_type + ' ' + name + '|' + level3_type[0] +  '. ' + name + '|' + level3_type[0] +  '.' + name
     else:
         # one word only
-        name = level3_type + ' ' + name
+        name = level3_type + ' ' + name + '|' + level3_type[0] +  '. ' + name + '|' + level3_type[0] +  '.' + name
 
     return name
     
@@ -180,7 +181,7 @@ def generate_level2_names():
         for level2 in sorted(level2s.keys()):
             level2_name = level2
             level2_name += '/'
-            level2_name += '|'.join(level2s[level2]['level1'])
+            level2_name += '|'.join(list(set(level2s[level2]['level1'])))
             level2_names_file.write(level2_name)
             level2_names_file.write('\n')
 
@@ -214,9 +215,9 @@ def generate_level3_names():
         for level3 in sorted(level3s.keys()):
             level3_name = level3
             level3_name += '/'
-            level3_name += '|'.join(level3s[level3]['level1'])
+            level3_name += '|'.join(list(set(level3s[level3]['level1'])))
             level3_name += '/'
-            level3_name += '|'.join(level3s[level3]['level2'])
+            level3_name += '|'.join(list(set(level3s[level3]['level2'])))
             level3_names_file.write(level3_name)
             level3_names_file.write('\n')
 

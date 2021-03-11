@@ -506,6 +506,23 @@ const testcase = (test, common) => {
       { level2: 'lam dong' }
     ]
   )
+
+  assert(
+    'q.1 tp.ho chi minh',
+    [
+      { level3: 'quan 1' },
+      { level2: 'ho chi minh' }
+    ]
+  )
+
+  assert(
+    'p. 6 q.6 tp.hcm',
+    [
+      { level4: 'phuong 6' },
+      { level3: 'quan 6' },
+      { level2: 'ho chi minh' }
+    ]
+  )
 }
 
 module.exports.all = (tape, common) => {
