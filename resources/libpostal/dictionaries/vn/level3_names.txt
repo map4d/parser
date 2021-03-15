@@ -103,7 +103,7 @@ chau doc|thanh pho chau doc|tp chau doc|tp. chau doc|tp.chau doc/an giang
 chau duc|huyen chau duc|h. chau duc|h.chau duc/ba ria vung tau
 chau phu|huyen chau phu|h. chau phu|h.chau phu/an giang
 chau thanh a|huyen chau thanh a|h. chau thanh a|h.chau thanh a/hau giang
-chau thanh|huyen chau thanh|h. chau thanh|h.chau thanh/tay ninh|hau giang|tien giang|kien giang|dong thap|an giang|long an|ben tre|tra vinh|soc trang
+chau thanh|huyen chau thanh|h. chau thanh|h.chau thanh/hau giang|tay ninh|an giang|tien giang|kien giang|long an|dong thap|soc trang|tra vinh|ben tre
 chi lang|huyen chi lang|h. chi lang|h.chi lang/lang son
 chi linh|thanh pho chi linh|tp chi linh|tp. chi linh|tp.chi linh/hai duong
 chiem hoa|huyen chiem hoa|h. chiem hoa|h.chiem hoa/tuyen quang
@@ -453,18 +453,18 @@ phuoc long|huyen phuoc long|h. phuoc long|h.phuoc long/bac lieu
 phuoc long|thi xa phuoc long|tx. phuoc long|tx.phuoc long/binh phuoc
 phuoc son|huyen phuoc son|h. phuoc son|h.phuoc son/quang nam
 pleiku|thanh pho pleiku|tp pleiku|tp. pleiku|tp.pleiku/gia lai
-quan 10|q. 10|q.10/ho chi minh
-quan 11|q. 11|q.11/ho chi minh
-quan 12|q. 12|q.12/ho chi minh
-quan 1|quan 01|q.01|q. 01|q.1|q. 1/ho chi minh
-quan 2|quan 02|q.02|q. 02|q.2|q. 2/ho chi minh
-quan 3|quan 03|q.03|q. 03|q.3|q. 3/ho chi minh
-quan 4|quan 04|q.04|q. 04|q.4|q. 4/ho chi minh
-quan 5|quan 05|q.05|q. 05|q.5|q. 5/ho chi minh
-quan 6|quan 06|q.06|q. 06|q.6|q. 6/ho chi minh
-quan 7|quan 07|q.07|q. 07|q.7|q. 7/ho chi minh
-quan 8|quan 08|q.08|q. 08|q.8|q. 8/ho chi minh
-quan 9|quan 09|q.09|q. 09|q.9|q. 9/ho chi minh
+quan 10|q. 10|q.10|q10/ho chi minh
+quan 11|q. 11|q.11|q11/ho chi minh
+quan 12|q. 12|q.12|q12/ho chi minh
+quan 1|quan 01|q.01|q. 01|q.1|q. 1|q1/ho chi minh
+quan 2|quan 02|q.02|q. 02|q.2|q. 2|q2/ho chi minh
+quan 3|quan 03|q.03|q. 03|q.3|q. 3|q3/ho chi minh
+quan 4|quan 04|q.04|q. 04|q.4|q. 4|q4/ho chi minh
+quan 5|quan 05|q.05|q. 05|q.5|q. 5|q5/ho chi minh
+quan 6|quan 06|q.06|q. 06|q.6|q. 6|q6/ho chi minh
+quan 7|quan 07|q.07|q. 07|q.7|q. 7|q7/ho chi minh
+quan 8|quan 08|q.08|q. 08|q.8|q. 8|q8/ho chi minh
+quan 9|quan 09|q.09|q. 09|q.9|q. 9|q9/ho chi minh
 quan ba|huyen quan ba|h. quan ba|h.quan ba/ha giang
 quan hoa|huyen quan hoa|h. quan hoa|h.quan hoa/thanh hoa
 quan son|huyen quan son|h. quan son|h.quan son/thanh hoa
@@ -514,7 +514,7 @@ sop cop|huyen sop cop|h. sop cop|h.sop cop/son la
 tam binh|huyen tam binh|h. tam binh|h.tam binh/vinh long
 tam dao|huyen tam dao|h. tam dao|h.tam dao/vinh phuc
 tam diep|thanh pho tam diep|tp tam diep|tp. tam diep|tp.tam diep/ninh binh
-tam duong|huyen tam duong|h. tam duong|h.tam duong/vinh phuc|lai chau
+tam duong|huyen tam duong|h. tam duong|h.tam duong/lai chau|vinh phuc
 tam ky|thanh pho tam ky|tp tam ky|tp. tam ky|tp.tam ky/quang nam
 tam nong|huyen tam nong|h. tam nong|h.tam nong/dong thap|phu tho
 tan an|thanh pho tan an|tp tan an|tp. tan an|tp.tan an/long an
@@ -654,7 +654,7 @@ vinh linh|huyen vinh linh|h. vinh linh|h.vinh linh/quang tri
 vinh loc|huyen vinh loc|h. vinh loc|h.vinh loc/thanh hoa
 vinh loi|huyen vinh loi|h. vinh loi|h.vinh loi/bac lieu
 vinh long|thanh pho vinh long|tp vinh long|tp. vinh long|tp.vinh long/vinh long
-vinh thanh|huyen vinh thanh|h. vinh thanh|h.vinh thanh/can tho|binh dinh
+vinh thanh|huyen vinh thanh|h. vinh thanh|h.vinh thanh/binh dinh|can tho
 vinh thuan|huyen vinh thuan|h. vinh thuan|h.vinh thuan/kien giang
 vinh tuong|huyen vinh tuong|h. vinh tuong|h.vinh tuong/vinh phuc
 vinh yen|thanh pho vinh yen|tp vinh yen|tp. vinh yen|tp.vinh yen/vinh phuc
